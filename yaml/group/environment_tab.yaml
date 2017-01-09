@@ -8,3 +8,4 @@ environment:
     - group.openweathermap
     - group.wunderground
     - weather.openweathermap
+    - group.yweather

@@ -39,7 +39,7 @@ tts:
 
 weather:
   - platform: openweathermap
-    api_key: 94b61ce157b30c9db07aeb2d213aab35
+    api_key: !secret openweathermap_api_key
 
 updater:
 discovery:
