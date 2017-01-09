@@ -2,3 +2,7 @@
   name: Prius Location
   still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.device_tracker.toyota_prius.attributes.latitude }},{{ states.device_tracker.toyota_prius.attributes.longitude }}&zoom=13&size=500x500&maptype=roadmap&markers=color:blue%7Clabel:P%7C{{ states.device_tracker.toyota_prius.attributes.latitude }},{{ states.device_tracker.toyota_prius.attributes.longitude }}
   limit_refetch_to_url_change: true
+- platform: generic
+  name: DWMi5 Location
+  still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.device_tracker.dwmi5.attributes.latitude }},{{ states.device_tracker.dwmi5.attributes.longitude }}&zoom=13&size=500x500&maptype=roadmap&markers=color:blue%7Clabel:P%7C{{ states.device_tracker.toyota_prius.attributes.latitude }},{{ states.device_tracker.toyota_prius.attributes.longitude }}
+  limit_refetch_to_url_change: true

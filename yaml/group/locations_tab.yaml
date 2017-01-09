@@ -6,6 +6,7 @@ locations:
     - device_tracker.dwmi5
     - device_tracker.toyota_prius
     - camera.prius_location
+    - camera.dwmi5_location
     - sensor.drive_to_rehoboth
     - sensor.drive_to_sas
     - sensor.phone_to_home
