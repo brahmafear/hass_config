@@ -1,0 +1,12 @@
+Show logs in realtime:
+sudo journalctl -u homeassistant@hass -f
+
+Python environment:
+source /srv/hass/bin/activate
+
+Check config - be in python environment first
+/srv/hass/bin/hass -c /srv/hass/cfg --script check_config
+
+Upgrade hass - be in python environment
+pip3 install --upgrade homeassistant
+

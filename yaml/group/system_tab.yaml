@@ -1,0 +1,9 @@
+system:
+  name: System
+  icon: mdi:settings
+  view: yes
+  entities:
+    - group.raspi
+    - group.internet
+    - group.automations
+    - group.network_devices

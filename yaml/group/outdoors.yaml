@@ -1,0 +1,4 @@
+outdoors:
+  name: Outdoors
+  entities:
+    - switch.window_candles

@@ -1,0 +1,2 @@
+backup_hass: /srv/hass/shell_scripts/backup_hass.sh
+update_hass: /srv/hass/shell_scripts/update_hass.sh

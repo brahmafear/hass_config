@@ -1,0 +1,19 @@
+  broker: 127.0.0.1
+  port: 1883
+  client_id: homeassistant
+  keepalive: 60
+  # username: !secret mqtt_username
+  # password: !secret mqtt_password
+  # certificate: /home/paulus/dev/addtrustexternalcaroot.crt
+  # protocol: 3.1.1
+  birth_message:
+    topic: '/hass/status'
+    payload: 'online'
+    qos: 1
+    retain: true
+  will_message:
+    topic: '/hass/status'
+    payload: 'offline'
+    qos: 1
+    retain: true
+

@@ -1,0 +1,8 @@
+home:
+  name: House
+  view: yes
+  icon: mdi:home
+  entities:
+    - group.livingroom
+    - group.kitchen
+    - group.garage

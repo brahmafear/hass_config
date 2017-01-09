@@ -1,0 +1,9 @@
+- platform: template
+  sensors:
+      chromecast:
+        friendly_name: 'ChromeCast'
+        value_template: "{{ 'Online' if is_state('device_tracker.6cadf84f2951', 'home') else 'Offline' }}"
+#      chromecast:
+#        friendly_name: 'ChromeCast'
+#        value_template: "{{ 'Online' if is_state('device_tracker.6cadf84f2951', 'home') else 'Offline' }}"
+

@@ -1,0 +1,7 @@
+mediaplayers:
+  name: Media Players
+  icon: mdi:monitor
+  entities:
+    - media_player._samsung_un55ku6600
+    - media_player.chromemyers
+    - sensor.plex

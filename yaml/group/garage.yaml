@@ -1,0 +1,6 @@
+garage:
+  name: Garage
+  icon: mdi:garage
+  entities:
+    - sensor.dht_sensor_temperature
+    - sensor.dht_sensor_humidity

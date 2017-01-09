@@ -1,0 +1,4 @@
+- platform: plex
+  username: !secret plex_username
+  password: !secret plex_password
+  host: 192.168.9.25

@@ -1,0 +1,10 @@
+api_password: !secret http_api_password
+ssl_certificate: /etc/ssl/certs/self_signed.chain.pem
+ssl_key: /etc/ssl/certs/self_signed.key.pem
+trusted_networks:
+  - 127.0.0.1
+  - 192.168.9.0/24
+ip_ban_enabled: true
+login_attempts_threshold: 3
+base_url: lewes.hopto.org:8123
+development: true

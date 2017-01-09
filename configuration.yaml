@@ -1,0 +1,51 @@
+homeassistant:
+  name: Home
+  latitude: !secret hass_lat
+  longitude: !secret hass_long
+  elevation: 6
+  unit_system: imperial
+  time_zone: America/New_York
+  customize: !include_dir_merge_named yaml/customization
+
+device_tracker: !include_dir_merge_list yaml/device_tracker      
+camera: !include_dir_merge_list yaml/camera      
+sensor: !include_dir_merge_list yaml/sensor
+automation: !include_dir_merge_list yaml/automation
+switch: !include_dir_merge_list yaml/switch
+notify: !include_dir_merge_list yaml/notify
+light: !include_dir_merge_list yaml/light
+scene: !include_dir_merge_list yaml/scene
+input_boolean: !include_dir_merge_named yaml/input_boolean
+script: !include_dir_merge_named yaml/script
+group: !include_dir_merge_named yaml/group
+
+mqtt: !include yaml/mqtt.yaml
+mysensors: !include yaml/mysensors.yaml
+logger: !include yaml/logger.yaml
+media_player: !include yaml/media_player.yaml
+emulated_hue: !include yaml/emulated_hue.yaml
+http: !include yaml/http.yaml
+zone: !include yaml/zones.yaml
+shell_command: !include yaml/shell_commands.yaml
+
+ifttt:
+  key: !secret ifttt_key
+
+tts:
+  - platform: google
+    cache: true
+    cache_dir: /tmp/tts
+    time_memory: 300
+
+weather:
+  - platform: openweathermap
+    api_key: 94b61ce157b30c9db07aeb2d213aab35
+
+updater:
+discovery:
+conversation:
+# history:
+# logbook:
+sun:
+# zeroconf:
+frontend:

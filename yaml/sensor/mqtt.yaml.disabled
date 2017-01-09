@@ -1,0 +1,8 @@
+- platform: mqtt
+  state_topic: "/house/sensors/temperature"
+  name: "House Temperature"
+  unit_of_measurement: '°F'
+- platform: mqtt
+  state_topic: "/house/sensors/humidity"
+  name: "House Humidity"
+  unit_of_measurement: '%'

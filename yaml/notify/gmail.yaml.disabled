@@ -1,0 +1,6 @@
+- name: gmail
+  platform: smtp
+  server: aspmx.l.google.com
+  sender: !secret notify_gmail_sender
+  starttls: true
+  recipient: !secret notify_gmail_recipient

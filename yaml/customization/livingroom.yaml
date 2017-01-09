@@ -1,0 +1,15 @@
+switch.christmas_tree:
+  friendly_name: Christmas Tree
+  emulated_hue: true
+  emulated_hue_name: "christmas tree"
+
+switch.window_candles:
+  friendly_name: Window Candles
+  emulated_hue: true
+  emulated_hue_name: "window candles"
+
+switch.samsungtv:
+  friendly_name: Samsung TV
+  assumed_state: true
+  emulated_hue: true
+  emulated_hue_name: "tv"

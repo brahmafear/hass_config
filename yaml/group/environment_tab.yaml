@@ -1,0 +1,10 @@
+environment:
+  name: Environment
+  view: yes
+  icon: mdi:weather-cloudy
+  entities:
+    - sun.sun
+    - group.darksky
+    - group.openweathermap
+    - group.wunderground
+    - weather.openweathermap

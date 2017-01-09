@@ -1,0 +1,15 @@
+sensor.speedtest_ping:
+  friendly_name: Speed Ping
+  icon: mdi:pulse
+sensor.speedtest_download:
+  friendly_name: Speed Download
+  icon: mdi:arrow-down-bold
+sensor.speedtest_upload:
+  friendly_name: Speed Upload
+  icon: mdi:arrow-up-bold
+sensor.fastcom_download:
+  friendly_name: Fast Download
+  icon: mdi:arrow-down-bold
+sensor.external_ip:
+  friendly_name: External IP
+  icon: mdi:web

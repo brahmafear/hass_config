@@ -1,0 +1,12 @@
+yweather:
+  name: Yahoo Weather
+  entities:
+    - sensor.yweather_condition
+    - sensor.yweather_current
+    - sensor.yweather_humidity
+    - sensor.yweather_pressure
+    - sensor.yweather_temperature
+    - sensor.yweather_temperature_max
+    - sensor.yweather_temperature_min
+    - sensor.yweather_visibility
+    - sensor.yweather_wind_speed

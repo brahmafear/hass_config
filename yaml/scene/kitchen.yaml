@@ -1,0 +1,25 @@
+- name: kitchen_red
+  entities:
+    light.node_21_40:
+      state: on
+      rgb_color: [ 16, 0, 0 ]
+      brightness: 255
+- name: kitchen_bright_red
+  entities:
+    light.node_21_40:
+      state: on
+      rgb_color: [ 255, 0, 0 ]
+      brightness: 255
+- name: kitchen_bright_white
+  entities:
+    light.node_21_40:
+      state: on
+      rgb_color: [ 255, 255, 255 ]
+      brightness: 255
+- name: kitchen_blue
+  entities:
+    light.node_21_40:
+      state: on
+      rgb_color: [ 0, 0, 255 ]
+      brightness: 255
+

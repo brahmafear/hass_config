@@ -1,0 +1,9 @@
+raspi:
+  name: Raspberry Pi
+  icon: mdi:raspberrypi
+  entities:
+    - sensor.cpu_use
+    - sensor.ram_use
+    - sensor.disk_free_
+    - sensor.last_boot
+    - sensor.since_last_boot

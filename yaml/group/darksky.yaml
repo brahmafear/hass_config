@@ -1,0 +1,20 @@
+darksky:
+  name: Dark Sky
+  entities:
+    - sensor.dark_sky_minutely_summary
+    - sensor.dark_sky_summary
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_apparent_temperature
+    - sensor.dark_sky_temperature_max
+    - sensor.dark_sky_temperature_min
+    - sensor.dark_sky_daily_high_temperature
+    - sensor.dark_sky_daily_low_temperature
+    - sensor.dark_sky_precip_probability
+    - sensor.dark_sky_humidity
+    - sensor.dark_sky_wind_speed
+    - camera.delaware_radar
+#    - sun.sun
+#    - sensor.dark_sky_daily_summary
+#    - sensor.dark_sky_hourly_summary
+#    - sensor.dark_sky_icon
+#    - sensor.dark_sky_wind_bearing

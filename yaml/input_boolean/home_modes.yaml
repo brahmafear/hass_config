@@ -1,0 +1,9 @@
+#notify_home:
+#  name: Notify when someone arrives home
+#  initial: off
+#  icon: mdi:car
+  
+trash_reminder:
+  name: Trash Day Reminder
+  icon: mdi:delete
+  initial: off 

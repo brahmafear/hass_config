@@ -1,0 +1,18 @@
+- alias: Window Candles Sunset
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-00:45:00"
+  action:
+    service: homeassistant.turn_on
+    entity_id: switch.window_candles
+
+- alias: Windows Candles 11pm
+  trigger:
+    platform: time
+    hours: 23
+    minutes: 0
+    seconds: 0
+  action:
+    service: homeassistant.turn_off
+    entity_id: switch.window_candles

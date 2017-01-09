@@ -1,0 +1,5 @@
+new_default_view:
+  name: Test
+  view: yes
+  entities:
+    - group.front_card

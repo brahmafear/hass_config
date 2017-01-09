@@ -1,0 +1,23 @@
+#say_outdoor_temp:
+#  alias: Say Outdoor Temperature
+#  sequence:
+#    - service: homeassistant.turn_on
+#      data:
+#        entity_id: media_player.cast
+#    - service: tts.google_say
+#      entity_id: media_player.cast
+#      data_template:
+#        message: 'Outdoor temperature is {{ sensor.dark_sky_temperature }}.'
+#        cache: false
+
+say_hello:
+  alias: Say Hello
+  sequence:
+    - service: homeassistant.turn_on
+      data:
+        entity_id: media_player.cast
+    - service: tts.google_say
+      entity_id: media_player.cast
+      data:
+        message: 'Hello Jennifer'
+        cache: false 

@@ -1,0 +1,9 @@
+automations:
+  name: Automation Controls
+  entities:
+    - automation.house_temperature_notification
+    - automation.startup_notification
+    - automation.turn_on_christmas_tree_when_motion_in_living_room
+    - automation.window_candles_sunset
+    - automation.windows_candles_11pm
+    - automation.kitchen_motion_at_night

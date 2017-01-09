@@ -1,0 +1,5 @@
+- name: Bedtime
+  entities:
+    switch.christmas_tree: off
+    switch.samsungtv: off
+

@@ -1,0 +1,29 @@
+#   - platform: mqtt
+#     name: "eTekCity A3"
+#     state_topic: "/house/amrelay/A3:6/state"
+#     command_topic: "/house/amrelay/A3:6"
+#     payload_on: "1"
+#     payload_off: "0"
+#     optimistic: false
+#     qos: 0
+#     retain: true
+# 
+#   - platform: mqtt
+#     name: "eTekCity B3"
+#     state_topic: "/house/amrelay/B3:6/state"
+#     command_topic: "/house/amrelay/B3:6"
+#     payload_on: "1"
+#     payload_off: "0"
+#     optimistic: false
+#     qos: 0
+#     retain: true
+# 
+#   - platform: mqtt
+#     name: "eTekCity C7"
+#     state_topic: "/house/amrelay/C7:6/state"
+#     command_topic: "/house/amrelay/C7:6"
+#     payload_on: "1"
+#     payload_off: "0"
+#     optimistic: false
+#     qos: 0
+#     retain: true

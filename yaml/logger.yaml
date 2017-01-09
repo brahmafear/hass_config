@@ -1,0 +1,9 @@
+default: warning
+logs:
+  mysensors: error
+
+#  default: info
+#  logs:
+#    mysensors: debug
+#    homeassistant.components.mysensors: debug
+

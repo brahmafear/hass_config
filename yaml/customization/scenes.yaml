@@ -1,0 +1,26 @@
+scene.bedtime:
+  friendly_name: Bedtime
+  emulated_hue: true
+  emulated_hue_name: "bedtime"
+
+scene.kitchen_red:
+  friendly_name: Kitchen Red
+#  emulated_hue: true
+  emulated_hue_name: "kitchen red"
+
+scene.kitchen_bright_red:
+  friendly_name: Kitchen Bright Red
+#  emulated_hue: true
+  emulated_hue_name: "kitchen bright red"
+
+scene.kitchen_blue:
+  friendly_name: Kitchen Blue
+#  emulated_hue: true
+  emulated_hue_name: "kitchen blue"
+
+scene.kitchen_bright_white:
+  friendly_name: Kitchen White
+#  emulated_hue: true
+  emulated_hue_name: "kitchen bright white"
+
+

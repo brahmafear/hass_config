@@ -1,0 +1,41 @@
+- name: gary_and_jane_house
+  latitude: !secret zone_gjh_lat
+  longitude: !secret zone_gjh_long
+  radius: 200
+  icon: mdi:people 
+  passive: true
+
+- name: downtown_rehoboth
+  latitude: !secret zone_dtr_lat
+  longitude: !secret zone_dtr_long
+  radius: 1000
+  icon: mdi:people 
+  passive: true
+
+- name: cape_henlopen
+  latitude: !secret zone_chsp_lat
+  longitude: !secret zone_chsp_long
+  radius: 3200
+  icon: mdi:people 
+  passive: true
+
+- name: lewes_yacht_club
+  latitude: !secret zone_lyc_lat
+  longitude: !secret zone_lyc_long
+  radius: 1000
+  icon: mdi:people 
+  passive: true
+
+- name: sas
+  latitude: !secret zone_sas_lat
+  longitude: !secret zone_sas_long
+  radius: 1500
+  icon: mdi:people 
+  passive: true
+
+- name: gym
+  latitude: !secret zone_gym_lat
+  longitude: !secret zone_gym_long
+  radius: 500
+  icon: mdi:people 
+  passive: true

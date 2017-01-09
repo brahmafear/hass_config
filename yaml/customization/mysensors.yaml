@@ -1,0 +1,19 @@
+binary_sensor.node_20_22:
+  friendly_name: Living Room Motion
+sensor.node_20_10:
+  friendly_name: Living Room Temperature
+sensor.node_20_11:
+  friendly_name: Living Room Humidity
+light.node_20_60:
+  friendly_name: Living Room RGB
+
+sensor.node_21_10:
+  friendly_name: Kitchen Temperature
+sensor.node_21_11:
+  friendly_name: Kitchen Humidity
+light.node_21_40:
+  friendly_name: Kitchen RGB Light
+  emulated_hue: true
+  emulated_hue_name: "Kitchen Lights"
+binary_sensor.node_21_22:
+  friendly_name: Kitchen Motion

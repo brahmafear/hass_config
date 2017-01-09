@@ -1,0 +1,11 @@
+switch.christmas_tree:
+  friendly_name: Christmas Tree
+
+sensor.dht_sensor_humidity:
+  friendly_name: Garage Humidity
+
+sensor.dht_sensor_temperature:
+  friendly_name: Garage Temperature
+
+switch.window_candles:
+  friendly_name: Window Candles

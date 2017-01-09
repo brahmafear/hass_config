@@ -1,0 +1,4 @@
+network_devices:
+  name: Network Devices
+  entities:
+    - sensor.chromecast
