@@ -12,7 +12,7 @@ More documentation coming soon....
    * Attached NRF24L01+ radio for MySensors
 
 **Devices**
-   * MQTT controlled [ecoPlug](http://www.homedepot.com/p/Grounded-Indoor-Wi-Fi-Adapter-2-Pack-CT-065W) running [ESPurna](https://bitbucket.org/xoseperez/espurna) firmware.
+   * MQTT controlled [ecoPlugs](http://www.homedepot.com/p/Grounded-Indoor-Wi-Fi-Adapter-2-Pack-CT-065W) running [ESPurna](https://bitbucket.org/xoseperez/espurna) firmware.
    * [eTekCity](https://smile.amazon.com/dp/B00DQELHBS/) outlets.
    * Custom made Arduino boards using [MySensors](https://www.mysensors.org/) with:
       * RGB LED strips
@@ -21,4 +21,4 @@ More documentation coming soon....
       * PIR motion sensors
       * CdS light sensors
 
-
+[Instructions](https://home-assistant.io/cookbook/githubbackup/) for creating a github repository for your own config.  
