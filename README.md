@@ -22,5 +22,4 @@ More documentation coming soon....
       * CdS light sensors
 
 
-
 [Instructions](https://home-assistant.io/cookbook/githubbackup/) for creating a github repository for your own config.  
