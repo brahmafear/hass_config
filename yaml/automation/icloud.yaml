@@ -1,0 +1,9 @@
+- alias: Fix icloud interval
+  trigger:
+    platform: state
+    entity_id: device_tracker.dwmi5
+  action:
+    service: device_tracker.icloud_set_interval
+    data: 
+      device_name: dwmi5
+      interval: 600

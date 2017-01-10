@@ -1,10 +1,10 @@
 api_password: !secret http_api_password
-ssl_certificate: /etc/ssl/certs/self_signed.chain.pem
-ssl_key: /etc/ssl/certs/self_signed.key.pem
+ssl_certificate: !secret http_ssl_crt
+ssl_key: !secret http_ssl_key
 trusted_networks:
   - 127.0.0.1
   - 192.168.9.0/24
 ip_ban_enabled: true
 login_attempts_threshold: 3
-base_url: !secret hass_base_url
+base_url: !secret http_base_url
 development: true

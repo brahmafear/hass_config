@@ -1,7 +1,7 @@
 environment:
   name: Environment
   view: yes
-  icon: mdi:weather-cloudy
+  icon: mdi:weather-partlycloudy
   entities:
     - sun.sun
     - group.darksky

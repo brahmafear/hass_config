@@ -1,7 +1,6 @@
 - platform: plex
 - platform: cast
   host: 192.168.9.206
-#- platform: samsungtv
-#  host: 192.168.9.199
-#- platform: _samsung_un55ku6600
+- platform: samsungtv
+  host: 192.168.9.199
 

@@ -10,3 +10,8 @@ Check config - be in python environment first
 Upgrade hass - be in python environment
 pip3 install --upgrade homeassistant
 
+Enable git saving passwords:
+git config credential.helper store
+
+Disable git saving credentials:
+git config --unset credential.helper

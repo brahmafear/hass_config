@@ -13,6 +13,7 @@ secrets.yaml
 known_devices.yaml
 mysensors_devices.json
 ip_bans.yaml
-icloud
-lib
-deps
+/icloud
+/lib
+/deps
+/ssl

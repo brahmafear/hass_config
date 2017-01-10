@@ -1,0 +1,17 @@
+icloud_interval_600:
+  alias: "Set icloud interval to 600"
+  sequence:
+    - service: device_tracker.icloud_set_interval
+      entity_id: device_tracker.dwmi5
+      data:
+        interval: 600
+        device_name: dwmi5
+
+icloud_lost_phone:
+  alias: "Play lost iPhone sound"
+  sequence:
+    - service: device_tracker.icloud_lost_iphone
+      entity_id: device_tracker.dwmi5
+      data:
+        device_name: dwmi5
+
