@@ -13,8 +13,9 @@ More documentation coming soon....
 
 **Devices**
    * MQTT controlled [ecoPlugs](http://www.homedepot.com/p/Grounded-Indoor-Wi-Fi-Adapter-2-Pack-CT-065W) running [ESPurna](https://bitbucket.org/xoseperez/espurna) firmware.
-   * [eTekCity](https://smile.amazon.com/dp/B00DQELHBS/) outlets.
+   * [eTekCity](https://smile.amazon.com/dp/B00DQELHBS/) 433MHz outlets.
    * Custom made Arduino boards using [MySensors](https://www.mysensors.org/) with:
+      * NRF24L01+ radios
       * RGB LED strips
       * DHT11 sensors
       * NeoPixel LED strips
