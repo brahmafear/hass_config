@@ -5,6 +5,9 @@
 *.key
 *.conf
 *.db-journal
+*.test
+*.good
+*.bak
 .*
 !/.gitignore
 home-assistant.log
@@ -17,3 +20,4 @@ ip_bans.yaml
 /lib
 /deps
 /ssl
+/backups

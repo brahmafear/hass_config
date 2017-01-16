@@ -1,7 +1,7 @@
 - alias: Turn on christmas tree when motion in living room
   trigger:
     - platform: state
-      entity_id: binary_sensor.node_20_22
+      entity_id: binary_sensor.living_room_51_20
       to: 'on'
   action:
     service: homeassistant.turn_on

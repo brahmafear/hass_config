@@ -1,11 +1,13 @@
-binary_sensor.node_20_22:
-  friendly_name: Living Room Motion
-sensor.node_20_10:
-  friendly_name: Living Room Temperature
-sensor.node_20_11:
-  friendly_name: Living Room Humidity
-light.node_20_60:
-  friendly_name: Living Room RGB
+binary_sensor.living_room_51_15:
+  friendly_name: Motion
+sensor.living_room_51_10:
+  friendly_name: Temperature
+sensor.living_room_51_11:
+  friendly_name: Humidity
+sensor.living_room_51_15:
+  friendly_name: Light Level
+light.living_room_51_30:
+  friendly_name: LED
 
 sensor.node_21_10:
   friendly_name: Kitchen Temperature

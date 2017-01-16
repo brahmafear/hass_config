@@ -1,0 +1,10 @@
+group:
+  kitchen:
+  name: Kitchen
+  entities:
+    - binary_sensor.node_21_22
+    - sensor.node_21_10
+    - sensor.node_21_11
+    - light.node_21_40
+
+

@@ -22,11 +22,11 @@
 - alias: "House Temperature Notification"
   trigger:
     - platform: numeric_state
-      entity_id: sensor.node_20_10
+      entity_id: sensor.living_room_51_10
       below: 50
   action:
     - service: notify.pushbullet
       data:
         title: "House Cold!"
-        message: "House is too cold. Current indoor temp is {{ states.sensor.node_20_10.state }}!"
+        message: "House is too cold. Current indoor temp is {{ states.sensor.living_room_51_10.state }}!"
 

@@ -4,4 +4,4 @@ front_card:
     - sensor.time
     - sensor.dark_sky_hourly_summary
     - sensor.dark_sky_apparent_temperature
-    - sensor.node_20_10
+    - sensor.living_room_51_10

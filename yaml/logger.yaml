@@ -1,3 +1,5 @@
+#default: debug
+
 default: warning
 logs:
   mysensors: error

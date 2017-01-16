@@ -2,11 +2,11 @@ livingroom:
   name: Living Room
   control: hidden
   entities:
-    - binary_sensor.node_20_22
-    - sensor.node_20_10
-    - sensor.node_20_11
+    - binary_sensor.living_room_51_20
+    - sensor.living_room_10
+    - sensor.living_room_11
+    - sensor.living_room_15
     - switch.window_candles
     - switch.christmas_tree
-    - switch.samsungtv
-    - switch.living_room_lamp
-    - light.node_20_60
+    - light.living_room_51_30
+    - media_player.living_room_tv
