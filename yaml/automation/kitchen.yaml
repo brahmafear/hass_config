@@ -1,7 +1,7 @@
 - alias: Kitchen Motion at night
   trigger:
     - platform: state
-      entity_id: binary_sensor.node_21_22
+      entity_id: binary_sensor.kitchen_52_20
       to: 'on'
   condition:
     condition: or
@@ -13,3 +13,12 @@
   action:
     service: homeassistant.turn_on
     entity_id: script.kitchen_lights_motion
+
+- alias: Kitchen Button
+  trigger:
+    - platform: state
+      entity_id: switch.kitchen_52_21
+      to: 'on'
+  action:
+    service: light.toggle
+    entity_id: light.kitchen_52_33

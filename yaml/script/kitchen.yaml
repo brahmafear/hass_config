@@ -7,7 +7,7 @@ kitchen_lights_motion:
         entity_id: script.kitchen_lights_motion_off
     - service: light.turn_on
       data:
-        entity_id: light.node_21_40
+        entity_id: light.kitchen_52_33
         rgb_color: [16, 0, 0]
         brightness: 32
     - service: script.turn_on
@@ -21,4 +21,4 @@ kitchen_lights_motion_off:
         minutes: 1
     - service: light.turn_off
       data:
-        entity_id: light.node_21_40
+        entity_id: light.kitchen_52_33

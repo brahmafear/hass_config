@@ -3,6 +3,10 @@
     - platform: state
       entity_id: binary_sensor.living_room_51_20
       to: 'on'
+  condition:
+    condition: state
+    entity_id: input_boolean.master_automation
+    state: 'on'
   action:
     service: homeassistant.turn_on
     entity_id: script.timed_christmas

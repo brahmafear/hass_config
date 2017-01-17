@@ -1,4 +1,4 @@
-binary_sensor.living_room_51_15:
+binary_sensor.living_room_51_20:
   friendly_name: Motion
 sensor.living_room_51_10:
   friendly_name: Temperature
@@ -8,14 +8,21 @@ sensor.living_room_51_15:
   friendly_name: Light Level
 light.living_room_51_30:
   friendly_name: LED
+switch.living_room_51_21:
+  friendly_name: Button
 
-sensor.node_21_10:
-  friendly_name: Kitchen Temperature
-sensor.node_21_11:
-  friendly_name: Kitchen Humidity
-light.node_21_40:
-  friendly_name: Kitchen RGB Light
-  emulated_hue: true
+binary_sensor.kitchen_52_20:
+  friendly_name: Motion
+sensor.kitchen_52_10:
+  friendly_name: Temperature
+sensor.kitchen_52_11:
+  friendly_name: Humidity
+sensor.kitchen_52_15:
+  friendly_name: Light Level
+light.kitchen_52_33:
+  friendly_name: RGB Strip
+  emulated_hue : true
   emulated_hue_name: "Kitchen Lights"
-binary_sensor.node_21_22:
-  friendly_name: Kitchen Motion
+switch.kitchen_52_21:
+  friendly_name: Button
+

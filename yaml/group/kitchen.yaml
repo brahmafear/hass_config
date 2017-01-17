@@ -1,7 +1,10 @@
 kitchen:
   name: Kitchen
+  control: hidden
   entities:
-    - binary_sensor.node_21_22
-    - sensor.node_21_10
-    - sensor.node_21_11
-    - light.node_21_40
+    - binary_sensor.kitchen_52_20
+    - sensor.kitchen_52_10
+    - sensor.kitchen_52_11
+    - sensor.kitchen_52_15
+    - light.kitchen_52_33
+    - switch.kitchen_52_21
