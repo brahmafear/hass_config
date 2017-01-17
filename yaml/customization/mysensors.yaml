@@ -11,6 +11,24 @@ light.living_room_51_30:
 switch.living_room_51_21:
   friendly_name: Button
 
+binary_sensor.bedroom_53_20:
+  friendly_name: Motion
+sensor.bedroom_53_10:
+  friendly_name: Temperature
+sensor.bedroom_53_11:
+  friendly_name: Humidity
+sensor.bedroom_53_15:
+  friendly_name: Light Level
+light.bedroom_53_30:
+  friendly_name: LED
+light.bedroom_53_36:
+  friendly_name: Neo
+  emulated_hue: true
+  emulated_hue_name: "Bedroom Lights"
+switch.bedroom_53_21:
+  friendly_name: Button
+
+
 binary_sensor.kitchen_52_20:
   friendly_name: Motion
 sensor.kitchen_52_10:

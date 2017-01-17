@@ -1,0 +1,11 @@
+bedroom:
+  name:  Bedroom
+  control: hidden
+  entities:
+    - binary_sensor.bedroom_53_20
+    - sensor.bedroom_53_10
+    - sensor.bedroom_53_11
+    - sensor.bedroom_53_15
+    - light.bedroom_53_30
+    - light.bedroom_53_36
+    - switch.bedroom_53_21

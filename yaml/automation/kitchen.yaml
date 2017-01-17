@@ -4,12 +4,15 @@
       entity_id: binary_sensor.kitchen_52_20
       to: 'on'
   condition:
-    condition: or
-    conditions:
-      - condition: time
-        after: '22:00:00'
-      - condition: time
-        before: '07:00:00'
+#    condition: or
+#    conditions:
+#      - condition: time
+#        after: '22:00:00'
+#      - condition: time
+#        before: '07:00:00'
+    condition: numeric_state
+    entity_id: sensor.kitchen_52_15
+    below: 30
   action:
     service: homeassistant.turn_on
     entity_id: script.kitchen_lights_motion
