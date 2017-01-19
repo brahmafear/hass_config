@@ -1,5 +1,5 @@
 master_automation:
-  name: Auomation Control
+  name: Automation Control
   initial: on
   icon: mdi:android
 

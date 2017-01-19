@@ -10,6 +10,8 @@ homeassistant:
 
 device_tracker: !include_dir_merge_list yaml/device_tracker      
 camera: !include_dir_merge_list yaml/camera      
+binary_sensor: !include_dir_merge_list yaml/binary_sensor      
+cover: !include_dir_merge_list yaml/cover      
 sensor: !include_dir_merge_list yaml/sensor
 automation: !include_dir_merge_list yaml/automation
 switch: !include_dir_merge_list yaml/switch
