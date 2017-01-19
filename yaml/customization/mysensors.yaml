@@ -44,3 +44,17 @@ light.kitchen_52_33:
 switch.kitchen_52_21:
   friendly_name: Button
 
+
+binary_sensor.porch_54_20:
+  friendly_name: Motion
+sensor.porch_54_10:
+  friendly_name: Temperature
+sensor.porch_54_11:
+  friendly_name: Humidity
+sensor.porch_54_15:
+  friendly_name: Light Level
+light.porch_54_33:
+  friendly_name: RGB Strip
+switch.porch_54_21:
+  friendly_name: Button
+

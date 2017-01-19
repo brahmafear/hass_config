@@ -1,4 +1,4 @@
-- alias: Kitchen Motion at night
+- alias: Kitchen Motion
   trigger:
     - platform: state
       entity_id: binary_sensor.kitchen_52_20

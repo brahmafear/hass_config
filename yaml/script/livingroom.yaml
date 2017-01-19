@@ -1,19 +1,19 @@
 
-timed_christmas:
-  alias: "Turn on christmas and set timer"
+livingroom_lights_motion:
+  alias: "Living Room Motion"
   sequence:
     - service: script.turn_off
       data:
-         entity_id: script.christmas_off
+         entity_id: script.livingroom_lights_motion_off
     - service: switch.turn_on
       data:
         entity_id: switch.christmas_tree
     - service: script.turn_on
       data:
-        entity_id: script.christmas_off
+        entity_id: script.livingroom_lights_motion_off
 
-christmas_off:
-  alias: "Turn off lamp after 10 minutes"
+livingroom_lights_motion_off:
+  alias: "Living Room Motion Off"
   sequence:
     - delay:
         minutes: 10

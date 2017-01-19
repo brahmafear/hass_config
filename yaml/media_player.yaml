@@ -6,4 +6,3 @@
   port: 8001
   name: Living Room TV
   timeout: 1
-- platform: plex

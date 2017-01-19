@@ -1,10 +1,12 @@
 garage:
   name: Garage
   icon: mdi:garage
+  control: hidden
   entities:
     - binary_sensor.garage_motion
     - sensor.dht_sensor_temperature
     - sensor.dht_sensor_humidity
+    - switch.garage_light
     - switch.garage_relay
     - cover.garage_door
     - camera.garage_cam

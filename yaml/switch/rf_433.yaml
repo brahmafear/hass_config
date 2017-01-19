@@ -11,6 +11,11 @@
       pulselength: 186
       code_on: 5264691
       code_off: 5264700
+    garage_light:
+      protocol: 1
+      pulselength: 186
+      code_on: 5266691
+      code_off: 5266700
 #    plug_3:
 #      protocol: 1
 #      pulselength: 186
