@@ -1,7 +1,7 @@
 locations:
   name: Locations
-  icon: mdi:web
   view: yes
+  icon: mdi:web
   entities:
     - device_tracker.owntracks_dwmi5
     - device_tracker.toyota_prius

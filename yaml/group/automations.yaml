@@ -1,6 +1,7 @@
 automations:
   name: Automation Controls
   entities:
+    - automation.motion_alarm_notification
     - automation.house_temperature_notification
     - automation.startup_notification
     - automation.livingroom_motion

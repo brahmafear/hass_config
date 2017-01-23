@@ -1,7 +1,7 @@
 system:
   name: System
-  icon: mdi:settings
   view: yes
+  icon: mdi:settings
   entities:
     - group.raspi
     - group.internet

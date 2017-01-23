@@ -1,0 +1,27 @@
+- alias: Motion Alarm Notification
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.garage_motion
+      from: 'off'
+      to: 'on'
+    - platform: state
+      entity_id: binary_sensor.livingroom_51_20
+      from: 'off'
+      to: 'on'
+    - platform: state
+      entity_id: binary_sensor.kitchen_52_20
+      from: 'off'
+      to: 'on'
+    - platform: state
+      entity_id: binary_sensor.bedroom_53_20
+      from: 'off'
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: input_boolean.motion_alarm
+      state: 'on'
+  action:
+    - service: notify.pushbullet
+      data: 
+        title: "Motion Alarm"
+        message: "Motion detected."

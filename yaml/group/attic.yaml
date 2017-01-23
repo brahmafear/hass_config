@@ -1,0 +1,6 @@
+attic:
+  name: Attic
+  control: no
+  entities:
+    - sensor.attic_59_10
+    - sensor.attic_59_11

@@ -58,3 +58,7 @@ light.porch_54_33:
 switch.porch_54_21:
   friendly_name: Button
 
+sensor.attic_59_10:
+  friendly_name: Temperature
+sensor.attic_59_11:
+  friendly_name: Humidity

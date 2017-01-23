@@ -1,0 +1,5 @@
+zone: home
+devices:
+  - device_tracker.dwmi5
+#tolerance: 10
+#unit_of_measurement: mi

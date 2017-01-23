@@ -1,5 +1,5 @@
 - platform: rpi_gpio
-  relay_time: 0.4
+  relay_time: 1.0
   state_pull_mode: 'DOWN'
   invert_logic: false
   covers:

@@ -1,11 +1,26 @@
-#default: debug
+############################################################
+#
+# Logger
+#
+############################################################
 
-default: warning
+# Log Severities: notset, debug, info, warn, warning, error, fatal, critical
+
+#default: debug
+default: error
+
 logs:
+#  homeassistant.components.automation: debug
+#  homeassistant.components.sensor: debug
+#  homeassistant.components.discovery: warn
+#  homeassistant.components.camera: debug
+#  homeassistant.components.alexa: debug
+#  homeassistant.components.emulated_hue: debug
+#  homeassistant.components.http: warn
+#  requests.packages.urllib3.connectionpool: warn
+#  homeassistant.core: debug
+#  homeassistant.components.mysensors: debug
+
   mysensors: error
 
-#  default: info
-#  logs:
-#    mysensors: debug
-#    homeassistant.components.mysensors: debug
 

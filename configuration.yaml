@@ -18,6 +18,7 @@ switch: !include_dir_merge_list yaml/switch
 notify: !include_dir_merge_list yaml/notify
 light: !include_dir_merge_list yaml/light
 scene: !include_dir_merge_list yaml/scene
+# proximity: !include_dir_list yaml/proximity
 input_boolean: !include_dir_merge_named yaml/input_boolean
 script: !include_dir_merge_named yaml/script
 group: !include_dir_merge_named yaml/group
@@ -34,21 +35,26 @@ shell_command: !include yaml/shell_commands.yaml
 ifttt:
   key: !secret ifttt_key
 
-tts:
-  - platform: google
-    cache: true
-    cache_dir: /tmp/tts
-    time_memory: 300
+#tts:
+#  - platform: google
+#    cache: true
+#    cache_dir: /run/hass/tts
+#    time_memory: 300
 
 weather:
   - platform: openweathermap
     api_key: !secret openweathermap_api_key
 
-updater:
-discovery:
-conversation:
-# history:
-# logbook:
 sun:
+updater:
+conversation:
+
+# recorder: !include yaml/recorder.yaml
+# history: !include yaml/history.yaml
+# history:
+
+# logbook:
+# discovery:
 # zeroconf:
+
 frontend:

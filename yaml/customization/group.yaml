@@ -1,0 +1,8 @@
+group.home:
+  order: 1
+group.environment:
+  order: 2
+group.locations:
+  order: 3
+group.system:
+  order: 4
