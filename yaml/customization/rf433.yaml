@@ -8,8 +8,6 @@ switch.window_candles:
   emulated_hue: true
   emulated_hue_name: "window candles"
 
-switch.samsungtv:
-  friendly_name: Samsung TV
-  assumed_state: true
-  emulated_hue: true
-  emulated_hue_name: "tv"
+switch.garage_light:
+  friendly_name: Garage Light
+  assumed_state: false

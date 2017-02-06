@@ -1,0 +1,8 @@
+buttons:
+  name: Buttons
+  control: hidden
+  entities:
+    - switch.living_room_51_21
+    - switch.kitchen_52_21
+    - switch.bedroom_53_21
+    - switch.porch_54_21

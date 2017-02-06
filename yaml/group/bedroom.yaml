@@ -8,4 +8,4 @@ bedroom:
     - sensor.bedroom_53_15
     - light.bedroom_53_30
     - light.bedroom_53_36
-    - switch.bedroom_53_21
+#    - switch.bedroom_53_21

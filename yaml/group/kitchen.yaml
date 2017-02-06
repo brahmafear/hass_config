@@ -7,4 +7,4 @@ kitchen:
     - sensor.kitchen_52_11
     - sensor.kitchen_52_15
     - light.kitchen_52_33
-    - switch.kitchen_52_21
+#    - switch.kitchen_52_21

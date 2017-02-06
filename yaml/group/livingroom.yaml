@@ -9,5 +9,4 @@ livingroom:
     - light.living_room_51_30
     - switch.window_candles
     - switch.christmas_tree
-    - media_player.living_room_tv
-    - switch.living_room_51_21
+#    - switch.living_room_51_21

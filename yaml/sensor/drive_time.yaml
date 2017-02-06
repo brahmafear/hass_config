@@ -3,14 +3,22 @@
   origin: !secret google_travel_time_origin
   destination: !secret google_travel_time_destination_1
   name: !secret google_travel_time_name_1   
+  options:
+    mode: driving
+
 - platform: google_travel_time
   api_key: !secret google_travel_time_api_key
   origin: !secret google_travel_time_origin
   destination: !secret google_travel_time_destination_2
   name: !secret google_travel_time_name_2
+  options:
+    mode: driving
+
 - platform: google_travel_time
   name: Phone To Home
   api_key: !secret google_travel_time_api_key
   origin: device_tracker.owntracks_dwmi5
   destination: zone.home
+  options:
+    mode: driving
 

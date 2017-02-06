@@ -4,12 +4,13 @@ sensor.living_room_51_10:
   friendly_name: Temperature
 sensor.living_room_51_11:
   friendly_name: Humidity
+  icon: mdi:water-percent
 sensor.living_room_51_15:
   friendly_name: Light Level
 light.living_room_51_30:
   friendly_name: LED
 switch.living_room_51_21:
-  friendly_name: Button
+  friendly_name: Living Room
 
 binary_sensor.bedroom_53_20:
   friendly_name: Motion
@@ -17,6 +18,7 @@ sensor.bedroom_53_10:
   friendly_name: Temperature
 sensor.bedroom_53_11:
   friendly_name: Humidity
+  icon: mdi:water-percent
 sensor.bedroom_53_15:
   friendly_name: Light Level
 light.bedroom_53_30:
@@ -26,7 +28,7 @@ light.bedroom_53_36:
   emulated_hue: true
   emulated_hue_name: "Bedroom Lights"
 switch.bedroom_53_21:
-  friendly_name: Button
+  friendly_name: Bedroom
 
 
 binary_sensor.kitchen_52_20:
@@ -35,6 +37,7 @@ sensor.kitchen_52_10:
   friendly_name: Temperature
 sensor.kitchen_52_11:
   friendly_name: Humidity
+  icon: mdi:water-percent
 sensor.kitchen_52_15:
   friendly_name: Light Level
 light.kitchen_52_33:
@@ -42,7 +45,7 @@ light.kitchen_52_33:
   emulated_hue : true
   emulated_hue_name: "Kitchen Lights"
 switch.kitchen_52_21:
-  friendly_name: Button
+  friendly_name: Kitchen
 
 
 binary_sensor.porch_54_20:
@@ -51,14 +54,16 @@ sensor.porch_54_10:
   friendly_name: Temperature
 sensor.porch_54_11:
   friendly_name: Humidity
+  icon: mdi:water-percent
 sensor.porch_54_15:
   friendly_name: Light Level
 light.porch_54_33:
   friendly_name: RGB Strip
 switch.porch_54_21:
-  friendly_name: Button
+  friendly_name: Porch
 
 sensor.attic_59_10:
   friendly_name: Temperature
 sensor.attic_59_11:
   friendly_name: Humidity
+  icon: mdi:water-percent

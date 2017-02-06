@@ -1,8 +1,7 @@
 sensor.dht_sensor_humidity:
   friendly_name: Garage Humidity
+  icon: mdi:water-percent
 sensor.dht_sensor_temperature:
   friendly_name: Garage Temperature
 binary_sensor.garage_motion:
   sensor_class: motion
-switch.garage_light:
-  friendly_name: Garage Light

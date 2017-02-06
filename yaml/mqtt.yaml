@@ -1,7 +1,8 @@
   broker: 127.0.0.1
 #  port: 8883
   port: 1883
-  client_id: homeassistant
+#  client_id: homeassistant
+  client_id: home-assistant-1
   keepalive: 60
 #  username: !secret mqtt_username
 #  password: !secret mqtt_password

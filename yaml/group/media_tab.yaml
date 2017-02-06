@@ -1,0 +1,9 @@
+media:
+  name: Media
+  icon: mdi:television-guide
+  view: true
+  entities:
+    - sensor.plex
+    - media_player.plex_web_chrome
+    - media_player.chromemyers
+    - media_player.living_room_tv
