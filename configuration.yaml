@@ -41,9 +41,9 @@ ifttt:
 #    cache_dir: /run/hass/tts
 #    time_memory: 300
 
-weather:
-  - platform: openweathermap
-    api_key: !secret openweathermap_api_key
+#weather:
+#  - platform: openweathermap
+#    api_key: !secret openweathermap_api_key
 
 sun:
 updater:
@@ -54,7 +54,7 @@ history: !include yaml/history.yaml
 # history:
 
 # logbook:
-# discovery:
-# zeroconf:
+discovery:
+zeroconf:
 
 frontend:

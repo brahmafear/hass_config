@@ -2,7 +2,7 @@
 #    domains:
 #      - device_tracker
 
-purge_days: 3
+# purge_days: 3
 # db_url: sqlite:///var/run/hass.db
 db_url: !secret hass_db_url
 exclude:
@@ -45,4 +45,4 @@ exclude:
     - sensor.since_last_boot
     - sensor.sonicwall
     - sensor.time
-
+    - sensor.moon

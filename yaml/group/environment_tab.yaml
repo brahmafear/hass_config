@@ -4,8 +4,9 @@ environment:
   icon: mdi:weather-partlycloudy
   entities:
     - sun.sun
+    - sensor.moon
     - group.darksky
     - group.openweathermap
     - group.wunderground
-    - weather.openweathermap
-    - group.yweather
+#    - weather.openweathermap
+#    - group.yweather

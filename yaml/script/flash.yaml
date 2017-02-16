@@ -1,0 +1,40 @@
+light_flash:
+  alias: "Light Flash Alert"
+  sequence:
+    - service: switch.toggle
+      data:
+#        entity_id: group.flashers
+        entity_id: switch.window_candles
+    - delay:
+        seconds: 0.5
+    - service: switch.toggle
+      data:
+#        entity_id: group.flashers
+        entity_id: switch.window_candles
+    - delay:
+        seconds: 0.5
+    - service: switch.toggle
+      data:
+#        entity_id: group.flashers
+        entity_id: switch.window_candles
+    - delay:
+        seconds: 0.5
+    - service: switch.toggle
+      data:
+#        entity_id: group.flashers
+        entity_id: switch.window_candles
+    - delay:
+        seconds: 0.5
+    - service: switch.toggle
+      data:
+#        entity_id: group.flashers
+        entity_id: switch.window_candles
+    - delay:
+        seconds: 0.5
+    - service: switch.toggle
+      data:
+#        entity_id: group.flashers
+        entity_id: switch.window_candles
+    - delay:
+        seconds: 0.5
+

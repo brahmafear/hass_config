@@ -1,0 +1,6 @@
+Flashers:
+  name: Flashers
+  control: hidden
+  entities:
+    - light.window_candles
+    - light.christmas_tree

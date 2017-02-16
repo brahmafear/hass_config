@@ -1,0 +1,29 @@
+17-02-15 18:55:08 ERROR (MainThread) [homeassistant.components.device_tracker] Error setting up platform owntracks
+Traceback (most recent call last):
+  File "/srv/hass/lib/python3.4/site-packages/homeassistant/components/device_tracker/__init__.py", line 165, in async_setup_platform
+    disc_info)
+  File "/usr/lib/python3.4/asyncio/futures.py", line 388, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.4/asyncio/tasks.py", line 286, in _wakeup
+    value = future.result()
+  File "/usr/lib/python3.4/asyncio/futures.py", line 277, in result
+    raise self._exception
+  File "/usr/lib/python3.4/concurrent/futures/thread.py", line 54, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/srv/hass/lib/python3.4/site-packages/homeassistant/components/device_tracker/owntracks.py", line 314, in setup_scanner
+    mqtt.subscribe(hass, EVENT_TOPIC, owntracks_event_update, 1)
+  File "/srv/hass/lib/python3.4/site-packages/homeassistant/helpers/event.py", line 26, in factory
+    hass.loop, ft.partial(async_factory, *args, **kwargs)).result()
+  File "/usr/lib/python3.4/concurrent/futures/_base.py", line 402, in result
+    return self.__get_result()
+  File "/usr/lib/python3.4/concurrent/futures/_base.py", line 354, in __get_result
+    raise self._exception
+  File "/srv/hass/lib/python3.4/site-packages/homeassistant/util/async.py", line 167, in run_callback
+    future.set_result(callback(*args))
+  File "/srv/hass/lib/python3.4/site-packages/homeassistant/components/mqtt/__init__.py", line 202, in async_subscribe
+    MQTT_CLIENT.subscribe(topic, qos)
+  File "/srv/hass/lib/python3.4/site-packages/homeassistant/components/mqtt/__init__.py", line 405, in subscribe
+    _raise_on_error(result)
+  File "/srv/hass/lib/python3.4/site-packages/homeassistant/components/mqtt/__init__.py", line 516, in _raise_on_error
+    raise HomeAssistantError('Error talking to MQTT: {}'.format(result))
+homeassistant.exceptions.HomeAssistantError: Error talking to MQTT: 1

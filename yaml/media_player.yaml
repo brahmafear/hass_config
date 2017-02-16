@@ -6,3 +6,6 @@
   port: 8001
   name: Living Room TV
   timeout: 1
+- platform: apple_tv
+  host: 192.168.9.242
+  login_id: 00000000-3c11-5c07-c05e-49dd686541cb

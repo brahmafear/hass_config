@@ -5,7 +5,7 @@ raspi:
     - sensor.cpu_use
     - sensor.ram_use
     - sensor.disk_free_
-    - sensor.disk_free_mntfantom
+    - sensor.disk_free_mntmedia
     - sensor.last_boot
 #    - sensor.since_last_boot
     - sensor.cpu_temperature

@@ -7,4 +7,4 @@ trusted_networks:
 ip_ban_enabled: true
 login_attempts_threshold: 3
 base_url: !secret http_base_url
-development: true
+# development: true

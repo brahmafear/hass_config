@@ -1,0 +1,5 @@
+hass:
+  name: Home Assistant
+  entities:
+    - sensor.installed_ha_version
+    - sensor.current_ha_version

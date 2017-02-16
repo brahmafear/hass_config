@@ -17,7 +17,7 @@
     - type: disk_free
       arg: /
     - type: disk_free
-      arg: /mnt/fantom/
+      arg: /mnt/media/
     - type: memory_use_percent
     - type: processor_use
     - type: last_boot

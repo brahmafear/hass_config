@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+pyfttt/__init__.py
+pyfttt/cmd_script.py
+pyfttt/sending.py
+pyfttt/server.py
+pyfttt/test_server.py
+pyfttt.egg-info/PKG-INFO
+pyfttt.egg-info/SOURCES.txt
+pyfttt.egg-info/dependency_links.txt
+pyfttt.egg-info/entry_points.txt
+pyfttt.egg-info/requires.txt
+pyfttt.egg-info/top_level.txt
