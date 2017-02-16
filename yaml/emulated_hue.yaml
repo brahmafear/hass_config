@@ -6,3 +6,4 @@ exposed_domains:
   - switch
   - scene
   - light
+  - input_boolean

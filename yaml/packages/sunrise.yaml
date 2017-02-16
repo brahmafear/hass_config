@@ -1,0 +1,18 @@
+sensor:
+  - platform: template
+    sensors:
+      sunrise:
+        value_template: "{{ as_timestamp(states.sun.sun.attributes.next_rising) | timestamp_custom('%H:%M', True) }}"
+
+  - platform: template
+    sensors:
+      sunset:
+        value_template: "{{ as_timestamp(states.sun.sun.attributes.next_setting) | timestamp_custom('%H:%M', True) }}"
+
+
+homeassistant:
+  customize:
+    sensor.sunrise:
+      friendly_name: Next Sunrise
+    sensor.sunset:
+      friendly_name: Next Sunset

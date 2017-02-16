@@ -4,6 +4,8 @@ environment:
   icon: mdi:weather-partlycloudy
   entities:
     - sun.sun
+    - sensor.sunrise
+    - sensor.sunset
     - sensor.moon
     - group.darksky
     - group.openweathermap
