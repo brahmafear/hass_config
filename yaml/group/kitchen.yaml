@@ -8,3 +8,4 @@ kitchen:
     - sensor.kitchen_52_15
     - light.kitchen_52_33
 #    - switch.kitchen_52_21
+    - light.nook_light

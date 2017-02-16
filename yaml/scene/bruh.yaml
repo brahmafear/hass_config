@@ -1,0 +1,7 @@
+  - name: Blue Porch
+    entities:
+      light.porch_leds:
+        state: on
+        rgb_color: [ 0, 0, 255 ]
+        brightness: 255
+

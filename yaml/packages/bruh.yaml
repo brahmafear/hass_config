@@ -66,6 +66,21 @@ automation:
           topic: "bruh/mqttstrip/setanimationspeed"
           payload: '{{ trigger.to_state.state | int }}'
 
+#scene:
+#  - name: Blue Porch
+#    entities:
+#      light.porch_leds:
+#        state: on
+#        rgb_color: [ 0, 0, 255 ]
+#        brightness: 255
+
+
+homeassistant:
+  customize:
+    scene.blue_porch:
+      emulated_hue: true
+      emulated_hue_name: Blue Porch
+
 #group:
 #  bruh:
 #    entities:
