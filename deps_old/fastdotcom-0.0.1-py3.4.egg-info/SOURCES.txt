@@ -1,9 +1,0 @@
-setup.cfg
-setup.py
-fastdotcom/__init__.py
-fastdotcom.egg-info/PKG-INFO
-fastdotcom.egg-info/SOURCES.txt
-fastdotcom.egg-info/dependency_links.txt
-fastdotcom.egg-info/requires.txt
-fastdotcom.egg-info/top_level.txt
-fastdotcom.egg-info/zip-safe

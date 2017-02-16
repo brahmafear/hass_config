@@ -8,6 +8,7 @@
 *.test
 *.good
 *.bak
+*.old
 .*
 !/.gitignore
 home-assistant.log
