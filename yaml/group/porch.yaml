@@ -8,4 +8,8 @@ porch:
     - sensor.porch_54_15
 #    - light.porch_54_33
 #    - switch.porch_54_21
+    - input_select.porch_led_effect
+    - input_slider.porch_animation_speed
+    - light.porch_leds
+
       

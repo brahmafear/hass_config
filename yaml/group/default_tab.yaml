@@ -3,4 +3,3 @@ default_view_temp:
   view: yes
   entities:
     - group.front_card
-    - group.bruh

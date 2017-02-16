@@ -1,6 +1,6 @@
 light:
   - platform: mqtt
-    name: "Bruh LEDs"
+    name: "Porch LEDs"
     command_topic: "bruh/mqttstrip/setpower"
     state_topic: "bruh/mqttstrip/setpowerpub"
     rgb_state_topic: "bruh/mqttstrip/setcolorpub"
@@ -10,8 +10,8 @@ light:
     optimistic: false
 
 input_select:
-  bruh_led_effect:
-    name: Bruh LED Effect
+  porch_led_effect:
+    name: Porch LED Effect
     options:
      - "BPM"
      - "Candy Cane"
@@ -34,7 +34,7 @@ input_select:
     initial: "Solid"
 
 input_slider:
-  bruh_animation_speed:
+  porch_animation_speed:
     name: Bruh Animation Speed
     initial: 150
     min: 1
@@ -42,33 +42,33 @@ input_slider:
     step: 10
 
 automation: 
-  - alias: "Bruh Input Effect"
+  - alias: "Porch Input Effect"
     initial_state: True
     hide_entity: False
     trigger:
       - platform: state
-        entity_id: input_select.bruh_led_effect
+        entity_id: input_select.porch_led_effect
     action:
       - service: mqtt.publish
         data_template:
           topic: "bruh/mqttstrip/seteffect"
           payload: '{{ trigger.to_state.state | string }}'
 
-  - alias: "Bruh Animation Speed"
+  - alias: "Porch Animation Speed"
     initial_state: True
     hide_entity: False
     trigger:
       - platform: state
-        entity_id: input_slider.bruh_animation_speed
+        entity_id: input_slider.porch_animation_speed
     action:
       - service: mqtt.publish
         data_template:
           topic: "bruh/mqttstrip/setanimationspeed"
           payload: '{{ trigger.to_state.state | int }}'
 
-group:
-  bruh:
-    entities:
-      - input_select.bruh_led_effect
-      - input_slider.bruh_animation_speed
-      - light.bruh_leds
+#group:
+#  bruh:
+#    entities:
+#      - input_select.bruh_led_effect
+#      - input_slider.bruh_animation_speed
+#      - light.bruh_leds
