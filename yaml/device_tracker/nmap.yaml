@@ -1,9 +1,9 @@
 - platform: nmap_tracker
   hosts: 192.168.9.1-255
-  track_new_devices: no
-  consider_home: 1800
-  interval_seconds: 60
-  home_interval: 5
+  track_new_devices: false
+  # consider_home: 180
+  interval_seconds: 30
+  # home_interval: 5
   scan_options: " --privileged -sP "
   # sudo setcap cap_net_raw,cap_net_admin,cap_net_bind_service+eip /usr/bin/nmap 
 
