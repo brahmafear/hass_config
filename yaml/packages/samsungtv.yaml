@@ -1,4 +1,4 @@
-switch: 
+switch:
   - platform: command_line
     switches:
       samsungtv:
@@ -6,6 +6,7 @@ switch:
         command_off: /srv/hass/bin/samsungctl --host 192.168.9.199 --method websocket --name samsungctl --description "SamsungCTL" --id com.ha.samsungctl --timeout 1 KEY_POWER
         # command_on: /srv/hass/bin/samsung.sh on
         # command_off: /srv/hass/bin/samsung.sh off
+        command_state: /bin/ping -c3 -l3 -n -q -W1 192.168.9.199 > /dev/null
         friendly_name: "Samsung TV"
 
 homeassistant:
@@ -14,30 +15,29 @@ homeassistant:
       emulated_hue: true
       emulated_hue_name: "TV"
 
-automation:
-  - alias: SamsungTV Watcher On
-    trigger:
-      - platform: state
-        entity_id: device_tracker.samsungtv
-        to: 'home'
-    condition:
-      condition: state
-      entity_id: switch.samsungtv
-      state: 'off'
-    action:
-      service: switch.turn_on
-      entity_id: switch.samsungtv
-
-  - alias: SamsungTV Watcher Off
-    trigger:
-      - platform: state
-        entity_id: device_tracker.samsungtv
-        to: 'not home'
-    condition:
-      condition: state
-      entity_id: switch.samsungtv
-      state: 'on'
-    action:
-      service: switch.turn_off
-      entity_id: switch.samsungtv
-  
+# automation:
+#   - alias: SamsungTV Watcher On
+#     trigger:
+#       - platform: state
+#         entity_id: device_tracker.samsungtv
+#         to: 'home'
+#     condition:
+#       condition: state
+#       entity_id: switch.samsungtv
+#       state: 'off'
+#     action:
+#       service: switch.turn_on
+#       entity_id: switch.samsungtv
+#
+#   - alias: SamsungTV Watcher Off
+#     trigger:
+#       - platform: state
+#         entity_id: device_tracker.samsungtv
+#         to: 'not home'
+#     condition:
+#       condition: state
+#       entity_id: switch.samsungtv
+#       state: 'on'
+#     action:
+#       service: switch.turn_off
+#       entity_id: switch.samsungtv

@@ -15,6 +15,14 @@
     mode: driving
 
 - platform: google_travel_time
+  api_key: !secret google_travel_time_api_key
+  origin: !secret google_travel_time_origin
+  destination: !secret google_travel_time_destination_3
+  name: !secret google_travel_time_name_3
+  options:
+    mode: driving
+
+- platform: google_travel_time
   name: Phone To Home
   api_key: !secret google_travel_time_api_key
   origin: device_tracker.owntracks_dwmi5
