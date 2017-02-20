@@ -2,11 +2,10 @@ sensor:
   - platform: template
     sensors:
       sunrise:
+        entity_id: sun.sun
         value_template: "{{ as_timestamp(states.sun.sun.attributes.next_rising) | timestamp_custom('%H:%M', True) }}"
-
-  - platform: template
-    sensors:
       sunset:
+        entity_id: sun.sun
         value_template: "{{ as_timestamp(states.sun.sun.attributes.next_setting) | timestamp_custom('%H:%M', True) }}"
 
 

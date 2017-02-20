@@ -8,10 +8,10 @@ homeassistant:
   customize: !include_dir_merge_named yaml/customization
   packages: !include_dir_named yaml/packages
 
-device_tracker: !include_dir_merge_list yaml/device_tracker      
-camera: !include_dir_merge_list yaml/camera      
-binary_sensor: !include_dir_merge_list yaml/binary_sensor      
-cover: !include_dir_merge_list yaml/cover      
+device_tracker: !include_dir_merge_list yaml/device_tracker
+camera: !include_dir_merge_list yaml/camera
+binary_sensor: !include_dir_merge_list yaml/binary_sensor
+cover: !include_dir_merge_list yaml/cover
 sensor: !include_dir_merge_list yaml/sensor
 automation: !include_dir_merge_list yaml/automation
 switch: !include_dir_merge_list yaml/switch
@@ -35,7 +35,7 @@ shell_command: !include yaml/shell_commands.yaml
 ifttt:
   key: !secret ifttt_key
 
-#tts:
+# tts:
 #  - platform: google
 #    cache: true
 #    cache_dir: /run/hass/tts
@@ -51,7 +51,6 @@ conversation:
 
 recorder: !include yaml/recorder.yaml
 history: !include yaml/history.yaml
-# history:
 
 # logbook:
 discovery:

@@ -1,0 +1,44 @@
+sensor:
+  - platform: template
+    sensors:
+        chromecast:
+          friendly_name: 'ChromeCast'
+          value_template: "{{ 'Online' if is_state('device_tracker.6cadf84f2951', 'home') else 'Offline' }}"
+        engenius_ap:
+          friendly_name: 'EnGenius AP'
+          value_template: "{{ 'Online' if is_state('device_tracker.00026fa196b8', 'home') else 'Offline' }}"
+        viostor_nvr:
+          friendly_name: 'VioStor NVR'
+          value_template: "{{ 'Online' if is_state('device_tracker.00089bcb17cc', 'home') else 'Offline' }}"
+        sonicwall:
+          friendly_name: 'SonicWall'
+          value_template: "{{ 'Online' if is_state('device_tracker.0017c53ba4f0', 'home') else 'Offline' }}"
+        airport_extreme:
+          friendly_name: 'Airport Extreme'
+          value_template: "{{ 'Online' if is_state('device_tracker.002436a06bb8', 'home') else 'Offline' }}"
+        ecoplug_2:
+          friendly_name: 'ecoPlug 2'
+          value_template: "{{ 'Online' if is_state('device_tracker.382b7807780e', 'home') else 'Offline' }}"
+        hpmini:
+          friendly_name: 'HP mini'
+          value_template: "{{ 'Online' if is_state('device_tracker.hpmini', 'home') else 'Offline' }}"
+        yeelight1:
+          friendly_name: 'YeeLight 1'
+          value_template: "{{ 'Online' if is_state('device_tracker.yeelight1', 'home') else 'Offline' }}"
+        appletv:
+          friendly_name: 'Apple TV'
+          value_template: "{{ 'Online' if is_state('device_tracker.appletv', 'home') else 'Offline' }}"
+
+group:
+  network_devices:
+    name: Network Devices
+    entities:
+      - sensor.sonicwall
+      - sensor.engenius_ap
+      - sensor.airport_extreme
+      - sensor.viostor_nvr
+      - sensor.hpmini
+      - sensor.ecoplug_2
+      - sensor.chromecast
+      - sensor.yeelight1
+      - sensor.appletv

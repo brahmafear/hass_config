@@ -1,9 +1,0 @@
-network_devices:
-  name: Network Devices
-  entities:
-    - sensor.sonicwall
-    - sensor.engenius_ap
-    - sensor.airport_extreme
-    - sensor.viostor_nvr
-    - sensor.ecoplug_2
-    - sensor.chromecast
