@@ -8,7 +8,7 @@ sensor:
   - platform: template
     sensors:
       ha_last_restart:
-        value_template: '{% if (states.automation.startup_notification.attributes.last_triggered) %}
+        value_template: '{% if states.automation.startup_notification and states.automation.startup_notification.attributes.last_triggered %}
                            {{ as_timestamp(states.automation.startup_notification.attributes.last_triggered) | timestamp_custom("%b %d %X") }}
                          {% else %}
                            Never
@@ -25,7 +25,7 @@ automation:
       service: notify.pushbullet
       data:
         title: "HomeAssistant Update"
-        message: 'Update for Home Assistant is available.'
+        message: "HomeAssistant {{ states('updater.updater') }} is now available."
 
   - alias: "Startup Notification"
     trigger:

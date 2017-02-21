@@ -13,11 +13,8 @@
 say_hello:
   alias: Say Hello
   sequence:
-    - service: homeassistant.turn_on
-      data:
-        entity_id: media_player.cast
     - service: tts.google_say
-      entity_id: media_player.cast
+      entity_id: media_player.appletv
       data:
-        message: 'Hello Jennifer'
-        cache: false 
+        message: 'Hello Dave'
+        cache: false
