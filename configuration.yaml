@@ -35,11 +35,11 @@ shell_command: !include yaml/shell_commands.yaml
 ifttt:
   key: !secret ifttt_key
 
-# tts:
-#  - platform: google
-#    cache: true
-#    cache_dir: /run/hass/tts
-#    time_memory: 300
+tts:
+ - platform: google
+   cache: true
+   cache_dir: /run/hass/tts
+   time_memory: 300
 
 #weather:
 #  - platform: openweathermap

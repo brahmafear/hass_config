@@ -8,7 +8,11 @@ sensor:
   - platform: template
     sensors:
       ha_last_restart:
-        value_template: '{{ as_timestamp(states.automation.startup_notification.attributes.last_triggered) | timestamp_custom("%b %d %X") }}'
+        value_template: '{% if (states.automation.startup_notification.attributes.last_triggered) %}
+                           {{ as_timestamp(states.automation.startup_notification.attributes.last_triggered) | timestamp_custom("%b %d %X") }}
+                         {% else %}
+                           Never
+                         {% endif %}'
         friendly_name: HA Last Restart
 
 automation:
