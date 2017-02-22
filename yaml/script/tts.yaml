@@ -14,7 +14,7 @@ say_hello:
   alias: Say Hello
   sequence:
     - service: tts.google_say
-      entity_id: media_player.appletv
+      entity_id: media_player.apple_tv
       data:
         message: 'Hello Dave'
         cache: false

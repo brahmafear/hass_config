@@ -4,5 +4,6 @@ front_card:
     - sensor.time
     - sensor.dark_sky_hourly_summary
     - sensor.dark_sky_apparent_temperature
-    - sensor.living_room_51_10
+    - sensor.house_temp_avg
+    - sensor.house_hum_avg
     - input_boolean.motion_alarm

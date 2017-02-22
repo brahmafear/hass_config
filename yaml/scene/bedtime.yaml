@@ -2,4 +2,10 @@
   entities:
     switch.christmas_tree: off
     switch.samsungtv: off
-
+    light.nook_light:
+      state: off
+    light.porch_leds:
+      state: off
+    light.kitchen_52_33:
+      state: off
+    
