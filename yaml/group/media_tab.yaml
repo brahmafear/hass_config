@@ -4,6 +4,8 @@ media:
   view: true
   entities:
     - sensor.plex
-    - media_player.plex_web_chrome
+    - media_player.apple_tv
     - media_player.chromemyers
     - media_player.living_room_tv
+    - media_player.rasplex
+    - media_player.samsungtv
