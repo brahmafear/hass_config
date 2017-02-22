@@ -34,31 +34,31 @@ sensor:
     sensors:
         chromecast:
           friendly_name: 'ChromeCast'
-          value_template: "{{ 'Online' if is_state('device_tracker.chromecast', 'home') else 'Offline' }}"
+          value_template: "{{ 'OK' if is_state('device_tracker.chromecast', 'home') else 'Offline' }}"
         engenius_ap:
           friendly_name: 'EnGenius AP'
-          value_template: "{{ 'Online' if is_state('device_tracker.engenius_ap', 'home') else 'Offline' }}"
+          value_template: "{{ 'OK' if is_state('device_tracker.engenius_ap', 'home') else 'Offline' }}"
         viostor_nvr:
           friendly_name: 'VioStor NVR'
-          value_template: "{{ 'Online' if is_state('device_tracker.viostor', 'home') else 'Offline' }}"
+          value_template: "{{ 'OK' if is_state('device_tracker.viostor', 'home') else 'Offline' }}"
         sonicwall:
           friendly_name: 'SonicWall'
-          value_template: "{{ 'Online' if is_state('device_tracker.sonicwall', 'home') else 'Offline' }}"
+          value_template: "{{ 'OK' if is_state('device_tracker.sonicwall', 'home') else 'Offline' }}"
         airport_extreme:
           friendly_name: 'Airport Extreme'
-          value_template: "{{ 'Online' if is_state('device_tracker.airport_extreme', 'home') else 'Offline' }}"
+          value_template: "{{ 'OK' if is_state('device_tracker.airport_extreme', 'home') else 'Offline' }}"
         ecoplug_2:
           friendly_name: 'ecoPlug 2'
-          value_template: "{{ 'Online' if is_state('device_tracker.ecoplug_2', 'home') else 'Offline' }}"
+          value_template: "{{ 'OK' if is_state('device_tracker.ecoplug_2', 'home') else 'Offline' }}"
         hpmini:
           friendly_name: 'HP mini'
-          value_template: "{{ 'Online' if is_state('device_tracker.hpmini', 'home') else 'Offline' }}"
+          value_template: "{{ 'OK' if is_state('device_tracker.hpmini', 'home') else 'Offline' }}"
         yeelight1:
           friendly_name: 'YeeLight 1'
-          value_template: "{{ 'Online' if is_state('device_tracker.yeelight1', 'home') else 'Offline' }}"
+          value_template: "{{ 'OK' if is_state('device_tracker.yeelight1', 'home') else 'Offline' }}"
         appletv:
           friendly_name: 'Apple TV'
-          value_template: "{{ 'Online' if is_state('device_tracker.appletv', 'home') else 'Offline' }}"
+          value_template: "{{ 'OK' if is_state('device_tracker.appletv', 'home') else 'Offline' }}"
 
 group:
   network_devices:
@@ -73,3 +73,4 @@ group:
       - sensor.chromecast
       - sensor.yeelight1
       - sensor.appletv
+
