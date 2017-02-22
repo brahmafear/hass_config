@@ -1,2 +1,10 @@
 
 exclude: !include excludes.yaml
+include:
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping
+    - sensor.owm_temperature
+    - sensor.cpu_use
+    - sensor.cpu_temperature
