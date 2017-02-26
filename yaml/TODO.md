@@ -1,22 +1,24 @@
-Possible future projects for HomeAssistant:
+# To Do List
 
-- PiLight for 433MHz control allowing multiple transmitters and moving hass off Pi.
+**Possible future projects for HomeAssistant:**
 
-- RFLink on Arduino Mega via serial for 433MHz, MiLight control
-    https://home-assistant.io/components/rflink/
+    * PiLight for 433MHz control allowing multiple transmitters and moving hass off Pi.
 
-- AI Thinker RGB/WW bulbs either reverse-engineered or with new firmware
+    * RFLink on Arduino Mega via serial for 433MHz, MiLight control
+      https://home-assistant.io/components/rflink/
 
-- Slampher with new firmware
+    * AI Thinker RGB/WW bulbs either reverse-engineered or with new firmware
 
-- USB webcam either with motion or just capturing stills
+    * Slampher with new firmware
 
-- Mopidy installations using Pis and Chips
+    * USB webcam either with motion or just capturing stills
 
-- SNMP device tracker via Soonicwall
+    * Mopidy installations using Pis and Chips
 
-- Rewrite MySensor Node scripts to use before()
-    https://forum.mysensors.org/topic/4276/converting-a-sketch-from-1-5-x-to-2-0-x/2
+    * SNMP device tracker via Soonicwall
 
-- iBeacon with OwnTracks - won't work with BT device tracker
-    https://gist.github.com/JonTheNiceGuy/294c5eadb3832c7bc6f90f472ca28242
+    * Rewrite MySensor Node scripts to use before()
+      https://forum.mysensors.org/topic/4276/converting-a-sketch-from-1-5-x-to-2-0-x/2
+
+    * iBeacon with OwnTracks - won't work with BT device tracker
+      https://gist.github.com/JonTheNiceGuy/294c5eadb3832c7bc6f90f472ca28242
