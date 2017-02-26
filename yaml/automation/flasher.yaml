@@ -1,7 +1,7 @@
 - alias: Flash Notification
-  trigger: 
+  trigger:
     - platform: state
-      entity_id: device_tracker.dwmi5
+      entity_id: device_tracker.owntracks_dwmi5
       to: 'home'
   action:
     service: script.turn_on

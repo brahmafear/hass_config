@@ -1,0 +1,19 @@
+script:
+  dash_rayovac:
+    alias: Dash Rayovac
+    sequence:
+      - service: switch.toggle
+        data:
+          entity_id: switch.christmas_tree
+      - delay:
+          seconds: 1.0
+      - service: switch.toggle
+        data:
+          entity_id: switch.christmas_tree
+
+  dash_vanityfair:
+    alias: Dash Vanity Fair
+    sequence:
+      - service: scene.turn_on
+        data:
+          entity_id: scene.bedtime

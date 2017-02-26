@@ -2,11 +2,11 @@ sensor:
   - platform: command_line
     command: python3 -c "import requests; print(requests.get('https://pypi.python.org/pypi/homeassistant/json').json()['info']['version'])"
     name: HA Current Version
-    scan_interval: 86400
+    scan_interval: 3600
   - platform: command_line
     name: HA Installed Version
     command: "/srv/hass/bin/hass --version"
-    scan_interval: 86400
+    scan_interval: 3600
   - platform: template
     sensors:
       ha_last_restart:

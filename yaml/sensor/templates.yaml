@@ -2,11 +2,11 @@
   sensors:
     house_temp_avg:
       value_template: '{{ ((states.sensor.living_room_51_10.state|int + states.sensor.kitchen_52_10.state|int + states.sensor.bedroom_53_10.state|int) / 3) |round(1) }}'
-      friendly_name: 'Average Temperature'
+      friendly_name: 'Average House Temperature'
       unit_of_measurement: '°F'
     house_hum_avg:
       value_template: '{{ ((states.sensor.living_room_51_11.state|int + states.sensor.kitchen_52_11.state|int + states.sensor.bedroom_53_11.state|int) / 3) |round(1) }}'
-      friendly_name: 'Average humidity'
+      friendly_name: 'Average House Humidity'
       unit_of_measurement: '%'
 
 # {{ ((states.sensor.living_room_51_10.state|int + states.sensor.kitchen_52_10.state|int + states.sensor.bedroom_53_10.state|int) / 3) |round(1) }}
