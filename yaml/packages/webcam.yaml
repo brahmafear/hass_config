@@ -1,0 +1,16 @@
+shell_command:
+  webcam_snap: /usr/bin/streamer -q -o /var/run/hass/snap.jpeg
+
+camera:
+  - platform: local_file
+    name: Garage Cam
+    file_path: /var/run/hass/snap.jpeg
+
+automation:
+  - alias: Webcam Snap
+    trigger:
+      platform: time
+      minutes: '/5'
+      seconds: 00
+    action:
+      service: shell_command.webcam_snap  

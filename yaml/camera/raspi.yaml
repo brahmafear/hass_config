@@ -1,3 +1,0 @@
-#- platform: local_file
-#  name: Garage Cam
-#  file_path: /var/run/streamer/streamer.jpeg
