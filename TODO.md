@@ -9,13 +9,13 @@
 
     * AI Thinker RGB/WW bulbs either reverse-engineered or with new firmware
 
-    * Slampher with new firmware
+    ~~ * Slampher with new firmware ~~
 
-    * USB webcam either with motion or just capturing stills
+    ~~ * USB webcam either with motion or just capturing stills ~~
 
     * Mopidy installations using Pis and Chips
 
-    * SNMP device tracker via Soonicwall
+    * SNMP device tracker via Sonicwall
 
     * Rewrite MySensor Node scripts to use before()
       https://forum.mysensors.org/topic/4276/converting-a-sketch-from-1-5-x-to-2-0-x/2
