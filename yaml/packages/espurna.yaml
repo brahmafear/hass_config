@@ -53,3 +53,15 @@ homeassistant:
       friendly_name: Porch Left Light
     switch.slampher_173b67:
       friendly_name: Side Door Light
+      emulated_hue: true
+      emulated_hue_name: "Side Light"
+    group.porch_lights:
+      emulated_hue: true
+      emulated_hue_name: "Porch Lights"
+
+group:
+  porch_lights:
+    name: Porch Lights
+    entities:
+      - switch.slampher_1735b9
+      - switch.slampher_173a91

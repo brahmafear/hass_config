@@ -77,13 +77,13 @@ script:
   dash_neat:
     alias: Dash Neat
     sequence:
-      - service: scene.turn_on
+      - service: scene.toggle
         data:
-          entity_id: scene.bedtime
+          entity_id: switch.slampher_173b67
 
   dash_mentos:
     alias: Dash Mentos
     sequence:
-      - service: scene.turn_on
+      - service: switch.toggle
         data:
-          entity_id: scene.bedtime
+          entity_id: group.porch_lights
