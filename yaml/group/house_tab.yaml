@@ -9,3 +9,4 @@ house:
     - group.bedroom
     - group.porch
     - group.attic
+    - group.outdoors

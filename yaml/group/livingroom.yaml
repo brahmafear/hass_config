@@ -7,7 +7,6 @@ livingroom:
     - sensor.living_room_51_11
     - sensor.living_room_51_15
     - light.living_room_51_30
-    - switch.window_candles
     - switch.christmas_tree
 #    - switch.living_room_51_21
     - switch.samsungtv

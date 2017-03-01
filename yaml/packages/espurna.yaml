@@ -44,3 +44,12 @@ switch:
     optimistic: false
     qos: 0
     retain: true
+
+homeassistant:
+  customize:
+    switch.slampher_1735b9:
+      friendly_name: Porch Right Light
+    switch.slampher_173a91:
+      friendly_name: Porch Left Light
+    switch.slampher_173b67:
+      friendly_name: Side Door Light
