@@ -22,3 +22,9 @@
 
 * iBeacon with OwnTracks - won't work with BT device tracker
       https://gist.github.com/JonTheNiceGuy/294c5eadb3832c7bc6f90f472ca28242
+
+* Rework motion detection scripts to use 'for' instead of second script
+
+* PyATV command line switches for direct control of ATV
+
+* LIRC2MQTT for IR input

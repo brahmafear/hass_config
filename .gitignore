@@ -17,6 +17,7 @@ home-assistant_v2.db
 secrets.yaml
 known_devices.yaml
 mysensors_devices.json
+mysensors_devices.tmp.json
 ip_bans.yaml
 /icloud
 /lib

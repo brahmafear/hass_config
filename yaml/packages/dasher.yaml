@@ -17,3 +17,73 @@ script:
       - service: scene.turn_on
         data:
           entity_id: scene.bedtime
+
+  dash_wilsonjones:
+    alias: Dash Wilson Jones
+    sequence:
+      - service: scene.turn_on
+        data:
+          entity_id: scene.bedtime
+
+  dash_newchapter:
+    alias: Dash NewChapter
+    sequence:
+      - service: scene.turn_on
+        data:
+          entity_id: scene.bedtime
+
+  dash_laundress:
+    alias: Dash Laundress
+    sequence:
+      - service: scene.turn_on
+        data:
+          entity_id: scene.bedtime
+
+  dash_pact:
+    alias: Dash Pact
+    sequence:
+      - service: scene.turn_on
+        data:
+          entity_id: scene.bedtime
+
+  dash_milkbaby:
+    alias: Dash Milk Baby
+    sequence:
+      - service: scene.turn_on
+        data:
+          entity_id: scene.bedtime
+
+  dash_puracy:
+    alias: Dash Puracy
+    sequence:
+      - service: scene.turn_on
+        data:
+          entity_id: scene.bedtime
+
+  dash_repurpose:
+    alias: Dash RePurpose
+    sequence:
+      - service: scene.turn_on
+        data:
+          entity_id: scene.bedtime
+
+  dash_dreamwater:
+    alias: Dash Dream Water
+    sequence:
+      - service: scene.turn_on
+        data:
+          entity_id: scene.bedtime
+
+  dash_neat:
+    alias: Dash Neat
+    sequence:
+      - service: scene.turn_on
+        data:
+          entity_id: scene.bedtime
+
+  dash_mentos:
+    alias: Dash Mentos
+    sequence:
+      - service: scene.turn_on
+        data:
+          entity_id: scene.bedtime
