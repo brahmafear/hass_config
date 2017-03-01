@@ -77,7 +77,7 @@ script:
   dash_neat:
     alias: Dash Neat
     sequence:
-      - service: scene.toggle
+      - service: switch.toggle
         data:
           entity_id: switch.slampher_173b67
 
