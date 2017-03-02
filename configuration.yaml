@@ -47,13 +47,13 @@ tts:
 
 sun:
 updater:
-conversation:
+# conversation:
 
 recorder: !include yaml/recorder.yaml
 history: !include yaml/history.yaml
 
 # logbook:
-discovery:
+# discovery:
 zeroconf:
 
 frontend:
