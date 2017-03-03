@@ -20,6 +20,9 @@ homeassistant:
       hidden: true
     device_tracker.yeelight1:
       hidden: true
+    device_tracker.tp_link:
+      hidden: true
+
 
     device_tracker.5ccf7f29a0d5:
       hidden: true
@@ -53,6 +56,9 @@ sensor:
       airport_extreme:
         friendly_name: 'Airport Extreme'
         value_template: "{{ 'OK' if is_state('device_tracker.airport_extreme', 'home') else 'Offline' }}"
+      tp_link:
+        friendly_name: 'TP Link'
+        value_template: "{{ 'OK' if is_state('device_tracker.tp_link', 'home') else 'Offline' }}"
       ecoplug_1:
         friendly_name: 'ecoPlug 1'
         value_template: "{{ 'OK' if is_state('device_tracker.ecoplug_1', 'home') else 'Offline' }}"
@@ -86,6 +92,7 @@ group:
       - sensor.sonicwall
       - sensor.engenius_ap
       - sensor.airport_extreme
+      - sensor.tp_link
       - sensor.viostor_nvr
       - sensor.hpmini
       - sensor.chromecast
