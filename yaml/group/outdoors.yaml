@@ -1,5 +1,6 @@
 outdoors:
   name: Outdoors
+  control: hidden
   entities:
     - switch.window_candles
     - switch.slampher_1735b9
