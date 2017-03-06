@@ -10,6 +10,8 @@ homeassistant:
       hidden: true
     device_tracker.airport_extreme:
       hidden: true
+    device_tracker.ecoplug_1:
+      hidden: true
     device_tracker.ecoplug_2:
       hidden: true
     device_tracker.appletv:
@@ -26,15 +28,6 @@ homeassistant:
       hidden: true
     device_tracker.echo_2:
       hidden: true
-
-
-    device_tracker.5ccf7f29a0d5:
-      hidden: true
-    device_tracker.7cc7090fefcb:
-      hidden: true
-    device_tracker.b827eb480cb2:
-      hidden: true
-
     device_tracker.SLAMPHER_1735b9:
       hidden: true
     device_tracker.SLAMPHER_173b67:
