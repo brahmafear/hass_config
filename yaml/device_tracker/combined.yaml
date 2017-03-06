@@ -1,0 +1,20 @@
+- platform: nmap_tracker
+  # Global device tracker options (have to be in first platform)
+  track_new_devices: false
+  consider_home: 180
+  interval_seconds: 30
+
+  hosts: 192.168.9.1-255
+  home_interval: 5
+  scan_options: " --privileged -sP "
+  # sudo setcap cap_net_raw,cap_net_admin,cap_net_bind_service+eip /usr/bin/nmap 
+
+- platform: automatic
+  client_id: !secret automatic_client_id
+  secret: !secret automatic_secret
+  username: !secret automatic_username
+  password: !secret automatic_password
+
+- platform: owntracks
+  max_gps_accuracy: 200
+

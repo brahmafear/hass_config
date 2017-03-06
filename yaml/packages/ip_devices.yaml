@@ -22,6 +22,10 @@ homeassistant:
       hidden: true
     device_tracker.tp_link:
       hidden: true
+    device_tracker.echo_1:
+      hidden: true
+    device_tracker.echo_2:
+      hidden: true
 
 
     device_tracker.5ccf7f29a0d5:
@@ -59,6 +63,12 @@ sensor:
       tp_link:
         friendly_name: 'TP Link'
         value_template: "{{ 'OK' if is_state('device_tracker.tp_link', 'home') else 'Offline' }}"
+      echo_1:
+        friendly_name: 'echo 1'
+        value_template: "{{ 'OK' if is_state('device_tracker.echo_1', 'home') else 'Offline' }}"
+      echo_2:
+        friendly_name: 'echo 2'
+        value_template: "{{ 'OK' if is_state('device_tracker.echo_2', 'home') else 'Offline' }}"
       ecoplug_1:
         friendly_name: 'ecoPlug 1'
         value_template: "{{ 'OK' if is_state('device_tracker.ecoplug_1', 'home') else 'Offline' }}"
@@ -97,6 +107,8 @@ group:
       - sensor.hpmini
       - sensor.chromecast
       - sensor.appletv
+      - sensor.echo_1
+      - sensor.echo_2
       - sensor.ecoplug_1
       - sensor.ecoplug_2
       - sensor.yeelight1
