@@ -1,4 +1,6 @@
+
 sensor:
+  - platform: moon
   - platform: template
     sensors:
       sunrise:
@@ -16,6 +18,14 @@ sensor:
                            Never
                          {% endif %}"
 
+group:
+  astro:
+    name: Sun & Moon
+    entities:
+      - sun.sun
+      - sensor.sunrise
+      - sensor.sunset
+      - sensor.moon
 
 homeassistant:
   customize:

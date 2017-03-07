@@ -3,10 +3,11 @@ environment:
   view: yes
   icon: mdi:weather-partlycloudy
   entities:
-    - sun.sun
-    - sensor.sunrise
-    - sensor.sunset
-    - sensor.moon
+#    - sun.sun
+#    - sensor.sunrise
+#    - sensor.sunset
+#    - sensor.moon
+    - group.astro
     - group.darksky
     - group.openweathermap
     - group.wunderground

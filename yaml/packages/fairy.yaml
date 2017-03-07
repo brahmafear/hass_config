@@ -1,0 +1,6 @@
+switch:
+  platform: mqtt
+  name: Fairy Bottle
+  command_topic: "/house/fairy/set"
+  state_topic: "/house/fairy/state"
+  

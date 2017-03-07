@@ -11,3 +11,5 @@ switch.window_candles:
 switch.garage_light:
   friendly_name: Garage Light
   assumed_state: false
+  emulated_hue: true
+  emulated_hue_name: "garage light"
