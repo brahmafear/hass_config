@@ -16,6 +16,11 @@ sensor:
                            Never
                          {% endif %}'
         friendly_name: HA Last Restart
+  - platform: command_line
+    name: SSL Expiry
+    unit_of_measurement: days
+    scan_interval: 86400
+    command: "ssl-cert-check -c /etc/letsencrypt/live/lewes.hopto.org/cert.pem | tail -c 36"
 
 automation:
   - alias: 'Update Available Notification'
@@ -47,3 +52,4 @@ group:
       - sensor.ha_installed_version
       - sensor.ha_current_version
       - sensor.ha_last_restart
+      - sensor.ssl_expiry
