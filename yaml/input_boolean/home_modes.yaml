@@ -7,13 +7,8 @@ master_automation:
 #  name: Notify when someone arrives home
 #  initial: off
 #  icon: mdi:car
-  
+
 trash_reminder:
   name: Trash Day Reminder
   icon: mdi:delete
-  initial: off 
-
-motion_alarm:
-  name: Motion Alarm
-  icon: mdi:alarm-multiple
   initial: off
