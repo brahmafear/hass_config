@@ -2,14 +2,17 @@ switch.christmas_tree:
   friendly_name: Christmas Tree
   emulated_hue: true
   emulated_hue_name: "christmas tree"
+  persistent: true
 
 switch.window_candles:
   friendly_name: Window Candles
   emulated_hue: true
   emulated_hue_name: "window candles"
+  persistent: true
 
 switch.garage_light:
   friendly_name: Garage Light
   assumed_state: false
   emulated_hue: true
   emulated_hue_name: "garage light"
+  persistent: true
