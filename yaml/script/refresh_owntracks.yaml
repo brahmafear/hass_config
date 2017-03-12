@@ -1,8 +1,9 @@
+###  This won't work at moment due to MQTT bridging being single direction
+
 refresh_owntracks:
   alias: Refresh Owntracks
   sequence:
   - service: mqtt.publish
     data:
       topic: "owntracks/owntracks/dwmi5/cmd"
-#     payload_template: '{"_type":"cmd","action":"reportLocation"}'
-      payload: '{"_type":"cmd","action":"reportLocation"}"'
+      payload: '{"_type":"cmd","action":"reportLocation"}'

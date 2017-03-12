@@ -1,0 +1,20 @@
+android_ip_webcam:
+  - host: 192.168.9.215
+    name: AstroTab
+
+group:
+  astrotab:
+    view: true
+    entities:
+      - camera.astrotab
+      - sensor.astrotab_audio_connections
+      - sensor.astrotab_video_connections
+      - switch.astrotab_exposure_lock
+      - switch.astrotab_focus
+      - switch.astrotab_frontfacing_camera
+      - switch.astrotab_gps_active
+      - switch.astrotab_night_vision
+      - switch.astrotab_overlay
+      - switch.astrotab_torch
+      - switch.astrotab_video_recording
+      - switch.astrotab_white_balance_lock

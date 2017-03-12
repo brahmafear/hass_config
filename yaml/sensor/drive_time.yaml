@@ -2,7 +2,7 @@
   api_key: !secret google_travel_time_api_key
   origin: !secret google_travel_time_origin
   destination: !secret google_travel_time_destination_1
-  name: !secret google_travel_time_name_1   
+  name: !secret google_travel_time_name_1
   options:
     mode: driving
 
@@ -29,4 +29,3 @@
   destination: zone.home
   options:
     mode: driving
-
