@@ -1,5 +1,6 @@
 binary_sensor.living_room_51_20:
   friendly_name: Motion
+  sensor_class: motion
 sensor.living_room_51_10:
   friendly_name: Temperature
 sensor.living_room_51_11:
@@ -14,6 +15,7 @@ switch.living_room_51_21:
 
 binary_sensor.bedroom_53_20:
   friendly_name: Motion
+  sensor_class: motion
 sensor.bedroom_53_10:
   friendly_name: Temperature
 sensor.bedroom_53_11:
@@ -33,6 +35,7 @@ switch.bedroom_53_21:
 
 binary_sensor.kitchen_52_20:
   friendly_name: Motion
+  sensor_class: motion
 sensor.kitchen_52_10:
   friendly_name: Temperature
 sensor.kitchen_52_11:
@@ -50,6 +53,7 @@ switch.kitchen_52_21:
 
 binary_sensor.porch_54_20:
   friendly_name: Motion
+  sensor_class: motion
 sensor.porch_54_10:
   friendly_name: Temperature
 sensor.porch_54_11:
