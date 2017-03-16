@@ -20,3 +20,18 @@
     entity_id:
       - switch.window_candles
       - group.porch_lights
+
+- alias: Side Light upon Prius arrival
+  trigger:
+    - platform: state
+      entity_id: device_tracker.toyota_prius
+      state: home
+  condition:
+    - condition: template
+      value_template: '{{ states.sun.sun.attributes.elevation < 4 }}'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: switch.slampher_173b67
+    - delay: 5:00
+    - service: homeassistant.turn_off
+      entity_id: switch.slampher_173b67

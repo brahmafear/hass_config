@@ -10,3 +10,4 @@ livingroom:
     - switch.christmas_tree
 #    - switch.living_room_51_21
     - switch.samsungtv
+    - switch.fairy_bottle
