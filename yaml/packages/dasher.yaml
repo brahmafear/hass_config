@@ -21,9 +21,14 @@ script:
   dash_wilsonjones:
     alias: Dash Wilson Jones
     sequence:
-      - service: scene.turn_on
+      - service_template: >
+          {% if states.cover.garage_door.state == "open" %}
+          cover.close_cover
+          {% else %}
+          cover.open_cover
+          {% endif %}
         data:
-          entity_id: scene.bedtime
+          entity_id: cover.garage_door
 
   dash_newchapter:
     alias: Dash NewChapter
