@@ -1,9 +1,10 @@
 ###  This won't work at moment due to MQTT bridging being single direction
+###  On iOS, must export config, add "cmd: true", reimport to OT app.
 
 refresh_owntracks:
   alias: Refresh Owntracks
   sequence:
   - service: mqtt.publish
     data:
-      topic: "owntracks/owntracks/dwmi5/cmd"
+      topic: "owntracks/owntracks/dwmi5"
       payload: '{"_type":"cmd","action":"reportLocation"}'

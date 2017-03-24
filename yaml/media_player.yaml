@@ -13,7 +13,7 @@
 #   host: 192.168.9.242
 #   login_id: !secret apple_tv_login_id
 
-- platform: mpd
-  host: 192.168.9.79
-  password: mpd
-  port: 6600
+# - platform: mpd
+#   host: 192.168.9.79
+#   password: mpd
+#   port: 6600
