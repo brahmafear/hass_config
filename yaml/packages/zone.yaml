@@ -15,6 +15,6 @@ automation:
       state: 'on'
     action:
       service: notify.pushbullet
-      data_template:
-        message: >
-          Zone changed to {{ trigger.to_state.entity_id.attributes.state }}
+      data:
+        title: Home Assistant Zone
+        message: Zone changed to {{ states.device_tracker.owntracks_dwmi5.state }}.
