@@ -1,4 +1,0 @@
-- platform: rest
-  resource: http://ip.jsontest.com
-  name: external_ip
-  value_template: '{{ value_json.ip }}'

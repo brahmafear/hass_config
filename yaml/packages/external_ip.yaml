@@ -1,0 +1,16 @@
+sensor:
+  - platform: rest
+    resource: http://ip.jsontest.com
+    name: external_ip
+    value_template: '{{ value_json.ip }}'
+
+automation:
+  - alias: Notify New External IP
+    trigger:
+      platform: state
+      entity_id: sensor.external_ip
+    action:
+      - service: notify.pushbullet
+        data:
+          title: Home Assistant IP
+          message: External IP changed to {{ states.sensor.external_ip.state }}.
