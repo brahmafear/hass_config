@@ -1,0 +1,20 @@
+input_boolean:
+  zone_alert:
+    name: Zone Change Alert
+    icon: mdi:alarm-multiple
+    initial: off
+
+automation:
+  - alias: Zone Change Alert
+    trigger:
+      platform: state
+      entity_id: device_tracker.owntracks_dwmi5
+    condition:
+      condition: state
+      entity_id: input_boolean.zone_alert
+      state: 'on'
+    action:
+      service: notify.pushbullet
+      data_template:
+        message: >
+          Zone changed to {{ trigger.to_state.entity_id.attributes.state }}

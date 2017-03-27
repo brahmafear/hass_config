@@ -4,6 +4,7 @@ group:
     control: hidden
     entities:
       - binary_sensor.kitchen_52_20
+      - sensor.kitchen_last_motion
       - sensor.kitchen_52_10
       - sensor.kitchen_52_11
       - sensor.kitchen_52_15
@@ -20,6 +21,18 @@ homeassistant:
       hidden: true
       emulated_hue: true
       emulated_hue_name: Kitchen Light
+
+sensor:
+  - platform: template
+    sensors:
+      kitchen_last_motion:
+        value_template: '{% if states.automation.kitchen_motion and states.automation.kitchen_motion.attributes.last_triggered %}
+                           {{ as_timestamp(states.automation.kitchen_motion.attributes.last_triggered) | timestamp_custom("%b %d %X") }}
+                         {% else %}
+                           Never
+                         {% endif %}'
+        friendly_name: Last Motion
+
 
 script:
   kitchen_lights_motion:

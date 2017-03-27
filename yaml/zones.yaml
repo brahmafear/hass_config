@@ -17,7 +17,7 @@
   longitude: !secret zone_chsp_long
   radius: 2000
   icon: mdi:people
-  passive: true
+  # passive: true
 
 - name: lewes_yacht_club
   latitude: !secret zone_lyc_lat
