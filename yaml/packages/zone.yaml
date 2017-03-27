@@ -16,5 +16,11 @@ automation:
     action:
       service: notify.pushbullet
       data:
-        title: Home Assistant Zone
-        message: Zone changed to {{ states.device_tracker.owntracks_dwmi5.state }}.
+        title: HA Zone now {{ states.device_tracker.owntracks_dwmi5.state }}
+#        message: Zone changed from {{ trigger.from_state.state|default('null') }} to {{ trigger.to_state.state|default('null') }}.
+        message: >
+          {% if trigger is defined %}
+          Zone changed from {{ trigger.from_state.state }} to {{ trigger.to_state.state }}.
+          {% else %}
+          Zone changed.
+          {% endif %}
