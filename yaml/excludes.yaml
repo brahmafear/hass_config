@@ -21,7 +21,10 @@
     - sensor.dark_sky_temperature
     - sensor.dark_sky_wind_speed
     - sensor.disk_free_
+    - sensor.ecoplug_1
     - sensor.ecoplug_2
+    - sensor.echo_1
+    - sensor.echo_2
     - sensor.engenius_ap
     - sensor.external_ip
     - sensor.last_boot
@@ -40,3 +43,21 @@
     - sensor.moon
     - sensor.sunrise
     - sensor.sunset
+    - sensor.airport_extreme
+    - sensor.appletv
+    - sensor.astrotab_audio_connections
+    - sensor.astrotab_video_connections
+    - sensor.chromecast
+    - sensor.ha_current_version
+    - sensor.ha_last_restart
+    - sensor.hpmini
+    - sensor.kitchen_last_motion
+    - sensor.plex
+    - sensor.slampher_1735b9
+    - sensor.slampher_173a91
+    - sensor.slampher_173b67
+    - sensor.ssl_expiry
+    - sensor.tp_link
+    - sensor.yeelight1
+    - sensor.viostor_nvr
+

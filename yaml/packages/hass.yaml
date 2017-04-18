@@ -37,8 +37,8 @@ automation:
   - alias: "Startup Notification"
     hide_entity: true
     trigger:
-      platform: event
-      event_type: homeassistant_start
+      platform: homeassistant
+      event: start
     action:
       service: notify.pushbullet
       data:

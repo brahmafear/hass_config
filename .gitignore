@@ -19,6 +19,7 @@ known_devices.yaml
 mysensors_devices.json
 mysensors_devices.tmp.json
 ip_bans.yaml
+ios.conf
 /icloud
 /lib
 /deps

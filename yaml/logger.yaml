@@ -11,7 +11,7 @@
 default: warn
 # default: error
 
-logs:
+# logs:
 #  homeassistant.components.automation: debug
 #  homeassistant.components.sensor: debug
 #  homeassistant.components.discovery: warn
@@ -23,6 +23,6 @@ logs:
 #  homeassistant.core: debug
 #  homeassistant.components.mysensors: debug
 
-  mysensors: error
+#  mysensors: error
 #  google_travel_time: debug
 #  homeassistant.components.google_travel_time: debug

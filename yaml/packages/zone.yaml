@@ -10,12 +10,21 @@ automation:
       platform: state
       entity_id: device_tracker.owntracks_dwmi5
     condition:
-      condition: state
-      entity_id: input_boolean.zone_alert
-      state: 'on'
+      condition: and
+      conditions:
+        - condition: state
+          entity_id: input_boolean.zone_alert
+          state: 'on'
+        - condition: template
+          value_template: >
+            {% if trigger is defined %}
+              {{ trigger.from_state.state != trigger.to_state.state }}
+            {% else %}
+              true
+            {% endif %}
     action:
       service: notify.pushbullet
-      data:
+      data_template:
         title: HA Zone now {{ states.device_tracker.owntracks_dwmi5.state }}
 #        message: Zone changed from {{ trigger.from_state.state|default('null') }} to {{ trigger.to_state.state|default('null') }}.
         message: >

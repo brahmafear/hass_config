@@ -9,6 +9,14 @@ automation:
     trigger:
       platform: state
       entity_id: sensor.external_ip
+    condition:
+      - condition: template
+        value_template: >
+          {% if trigger is defined %}
+            {{ trigger.to_state.state != "unknown" }}
+          {% else %}
+            true
+          {% endif %}
     action:
       - service: notify.pushbullet
         data:

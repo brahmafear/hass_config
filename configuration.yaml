@@ -56,4 +56,6 @@ history: !include yaml/history.yaml
 # discovery:
 zeroconf:
 
+ios:
+
 frontend:

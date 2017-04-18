@@ -3,9 +3,11 @@
     - platform: numeric_state
       entity_id: sensor.living_room_51_10
       below: 50
+    - platform: numeric_state
+      entity_id: sensor.living_room_51_10
+      above: 90
   action:
     - service: notify.pushbullet
       data:
-        title: "House Cold!"
-        message: "House is too cold. Current indoor temp is {{ states.sensor.living_room_51_10.state }}!"
-
+        title: "House Temp!"
+        message: "Current indoor temp is {{ states.sensor.living_room_51_10.state }}!"
