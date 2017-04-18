@@ -1,5 +1,5 @@
 ################################################################
-## Automation / Persistent States
+## Packages / Persistent States
 ################################################################
 
 ################################################################
@@ -32,14 +32,50 @@
 ##       persistent: true
 ################################################################
 
+################################################
+## Customize
+################################################
+
+homeassistant:
+  customize:
+    packages.persistence: &customize
+      haaska_hidden: true
+      homebridge_hidden: true
+      package: 'persistence'
+
+    automation.persistence_enable_automations:
+      <<: *customize
+      friendly_name: "Persistence Enable Automations"
+
+    automation.persistence_publish:
+      <<: *customize
+      friendly_name: "Persistence Publish"
+
+    automation.persistence_subscribe_binary:
+      <<: *customize
+      friendly_name: "Persistence Subscribe (Binary)"
+
+    automation.persistence_subscribe_select_option:
+      <<: *customize
+      friendly_name: "Persistence Subscribe (Select Option)"
+
+    automation.persistence_subscribe_select_value:
+      <<: *customize
+      friendly_name: "Persistence from MQTT (Select Value)"
+
+################################################
+## Automation
+################################################
+
 automation:
+
   ################################################
   ## Persistent Publisher
   ################################################
 
   - alias: persistence_publish
-    hide_entity: true
     initial_state: 'on'
+    hide_entity: true
     trigger:
       - platform: event
         event_type: state_changed
@@ -81,23 +117,9 @@ automation:
   ## Persistent Subscriptions
   ################################################
 
-  - alias: persistence_enable_subscriptions
-    hide_entity: true
-    initial_state: 'on'
-    trigger:
-      - platform: event
-        event_type: homeassistant_start
-    action:
-      - service: automation.turn_on
-        data:
-          entity_id:
-            - automation.persistence_subscribe_binary
-            - automation.persistence_subscribe_select_option
-            - automation.persistence_subscribe_select_value
-
   - alias: persistence_subscribe_binary
+    initial_state: 'on'
     hide_entity: true
-    initial_state: 'off'
     trigger:
       - platform: mqtt
         topic: home-assistant/automation/+
@@ -109,6 +131,8 @@ automation:
         topic: home-assistant/switch/+
     condition: &subscribe_condition
       - condition: template
+        value_template: "{{ ((states[trigger.topic.split('/')[1]][trigger.topic.split('/')[2]]|default).attributes|default).persistent|default(false, true) }}"
+      - condition: template
         value_template: "{{ not is_state(trigger.topic|replace('home-assistant/', '')|replace('/', '.'), trigger.payload) }}"
     action: &subscribe_action
       - service_template: "{{ trigger.topic.split('/')[1] }}.turn_{{ trigger.payload|lower }}"
@@ -116,8 +140,8 @@ automation:
           entity_id: "{{ trigger.topic|replace('home-assistant/', '')|replace('/', '.') }}"
 
   - alias: persistence_subscribe_select_option
+    initial_state: 'on'
     hide_entity: true
-    initial_state: 'off'
     trigger:
       - platform: mqtt
         topic: home-assistant/input_select/+
@@ -129,8 +153,8 @@ automation:
           option: "{{ trigger.payload }}"
 
   - alias: persistence_subscribe_select_value
+    initial_state: 'on'
     hide_entity: true
-    initial_state: 'off'
     trigger:
       - platform: mqtt
         topic: home-assistant/input_slider/+
