@@ -1,0 +1,13 @@
+light:
+  - platform: mqtt_json
+    command_topic: "29A0D5/rgbw/set"  
+    state_topic: "29A0D5/rgbw/state"  
+#    effect: true
+#    effect_list: rainbow
+    brightness: true
+#    color_temp: true
+    rgb: true
+    white_value: true
+    optimistic: false
+    qos: 0
+

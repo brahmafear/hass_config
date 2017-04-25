@@ -29,7 +29,7 @@ logger: !include yaml/logger.yaml
 media_player: !include yaml/media_player.yaml
 emulated_hue: !include yaml/emulated_hue.yaml
 http: !include yaml/http.yaml
-zone: !include yaml/zones.yaml
+# zone: !include yaml/zones.yaml
 shell_command: !include yaml/shell_commands.yaml
 
 ifttt:

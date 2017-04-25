@@ -1,8 +1,14 @@
 sensor:
-  - platform: rest
-    resource: http://ip.jsontest.com
+#  - platform: rest
+#    resource: http://ip.jsontest.com
+#    resource: http://diagnostic.opendns.com/myip
+#    name: external_ip
+#    value_template: '{{ value_json.ip }}'
+  - platform: command_line
     name: external_ip
-    value_template: '{{ value_json.ip }}'
+    command: /usr/bin/curl -sf http://diagnostic.opendns.com/myip | /usr/bin/head -n1
+    scan_interval: 1800
+
 
 automation:
   - alias: Notify New External IP

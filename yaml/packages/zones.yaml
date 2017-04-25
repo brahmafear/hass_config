@@ -1,0 +1,110 @@
+homeassistant:
+  customize:
+    zone.cape_henlopen:
+      track_ios: true
+    zone.crooked_hammock:
+      track_ios: true
+    zone.downtown_rehoboth:
+      track_ios: true
+    zone.gary_and_jane_house:
+      track_ios: true
+    zone.gym:
+      track_ios: true
+    zone.home:
+      track_ios: true
+    zone.lewes_yacht_club:
+      track_ios: true
+    zone.sas:
+      track_ios: true
+      
+zone:
+  - name: home
+    latitude: !secret hass_lat
+    longitude: !secret hass_long
+    radius: 15
+    icon: mdi:home
+
+  - name: gary_and_jane_house
+    latitude: !secret zone_gjh_lat
+    longitude: !secret zone_gjh_long
+    radius: 15
+    icon: mdi:home
+    # passive: true
+
+  - name: downtown_rehoboth
+    latitude: !secret zone_dtr_lat
+    longitude: !secret zone_dtr_long
+    radius: 500
+    icon: mdi:people
+    # passive: true
+
+  - name: cape_henlopen
+    latitude: !secret zone_chsp_lat
+    longitude: !secret zone_chsp_long
+    radius: 2000
+    icon: mdi:people
+    # passive: true
+
+  - name: lewes_yacht_club
+    latitude: !secret zone_lyc_lat
+    longitude: !secret zone_lyc_long
+    radius: 1000
+    icon: mdi:people
+    # passive: true
+
+  - name: sas
+    latitude: !secret zone_sas_lat
+    longitude: !secret zone_sas_long
+    radius: 1500
+    icon: mdi:people
+    # passive: true
+
+  - name: gym
+    latitude: !secret zone_gym_lat
+    longitude: !secret zone_gym_long
+    radius: 200
+    icon: mdi:people
+    # passive: true
+
+  - name: crooked_hammock
+    latitude: !secret zone_hammock_lat
+    longitude: !secret zone_hammock_long
+    radius: 20
+    icon: mdi:people
+    # passive: true
+
+input_boolean:
+  zone_alert:
+    name: Zone Change Alert
+    icon: mdi:alarm-multiple
+    initial: off
+
+automation:
+  - alias: Zone Change Alert
+    trigger:
+      platform: state
+      entity_id: device_tracker.owntracks_dwmi5
+    condition:
+      condition: and
+      conditions:
+        - condition: state
+          entity_id: input_boolean.zone_alert
+          state: 'on'
+        - condition: template
+          value_template: >
+            {% if trigger is defined %}
+              {{ trigger.from_state.state != trigger.to_state.state }}
+            {% else %}
+              true
+            {% endif %}
+    action:
+      service: notify.pushbullet
+      data_template:
+        title: HA Zone now {{ states.device_tracker.owntracks_dwmi5.state }}
+#        message: Zone changed from {{ trigger.from_state.state|default('null') }} to {{ trigger.to_state.state|default('null') }}.
+        message: >
+          {% if trigger is defined %}
+          Zone changed from {{ trigger.from_state.state }} to {{ trigger.to_state.state }}.
+          {% else %}
+          Zone changed.
+          {% endif %}

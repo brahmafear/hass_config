@@ -45,6 +45,18 @@ switch:
     qos: 0
     retain: true
 
+light:
+  - platform: mqtt
+    name: "AILIGHT_299BEC"
+    state_topic: "/espurna/switch/AILIGHT_299BEC/relay/0/get"
+    command_topic: "/espurna/switch/AILIGHT_299BEC/relay/0/set"
+    rgb_state_topic: "/espurna/switch/AILIGHT_299BEC/color/get"
+    rgb_command_topic: "/espurna/switch/AILIGHT_299BEC/color/set"
+    qos: 0
+    payload_on: 1
+    payload_off: 0
+    optimistic: false
+
 homeassistant:
   customize:
     switch.slampher_1735b9:

@@ -4,6 +4,8 @@
 #  client_id: homeassistant
   client_id: home-assistant-1
   keepalive: 60
+  discovery: true
+  discovery_prefix: homeassistant
 #  username: !secret mqtt_username
 #  password: !secret mqtt_password
   # certificate: /home/paulus/dev/addtrustexternalcaroot.crt

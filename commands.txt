@@ -15,3 +15,6 @@ git config credential.helper store
 
 Disable git saving credentials:
 git config --unset credential.helper
+
+Delete all the annoying OSX dot files:
+find /Volumes/Mounted-SMB-share -name ._\* -delete
