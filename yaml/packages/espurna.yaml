@@ -1,8 +1,8 @@
 switch:
   - platform: mqtt
     name: "SLAMPHER_173A91"
-    state_topic: "/espurna/switch/SLAMPHER_173A91/relay/0/get"
-    command_topic: "/espurna/switch/SLAMPHER_173A91/relay/0/set"
+    state_topic: "/espurna/switch/SLAMPHER173A91/relay/0/get"
+    command_topic: "/espurna/switch/SLAMPHER173A91/relay/0/set"
     payload_on: 1
     payload_off: 0
     optimistic: false
@@ -10,8 +10,8 @@ switch:
     retain: true
   - platform: mqtt
     name: "SLAMPHER_173B67"
-    state_topic: "/espurna/switch/SLAMPHER_173B67/relay/0/get"
-    command_topic: "/espurna/switch/SLAMPHER_173B67/relay/0/set"
+    state_topic: "/espurna/switch/SLAMPHER173B67/relay/0/get"
+    command_topic: "/espurna/switch/SLAMPHER173B67/relay/0/set"
     payload_on: 1
     payload_off: 0
     optimistic: false
@@ -19,8 +19,8 @@ switch:
     retain: true
   - platform: mqtt
     name: "SLAMPHER_1735B9"
-    state_topic: "/espurna/switch/SLAMPHER_1735B9/relay/0/get"
-    command_topic: "/espurna/switch/SLAMPHER_1735B9/relay/0/set"
+    state_topic: "/espurna/switch/SLAMPHER1735B9/relay/0/get"
+    command_topic: "/espurna/switch/SLAMPHER1735B9/relay/0/set"
     payload_on: 1
     payload_off: 0
     optimistic: false
@@ -28,34 +28,34 @@ switch:
     retain: true
   - platform: mqtt
     name: "ECOPLUG_07780E"
-    state_topic: "/espurna/switch/ECOPLUG_07780E/relay/0/get"
-    command_topic: "/espurna/switch/ECOPLUG_07780E/relay/0/set"
+    state_topic: "/espurna/switch/ECOPLUG07780E/relay/0/get"
+    command_topic: "/espurna/switch/ECOPLUG07780E/relay/0/set"
     payload_on: 1
     payload_off: 0
     optimistic: false
     qos: 0
     retain: true
   - platform: mqtt
-    name: "ECOPLUG_024662"
-    state_topic: "/espurna/switch/ECOPLUG_024662/relay/0/get"
-    command_topic: "/espurna/switch/ECOPLUG_024662/relay/0/set"
+    name: "ECOPLUG0_24662"
+    state_topic: "/espurna/switch/ECOPLUG024662/relay/0/get"
+    command_topic: "/espurna/switch/ECOPLUG024662/relay/0/set"
     payload_on: 1
     payload_off: 0
     optimistic: false
     qos: 0
     retain: true
 
-light:
-  - platform: mqtt
-    name: "AILIGHT_299BEC"
-    state_topic: "/espurna/switch/AILIGHT_299BEC/relay/0/get"
-    command_topic: "/espurna/switch/AILIGHT_299BEC/relay/0/set"
-    rgb_state_topic: "/espurna/switch/AILIGHT_299BEC/color/get"
-    rgb_command_topic: "/espurna/switch/AILIGHT_299BEC/color/set"
-    qos: 0
-    payload_on: 1
-    payload_off: 0
-    optimistic: false
+#light:
+#  - platform: mqtt
+#    name: "AILIGHT_299BEC"
+#    state_topic: "/espurna/light/AILIGHT_299BEC/relay/0/get"
+#    command_topic: "/espurna/light/AILIGHT_299BEC/relay/0/set"
+#    rgb_state_topic: "/espurna/light/AILIGHT_299BEC/color/get"
+#    rgb_command_topic: "/espurna/light/AILIGHT_299BEC/color/set"
+#    qos: 0
+#    payload_on: 1
+#    payload_off: 0
+#    optimistic: false
 
 homeassistant:
   customize:

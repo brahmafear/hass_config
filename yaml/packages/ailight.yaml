@@ -1,13 +1,23 @@
 light:
   - platform: mqtt_json
-    command_topic: "29A0D5/rgbw/set"  
-    state_topic: "29A0D5/rgbw/state"  
-#    effect: true
-#    effect_list: rainbow
+    name: 'AiLight 299BEC'
+    state_topic: '/AiLight/299BEC/state'
+    command_topic: '/AiLight/299BEC/set'
+    color_temp: true
     brightness: true
-#    color_temp: true
     rgb: true
     white_value: true
+    effect: false
     optimistic: false
-    qos: 0
+  - platform: mqtt_json
+    name: 'AiLight 29A0D5'
+    state_topic: '/AiLight/29A0D5/state'
+    command_topic: '/AiLight/29A0D5/set'
+    color_temp: true
+    brightness: true
+    rgb: true
+    white_value: true
+    effect: false
+    optimistic: false
+
 
