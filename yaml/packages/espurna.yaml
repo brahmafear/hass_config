@@ -1,7 +1,7 @@
 switch:
   - platform: mqtt
     name: "SLAMPHER_173A91"
-    state_topic: "/espurna/switch/SLAMPHER173A91/relay/0/get"
+    state_topic: "/espurna/switch/SLAMPHER173A91/relay/0"
     command_topic: "/espurna/switch/SLAMPHER173A91/relay/0/set"
     payload_on: 1
     payload_off: 0
@@ -10,7 +10,7 @@ switch:
     retain: true
   - platform: mqtt
     name: "SLAMPHER_173B67"
-    state_topic: "/espurna/switch/SLAMPHER173B67/relay/0/get"
+    state_topic: "/espurna/switch/SLAMPHER173B67/relay/0"
     command_topic: "/espurna/switch/SLAMPHER173B67/relay/0/set"
     payload_on: 1
     payload_off: 0
@@ -19,7 +19,7 @@ switch:
     retain: true
   - platform: mqtt
     name: "SLAMPHER_1735B9"
-    state_topic: "/espurna/switch/SLAMPHER1735B9/relay/0/get"
+    state_topic: "/espurna/switch/SLAMPHER1735B9/relay/0"
     command_topic: "/espurna/switch/SLAMPHER1735B9/relay/0/set"
     payload_on: 1
     payload_off: 0
@@ -28,7 +28,7 @@ switch:
     retain: true
   - platform: mqtt
     name: "ECOPLUG_07780E"
-    state_topic: "/espurna/switch/ECOPLUG07780E/relay/0/get"
+    state_topic: "/espurna/switch/ECOPLUG07780E/relay/0"
     command_topic: "/espurna/switch/ECOPLUG07780E/relay/0/set"
     payload_on: 1
     payload_off: 0
@@ -37,7 +37,7 @@ switch:
     retain: true
   - platform: mqtt
     name: "ECOPLUG0_24662"
-    state_topic: "/espurna/switch/ECOPLUG024662/relay/0/get"
+    state_topic: "/espurna/switch/ECOPLUG024662/relay/0"
     command_topic: "/espurna/switch/ECOPLUG024662/relay/0/set"
     payload_on: 1
     payload_off: 0

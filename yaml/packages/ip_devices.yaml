@@ -34,6 +34,10 @@ homeassistant:
       hidden: true
     device_tracker.SLAMPHER_173a91:
       hidden: true
+    device_tracker.ailight_299bec:
+      hidden: true
+    device_tracker.ailight_29a0d5:
+      hidden: true
 
 sensor:
   - platform: template
@@ -86,6 +90,12 @@ sensor:
       slampher_173a91:
         friendly_name: 'Porch Left Light'
         value_template: "{{ 'OK' if is_state('device_tracker.SLAMPHER_173a91', 'home') else 'Offline' }}"
+      ailight_299bec:
+        friendly_name: 'AiLight 299BEC'
+        value_template: "{{ 'OK' if is_state('device_tracker.ailight_299bec', 'home') else 'Offline' }}"
+      ailight_29a0d5:
+        friendly_name: 'AiLight 29A0D5'
+        value_template: "{{ 'OK' if is_state('device_tracker.ailight_29a0d5', 'home') else 'Offline' }}"
 
 
 group:
@@ -108,3 +118,5 @@ group:
       - sensor.slampher_1735b9
       - sensor.slampher_173b67
       - sensor.slampher_173a91
+      - sensor.ailight_299bec
+      - sensor.ailight_29a0d5
