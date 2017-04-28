@@ -1,12 +1,12 @@
 sensor:
   - platform: command_line
     command: python3 -c "import requests; print(requests.get('https://pypi.python.org/pypi/homeassistant/json').json()['info']['version'])"
-    name: HA Current Version
+    name: PyPI Version
     scan_interval: 3600
   - platform: command_line
-    name: HA Installed Version
+    name: HA Version
     command: "/srv/hass/bin/hass --version"
-    scan_interval: 3600
+    scan_interval: 360000
   - platform: template
     sensors:
       ha_last_restart:
@@ -16,11 +16,16 @@ sensor:
                            Never
                          {% endif %}'
         friendly_name: HA Last Restart
+      ha_restart_count:
+        value_template: '{{ states.input_slider.ha_restart_count.state | int }}'
+        friendly_name: HA Restarts this week
+
   - platform: command_line
     name: SSL Expiry
     unit_of_measurement: days
     scan_interval: 86400
     command: "ssl-cert-check -c /etc/letsencrypt/live/lewes.hopto.org/cert.pem | tail -c 36"
+
 
 automation:
   - alias: 'Update Available Notification'
@@ -40,16 +45,47 @@ automation:
       platform: homeassistant
       event: start
     action:
-      service: notify.pushbullet
-      data:
-        title: "HomeAssistant Startup"
-        message: "Home Assistant restarted."
+      - service: notify.pushbullet
+        data:
+          title: "HomeAssistant Startup"
+          message: "Home Assistant restarted."
+      - service: input_slider.select_value
+        data_template:
+          entity_id: input_slider.ha_restart_count
+          value: '{{ states.input_slider.ha_restart_count.state | int + 1 }}'
+
+  - alias: "Restart Count Reset"
+    hide_entity: true
+    trigger:
+      platform: time
+      after: '0:00:00'
+    condition:
+      - condition: template
+        value_template: '{{ as_timestamp(now())|timestamp_custom("%w", true) | int == 0 }}'
+    action:
+      - service: input_slider.select_value
+        data:
+          entity_id: input_slider.ha_restart_count
+          value: '0'
 
 group:
   hass:
     name: HomeAssistant
     entities:
-      - sensor.ha_installed_version
-      - sensor.ha_current_version
+      - sensor.ha_version
+      - sensor.pypi_version
       - sensor.ha_last_restart
+      - sensor.ha_restart_count
       - sensor.ssl_expiry
+
+input_slider:
+  ha_restart_count:
+    min: 0
+    max: 99
+    step: 1
+
+## Add customize section to hide input slider
+homeassistant:
+  customize:
+    input_slider.ha_restart_count:
+      hidden: true
