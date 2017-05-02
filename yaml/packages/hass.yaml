@@ -24,7 +24,7 @@ sensor:
     name: SSL Expiry
     unit_of_measurement: days
     scan_interval: 86400
-    command: "ssl-cert-check -c /etc/letsencrypt/live/lewes.hopto.org/cert.pem | tail -c 36"
+    command: "ssl-cert-check -c /etc/letsencrypt/live/hide_name/cert.pem | tail -c 36"
 
 
 automation:
