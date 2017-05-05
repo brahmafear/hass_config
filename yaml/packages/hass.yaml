@@ -26,7 +26,6 @@ sensor:
     scan_interval: 86400
     command: "ssl-cert-check -c /etc/letsencrypt/live/hide_name/cert.pem | tail -c 36"
 
-
 automation:
   - alias: 'Update Available Notification'
     hide_entity: true
@@ -53,6 +52,14 @@ automation:
         data_template:
           entity_id: input_slider.ha_restart_count
           value: '{{ states.input_slider.ha_restart_count.state | int + 1 }}'
+      - condition: state
+        entity_id: binary_sensor.new_version_check
+        state: 'on'
+      - service: persistent_notification.create
+        data:
+          title: 'HA Version'
+          message: 'This is a first run on a new HomeAssistant version.'
+      - service: shell_command.version_check_create_file
 
   - alias: "Restart Count Reset"
     hide_entity: true
@@ -67,6 +74,23 @@ automation:
         data:
           entity_id: input_slider.ha_restart_count
           value: '0'
+
+  # - alias: "New Version Detected"
+  #   hide_entity: true
+  #   trigger:
+  #     platform: state
+  #     entity_id: binary_sensor.new_version_check
+  #     to: 'on'
+  #   action:
+  #     - service: notify.pushbullet
+  #       data:
+  #         title: "HomeAssistant Version"
+  #         message: "New Homeassistant version"
+  #     - service: persistent_notification.create
+  #       data:
+  #         title: 'HA Version'
+  #         message: 'This is a first run on a new HomeAssistant version.'
+  #     - service: shell_command.version_check_create_file
 
 group:
   hass:
@@ -83,6 +107,15 @@ input_slider:
     min: 0
     max: 99
     step: 1
+
+shell_command:
+  version_check_create_file: 'touch /srv/hass/cfg/deps/version_file'
+
+binary_sensor:
+  - platform: command_line
+    name: New Version Check
+    command: ' [ -e /srv/hass/cfg/deps/version_file ] && echo "OFF" || echo "ON" '
+    scan_interval: 60
 
 ## Add customize section to hide input slider
 #homeassistant:
