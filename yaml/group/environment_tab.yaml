@@ -13,3 +13,4 @@ environment:
     - group.wunderground
 #    - weather.openweathermap
 #    - group.yweather
+    - group.local_weather

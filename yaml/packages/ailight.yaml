@@ -19,5 +19,55 @@ light:
     white_value: true
     effect: false
     optimistic: false
+  - platform: mqtt_json
+    name: 'AiLight 2550D0'
+    state_topic: '/AiLight/2550D0/state'
+    command_topic: '/AiLight/2550D0/set'
+    color_temp: true
+    brightness: true
+    rgb: true
+    white_value: true
+    effect: false
+    optimistic: false
+  - platform: mqtt_json
+    name: 'AiLight 2553E5'
+    state_topic: '/AiLight/2553E5/state'
+    command_topic: '/AiLight/2553E5/set'
+    color_temp: true
+    brightness: true
+    rgb: true
+    white_value: true
+    effect: false
+    optimistic: false
+  - platform: mqtt_json
+    name: 'AiLight 254EF3'
+    state_topic: '/AiLight/254EF3/state'
+    command_topic: '/AiLight/254EF3/set'
+    color_temp: true
+    brightness: true
+    rgb: true
+    white_value: true
+    effect: false
+    optimistic: false
+  - platform: mqtt_json
+    name: 'AiLight 255346'
+    state_topic: '/AiLight/255346/state'
+    command_topic: '/AiLight/255346/set'
+    color_temp: true
+    brightness: true
+    rgb: true
+    white_value: true
+    effect: false
+    optimistic: false
 
 
+group:
+  ailight:
+    name: AiLights
+    entities:
+      - light.ailight_254EF3
+      - light.ailight_2550D0
+      - light.ailight_255346
+      - light.ailight_2553E5
+      - light.ailight_299BEC
+      - light.ailight_29A0D5

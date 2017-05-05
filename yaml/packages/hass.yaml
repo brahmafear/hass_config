@@ -85,7 +85,7 @@ input_slider:
     step: 1
 
 ## Add customize section to hide input slider
-homeassistant:
-  customize:
-    input_slider.ha_restart_count:
-      hidden: true
+#homeassistant:
+#  customize:
+#    input_slider.ha_restart_count:
+#      hidden: true

@@ -1,0 +1,34 @@
+
+
+sensor:
+  - platform: rest
+    name: Lewes Bay Temperature
+    resource: !secret url_water_temp
+    value_template: '{{ value_json.data[0].v }}'
+    unit_of_measurement: '°F'
+    scan_interval: 1800
+
+  - platform: rest
+    name: RB Tides
+    resource: !secret url_tides
+    value_template: >
+      {% if value_json.response.0.periods.1.type == "h" %}H{% elif value_json.response.0.periods.1.type == "l" %}L{% else %}BAD{% endif %}: {{ value_json.response.0.periods.1.timestamp | timestamp_custom( "%H:%M" ) }} 
+      {% if value_json.response.0.periods.2.type == "h" %}H{% elif value_json.response.0.periods.2.type == "l" %}L{% else %}BAD{% endif %}: {{ value_json.response.0.periods.2.timestamp | timestamp_custom( "%H:%M" ) }} 
+    scan_interval: 216000
+
+group:
+  local_weather:
+    name: Local Conditions
+    entities:
+      - sensor.lewes_bay_temperature
+      - sensor.rb_tides
+
+
+
+#      {{ value_json.response.0.periods.0.timestamp | timestamp_custom( "%I:%M %p" ) }} {% if value_json.response.0.periods.0.type == "h" %}High{% elif value_json.response.0.periods.0.type == "l" %}Low{% else %}BAD{% endif %}
+#      {{ value_json.response.0.periods.1.timestamp | timestamp_custom( "%I:%M %p" ) }} {% if value_json.response.0.periods.1.type == "h" %}High{% elif value_json.response.0.periods.1.type == "l" %}Low{% else %}BAD{% endif %}
+#      {{ value_json.response.0.periods.2.timestamp | timestamp_custom( "%I:%M %p" ) }} {% if value_json.response.0.periods.2.type == "h" %}High{% elif value_json.response.0.periods.2.type == "l" %}Low{% else %}BAD{% endif %}
+#      {{ value_json.response.0.periods.3.timestamp | timestamp_custom( "%I:%M %p" ) }} {% if value_json.response.0.periods.3.type == "h" %}High{% elif value_json.response.0.periods.3.type == "l" %}Low{% else %}BAD{% endif %}
+
+#      {% if value_json.response.0.periods.1.type == "h" %}High{% elif value_json.response.0.periods.1.type == "l" %}Low{% else %}BAD{% endif %}:{{ value_json.response.0.periods.1.timestamp | timestamp_custom( "%I:%M %p" ) }} 
+#      {% if value_json.response.0.periods.2.type == "h" %}High{% elif value_json.response.0.periods.2.type == "l" %}Low{% else %}BAD{% endif %}:{{ value_json.response.0.periods.2.timestamp | timestamp_custom( "%I:%M %p" ) }} 
