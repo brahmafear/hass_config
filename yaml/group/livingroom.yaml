@@ -12,3 +12,6 @@ livingroom:
     - switch.samsungtv
     - switch.fairy_bottle
     - group.living_room_fan
+    - scene.living_daytime
+    - scene.living_nighttime
+    - scene.living_party

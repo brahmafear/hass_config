@@ -40,6 +40,12 @@ homeassistant:
       hidden: true
     device_tracker.ailight_2550d0:
       hidden: true
+    device_tracker.ailight_254ef3:
+      hidden: true
+    device_tracker.ailight_255346:
+      hidden: true
+    device_tracker.ailight_2553e5:
+      hidden: true
 
 sensor:
   - platform: template
@@ -63,16 +69,16 @@ sensor:
         friendly_name: 'TP Link'
         value_template: "{{ 'OK' if is_state('device_tracker.tp_link', 'home') else 'Offline' }}"
       echo_1:
-        friendly_name: 'echo 1'
+        friendly_name: 'Echo 1'
         value_template: "{{ 'OK' if is_state('device_tracker.echo_1', 'home') else 'Offline' }}"
       echo_2:
-        friendly_name: 'echo 2'
+        friendly_name: 'Echo 2'
         value_template: "{{ 'OK' if is_state('device_tracker.echo_2', 'home') else 'Offline' }}"
       ecoplug_1:
-        friendly_name: 'ecoPlug 1'
+        friendly_name: 'EcoPlug 1'
         value_template: "{{ 'OK' if is_state('device_tracker.ecoplug_1', 'home') else 'Offline' }}"
       ecoplug_2:
-        friendly_name: 'ecoPlug 2'
+        friendly_name: 'EcoPlug 2'
         value_template: "{{ 'OK' if is_state('device_tracker.ecoplug_2', 'home') else 'Offline' }}"
       hpmini:
         friendly_name: 'HP mini'
@@ -101,6 +107,15 @@ sensor:
       ailight_2550d0:
         friendly_name: 'AiLight 2550D0'
         value_template: "{{ 'OK' if is_state('device_tracker.ailight_2550d0', 'home') else 'Offline' }}"
+      ailight_254ef3:
+        friendly_name: 'AiLight 254EF3'
+        value_template: "{{ 'OK' if is_state('device_tracker.ailight_254ef3', 'home') else 'Offline' }}"
+      ailight_255346:
+        friendly_name: 'AiLight 255346'
+        value_template: "{{ 'OK' if is_state('device_tracker.ailight_255346', 'home') else 'Offline' }}"
+      ailight_2553e5:
+        friendly_name: 'AiLight 2553E5'
+        value_template: "{{ 'OK' if is_state('device_tracker.ailight_2553e5', 'home') else 'Offline' }}"
 
 
 group:
@@ -126,3 +141,6 @@ group:
       - sensor.ailight_299bec
       - sensor.ailight_29a0d5
       - sensor.ailight_2550d0
+      - sensor.ailight_254ef3
+      - sensor.ailight_255346
+      - sensor.ailight_2553e5
