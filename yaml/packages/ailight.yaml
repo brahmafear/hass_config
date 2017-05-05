@@ -62,7 +62,7 @@ light:
 
 
 group:
-  ailight:
+  ailights:
     name: AiLights
     entities:
       - light.ailight_254EF3
@@ -71,3 +71,71 @@ group:
       - light.ailight_2553E5
       - light.ailight_299BEC
       - light.ailight_29A0D5
+  living_room_fan:
+    name: Living Room Fan Lights
+    entities:
+      - light.ailight_2550D0
+      - light.ailight_299BEC
+      - light.ailight_254EF3
+      - light.ailight_29A0D5
+  table_lights:
+    name: Table Lights
+    entities:
+      - light.ailight_255346
+      - light.ailight_2553E5
+
+scene:
+  - name: Living Daytime
+    entities:
+      group.living_room_fan:
+        state: on
+        brightness: 255
+        white_value: 255
+        color_temp: 300
+  - name: Living Nighttime
+    entities:
+      group.living_room_fan:
+        state: on
+        brightness: 160
+        white_value: 100
+        color_temp: 500
+  - name: Living Party
+    entities:
+      light.ailight_254EF3:
+        state: on
+        brightness: 255
+        white_value: 0
+        rgb_color: [255,0,0]
+      light.ailight_299BEC:
+        state: on
+        brightness: 255
+        white_value: 0
+        rgb_color: [255,0,0]
+      light.ailight_2550D0:
+        state: on
+        brightness: 255
+        white_value: 0
+        rgb_color: [0,0,255]
+      light.ailight_29A0D5:
+        state: on
+        brightness: 255
+        white_value: 0
+        rgb_color: [0,0,255]
+
+homeassistant:
+  customize:
+    group.living_room_fan:
+      emulated_hue: true
+      emulated_hue_name: "Living Room Lights"
+    group.table_lights:
+      emulated_hue: true
+      emulated_hue_name: "Table Lights"
+    scene.living_daytime:
+      emulated_hue: true
+      emulated_hue_name: "Living Daytime"
+    scene.living_nighttime:
+      emulated_hue: true
+      emulated_hue_name: "Living Nighttime"
+    scene.living_party:
+      emulated_hue: true
+      emulated_hue_name: "Party Time"

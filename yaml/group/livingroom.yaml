@@ -11,3 +11,4 @@ livingroom:
 #    - switch.living_room_51_21
     - switch.samsungtv
     - switch.fairy_bottle
+    - group.living_room_fan
