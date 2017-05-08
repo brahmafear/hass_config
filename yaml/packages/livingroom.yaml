@@ -28,4 +28,21 @@ script:
         data:
           entity_id: 'scene.living_nighttime'
 
-
+group:
+  livingroom:
+    name: Living Room
+    control: hidden
+    entities:
+      - binary_sensor.living_room_51_20
+      - sensor.living_room_51_10
+      - sensor.living_room_51_11
+      - sensor.living_room_51_15
+      - light.living_room_51_30
+      - switch.christmas_tree
+      - switch.samsungtv
+      - switch.fairy_bottle
+      - group.living_room_fan
+      - scene.living_daytime
+      - scene.living_nighttime
+      - scene.living_party
+      - scene.living_worktime

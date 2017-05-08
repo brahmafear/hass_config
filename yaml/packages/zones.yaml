@@ -62,14 +62,14 @@ zone:
   - name: gym
     latitude: !secret zone_gym_lat
     longitude: !secret zone_gym_long
-    radius: 200
+    radius: 100
     icon: mdi:people
     # passive: true
 
   - name: crooked_hammock
     latitude: !secret zone_hammock_lat
     longitude: !secret zone_hammock_long
-    radius: 20
+    radius: 10
     icon: mdi:people
     # passive: true
 

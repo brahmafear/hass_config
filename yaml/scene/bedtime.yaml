@@ -1,11 +1,16 @@
 - name: Bedtime
   entities:
-    switch.christmas_tree: off
-    switch.samsungtv: off
+    switch.christmas_tree: 'off'
+    switch.fairy_bottle: 'off'
+    switch.samsungtv: 'off'
     light.nook_light:
-      state: off
+      state: 'off'
     light.porch_leds:
-      state: off
+      state: 'off'
     light.kitchen_52_33:
-      state: off
+      state: 'off'
+    group.living_room_fan:
+      state: 'off'    
+    group.table_lights:
+      state: 'off'    
     
