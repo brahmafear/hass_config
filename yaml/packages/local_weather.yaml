@@ -14,7 +14,7 @@ sensor:
     value_template: >
       {% if value_json.response.0.periods.1.type == "h" %}H{% elif value_json.response.0.periods.1.type == "l" %}L{% else %}BAD{% endif %}: {{ value_json.response.0.periods.1.timestamp | timestamp_custom( "%H:%M" ) }} 
       {% if value_json.response.0.periods.2.type == "h" %}H{% elif value_json.response.0.periods.2.type == "l" %}L{% else %}BAD{% endif %}: {{ value_json.response.0.periods.2.timestamp | timestamp_custom( "%H:%M" ) }} 
-    scan_interval: 216000
+    scan_interval: 21600
 
 group:
   local_weather:

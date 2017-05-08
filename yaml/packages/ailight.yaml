@@ -85,20 +85,27 @@ group:
       - light.ailight_2553E5
 
 scene:
-  - name: Living Daytime
+  - name: Living Worktime
     entities:
       group.living_room_fan:
         state: on
         brightness: 255
         white_value: 255
-        color_temp: 300
+        rgb_color: [255,255,255]
+  - name: Living Daytime
+    entities:
+      group.living_room_fan:
+        state: on
+        brightness: 255
+        white_value: 0
+        rgb_color: [255,240,100]
   - name: Living Nighttime
     entities:
       group.living_room_fan:
         state: on
-        brightness: 160
-        white_value: 100
-        color_temp: 500
+        brightness: 32
+        white_value: 0
+        rgb_color: [255,240,100]
   - name: Living Party
     entities:
       light.ailight_254EF3:
@@ -139,3 +146,6 @@ homeassistant:
     scene.living_party:
       emulated_hue: true
       emulated_hue_name: "Party Time"
+    scene.living_worktime:
+      emulated_hue: true
+      emulated_hue_name: "Living Worktime"

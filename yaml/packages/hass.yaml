@@ -18,7 +18,7 @@ sensor:
         friendly_name: HA Last Restart
       ha_restart_count:
         value_template: '{{ states.input_slider.ha_restart_count.state | int }}'
-        friendly_name: HA Restarts this week
+        friendly_name: HA Restarts this version
 
   - platform: command_line
     name: SSL Expiry
@@ -60,20 +60,24 @@ automation:
           title: 'HA Version'
           message: 'This is a first run on a new HomeAssistant version.'
       - service: shell_command.version_check_create_file
-
-  - alias: "Restart Count Reset"
-    hide_entity: true
-    trigger:
-      platform: time
-      after: '0:00:00'
-    condition:
-      - condition: template
-        value_template: '{{ as_timestamp(now())|timestamp_custom("%w", true) | int == 0 }}'
-    action:
       - service: input_slider.select_value
         data:
           entity_id: input_slider.ha_restart_count
           value: '0'
+
+#  - alias: "Restart Count Reset"
+#    hide_entity: true
+#    trigger:
+#      platform: time
+#      after: '0:00:00'
+#    condition:
+#      - condition: template
+#        value_template: '{{ as_timestamp(now())|timestamp_custom("%w", true) | int == 0 }}'
+#    action:
+#      - service: input_slider.select_value
+#        data:
+#          entity_id: input_slider.ha_restart_count
+#          value: '0'
 
   # - alias: "New Version Detected"
   #   hide_entity: true
@@ -115,10 +119,9 @@ binary_sensor:
   - platform: command_line
     name: New Version Check
     command: ' [ -e /srv/hass/cfg/deps/version_file ] && echo "OFF" || echo "ON" '
-    scan_interval: 60
+    scan_interval: 21600
 
-## Add customize section to hide input slider
-#homeassistant:
-#  customize:
-#    input_slider.ha_restart_count:
-#      hidden: true
+homeassistant:
+  customize:
+    input_slider.ha_restart_count:
+      hidden: true
