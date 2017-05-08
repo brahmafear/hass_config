@@ -1,0 +1,31 @@
+script:
+  living_room_toggle:
+    alias: Living Room Toggle
+    sequence:
+      - service: script.turn_on
+        data:
+          entity_id: 'script.living_room_toggle_1'
+      - service: script.turn_on
+        data:
+          entity_id: 'script.living_room_toggle_2'
+
+
+  living_room_toggle_1:
+    sequence:
+      - condition: state
+        entity_id: 'group.living_room_fan'
+        state: 'on'
+      - service: homeassistant.turn_off
+        data:
+          entity_id: group.living_room_fan
+
+  living_room_toggle_2:
+    sequence:
+      - condition: state
+        entity_id: 'group.living_room_fan'
+        state: 'off'
+      - service: scene.turn_on
+        data:
+          entity_id: 'scene.living_nighttime'
+
+

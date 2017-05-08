@@ -33,15 +33,9 @@ script:
   dash_newchapter:
     alias: Dash NewChapter
     sequence:
-      - service: homeassistant.toggle
+      - service: homeassistant.turn_on
         data:
-          entity_id: group.living_room_fan
-      - condition: state
-        entity_id: 'group.living_room_fan'
-        state: 'on'
-      - service: scene.turn_on
-        data:
-          entity_id: 'scene.living_nighttime'
+          entity_id: script.living_room_toggle
 
   dash_laundress:
     alias: Dash Laundress
