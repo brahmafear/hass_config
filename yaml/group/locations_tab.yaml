@@ -3,11 +3,13 @@ locations:
   view: yes
   icon: mdi:web
   entities:
-    - device_tracker.owntracks_dwmi5
+#    - device_tracker.owntracks_dwmi5
+    - device_tracker.dwmi5
     - device_tracker.toyota_prius
     - camera.prius_location
     - camera.dwmi5_location
     - sensor.drive_to_rehoboth
+    - sensor.drive_from_rehoboth
     - sensor.drive_to_sas
     - sensor.drive_to_beach
     - sensor.phone_to_home
