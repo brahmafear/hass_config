@@ -16,7 +16,7 @@ homeassistant:
       track_ios: true
     zone.sas:
       track_ios: true
-      
+
 zone:
   - name: home
     latitude: !secret hass_lat
@@ -83,7 +83,7 @@ automation:
   - alias: Zone Change Alert
     trigger:
       platform: state
-      entity_id: device_tracker.owntracks_dwmi5
+      entity_id: device_tracker.dwmi5
     condition:
       condition: and
       conditions:

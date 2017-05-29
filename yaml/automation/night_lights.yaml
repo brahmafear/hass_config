@@ -21,11 +21,11 @@
       - switch.window_candles
       - group.porch_lights
 
-- alias: Side Light upon Prius arrival
+- alias: Side Light upon arrival
   trigger:
     - platform: state
-      entity_id: device_tracker.toyota_prius
-      state: home
+      entity_id: device_tracker.toyota_prius, device_tracker.dwmi5
+      to: home
   condition:
     - condition: template
       value_template: '{{ states.sun.sun.attributes.elevation < 4 }}'
