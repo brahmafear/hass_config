@@ -1,0 +1,18 @@
+pb_test:
+  sequence:
+    - service: notify.pushbullet
+      data_template:
+        title: "C tree {{ states.switch.christmas_tree.state }}"
+        message: "Christmas tree is {{ states.switch.christmas_tree.state }}"
+
+ios_test:
+  sequence:
+    - service: notify.ios_dwmi5
+      data:
+        message: "Christmas tree is {{ states.switch.christmas_tree.state }}."
+
+ios_test_template:
+  sequence:
+    - service: notify.ios_dwmi5
+      data_template:
+        message: "Christmas tree is {{ states.switch.christmas_tree.state }}."
