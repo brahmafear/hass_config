@@ -1,6 +1,6 @@
 attic:
   name: Attic
-  control: no
+  control: hidden
   entities:
     - sensor.attic_59_10
     - sensor.attic_59_11

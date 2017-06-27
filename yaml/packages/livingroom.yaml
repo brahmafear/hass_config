@@ -34,6 +34,7 @@ group:
     control: hidden
     entities:
       - binary_sensor.living_room_51_20
+      - sensor.living_last_motion
       - sensor.living_room_51_10
       - sensor.living_room_51_11
       - sensor.living_room_51_15
@@ -46,3 +47,23 @@ group:
       - scene.living_nighttime
       - scene.living_party
       - scene.living_worktime
+
+sensor:
+  - platform: template
+    sensors:
+      living_last_motion:
+        value_template: '{% if states.automation.living_motion and states.automation.living_motion.attributes.last_triggered %}
+                           {{ as_timestamp(states.automation.living_motion.attributes.last_triggered) | timestamp_custom("%b %d %X") }}
+                         {% else %}
+                           Never
+                         {% endif %}'
+        friendly_name: Last Motion
+
+
+automation:
+  - alias: Living Motion
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.living_room_51_20
+        to: 'on'
+    action:

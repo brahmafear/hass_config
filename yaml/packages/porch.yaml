@@ -1,3 +1,21 @@
+group:
+  porch:
+    name: Porch
+    control: hidden
+    entities:
+      - binary_sensor.porch_54_20
+      - sensor.porch_last_motion
+      - sensor.porch_54_10
+      - sensor.porch_54_11
+      - sensor.porch_54_15
+  #    - light.porch_54_33
+  #    - switch.porch_54_21
+      - input_select.porch_led_effect
+      - input_slider.porch_animation_speed
+      - light.porch_leds
+
+
+
 light:
   - platform: mqtt
     name: "Porch LEDs"
@@ -41,7 +59,7 @@ input_slider:
     max: 150
     step: 10
 
-automation: 
+automation:
   - alias: "Porch Input Effect"
     initial_state: True
     hide_entity: False
@@ -66,13 +84,32 @@ automation:
           topic: "bruh/mqttstrip/setanimationspeed"
           payload: '{{ trigger.to_state.state | int }}'
 
-#scene:
-#  - name: Blue Porch
-#    entities:
-#      light.porch_leds:
-#        state: on
-#        rgb_color: [ 0, 0, 255 ]
-#        brightness: 255
+  - alias: Porch Motion
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.porch_54_20
+        to: 'on'
+    action:
+
+
+sensor:
+  - platform: template
+    sensors:
+      porch_last_motion:
+        value_template: '{% if states.automation.porch_motion and states.automation.porch_motion.attributes.last_triggered %}
+                           {{ as_timestamp(states.automation.porch_motion.attributes.last_triggered) | timestamp_custom("%b %d %X") }}
+                         {% else %}
+                           Never
+                         {% endif %}'
+        friendly_name: Last Motion
+
+scene:
+ - name: Blue Porch
+   entities:
+     light.porch_leds:
+       state: on
+       rgb_color: [ 0, 0, 255 ]
+       brightness: 255
 
 
 homeassistant:
@@ -80,10 +117,3 @@ homeassistant:
     scene.blue_porch:
       emulated_hue: true
       emulated_hue_name: Blue Porch
-
-#group:
-#  bruh:
-#    entities:
-#      - input_select.bruh_led_effect
-#      - input_slider.bruh_animation_speed
-#      - light.bruh_leds
