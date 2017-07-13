@@ -59,6 +59,16 @@ light:
     white_value: true
     effect: false
     optimistic: false
+  - platform: mqtt_json
+    name: 'AiLight 2F0349'
+    state_topic: '/AiLight/2F0349/state'
+    command_topic: '/AiLight/2F0349/set'
+    color_temp: true
+    brightness: true
+    rgb: true
+    white_value: true
+    effect: false
+    optimistic: false
 
 
 group:
@@ -71,6 +81,7 @@ group:
       - light.ailight_2553E5
       - light.ailight_299BEC
       - light.ailight_29A0D5
+      - light.ailight_2F0349
   living_room_fan:
     name: Living Room Fan Lights
     entities:

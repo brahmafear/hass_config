@@ -46,16 +46,41 @@ automation:
       - service: notify.pushbullet
         data_template:
           message: >
-            Motion detected: {{ trigger.to_state.entity_id }}
+            Motion detected: {{ trigger.to_state.entity_id|default("Unknown") }}
       - service: notify.ios_dwmi5
         data:
-          message: "Motion at home!"
+          title: "Motion title"
+          message: "Motion detected"
           data:
             push:
               badge: 1
               sound: "US-EN-Alexa-Motion-Detected-Generic.wav"
-              category: 'ALARM'
-            
+              category: "ALARM"
+            action_data:
+              entity_id: switch.christmas_tree
+              my_custom_data: foo_bar
+
+  - alias: Motion Alarm Flash
+    trigger:
+      platform: event
+      event_type: ios.notification_action_fired
+      event_data:
+        actionName: SOUND_ALARM
+    action:
+      - service: homeassistant.turn_on
+        entity_id: script.motion_alarm_flash
+
+  - alias: Cancel the alarm
+    trigger:
+      platform: event
+      event_type: ios.notification_action_fired
+      event_data:
+        actionName: SILENCE_ALARM
+    action:
+      - service: homeassistant.turn_off
+        data:
+          entity_id: input_boolean.motion_alarm
+
 
   - alias: Motion Alarm Arm
     trigger:
@@ -66,6 +91,7 @@ automation:
       - delay: 3:00
       - service: homeassistant.turn_on
         entity_id: input_boolean.motion_alarm
+        
   - alias: Motion Alarm Disarm
     trigger:
       - platform: state
@@ -74,3 +100,14 @@ automation:
     action:
       - service: homeassistant.turn_off
         entity_id: input_boolean.motion_alarm
+
+script:
+  motion_alarm_flash:
+    sequence:
+      - service: light.turn_on
+        data:
+          entity_id: group.living_room_fan
+          flash: long
+          rgb_color: [255,0,0]
+          white_value: 0
+          brightness: 255

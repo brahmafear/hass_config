@@ -1,0 +1,33 @@
+alarm:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.nook_light
+        effect: 'Strobe epilepsy!'
+    - service: light.turn_on
+      data:
+        entity_id: light.ailight_2550d0
+        flash: long
+        rgb_color: [255,0,0]    
+    - service: light.turn_on
+      data:
+        entity_id: light.ailight_29a0d5
+        flash: long
+        rgb_color: [255,0,0]    
+    - delay:
+        milliseconds: 250
+    - service: light.turn_on
+      data:
+        entity_id: light.ailight_299bec
+        flash: long
+        rgb_color: [0,0,255]    
+    - service: light.turn_on
+      data:
+        entity_id: light.ailight_254ef3
+        flash: long
+        rgb_color: [0,0,255]    
+    - delay:
+        seconds: 5
+    - service: light.turn_off
+      data:
+        entity_id: light.nook_light

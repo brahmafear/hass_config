@@ -57,5 +57,27 @@ history: !include yaml/history.yaml
 zeroconf:
 
 ios: !include yaml/ios.yaml
+# ios:
+#   push:
+#     categories:
+#       - name: Alarm
+#         identifier: 'ALARM'
+#         actions:
+#           - identifier: 'SOUND_ALARM'
+#             title: 'Sound Alarm'
+#             activationMode: 'background'
+#             authenticationRequired: yes
+#             destructive: yes
+#             behavior: 'default'
+#           - identifier: 'SILENCE_ALARM'
+#             title: 'Silence Alarm'
+#             activationMode: 'background'
+#             authenticationRequired: yes
+#             destructive: no
+#             behavior: 'default'
+#             textInputButtonTitle: 'Silencio!'
+#             textInputPlaceholder: 'Placeholder'
+
+
 
 frontend:

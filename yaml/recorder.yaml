@@ -2,7 +2,7 @@
 #    domains:
 #      - device_tracker
 
-purge_days: 3
+purge_days: 7
 # db_url: sqlite:///var/run/hass.db
 db_url: !secret hass_db_url
 

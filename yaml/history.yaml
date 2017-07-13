@@ -8,3 +8,6 @@ include:
     - sensor.owm_temperature
     - sensor.cpu_use
     - sensor.cpu_temperature
+    - sensor.drive_from_rehoboth
+    - sensor.drive_to_rehoboth
+    - sensor.drive_to_beach

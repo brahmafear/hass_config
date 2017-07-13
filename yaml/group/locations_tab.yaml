@@ -6,6 +6,8 @@ locations:
 #    - device_tracker.owntracks_dwmi5
     - device_tracker.dwmi5
     - device_tracker.toyota_prius
+    - sensor.dwmi5_battery_level
+    - sensor.dwmi5_battery_state
     - camera.prius_location
     - camera.dwmi5_location
     # - sensor.drive_to_rehoboth

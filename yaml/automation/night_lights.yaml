@@ -32,6 +32,10 @@
   action:
     - service: homeassistant.turn_on
       entity_id: switch.slampher_173b67
+    - service: notify.pushbullet
+      data_template:
+        title: "Welcome home {{ trigger.entity_id }}!"
+        message: "{{ trigger.entity_id }} arrived home at {{ now() }} to a lit side light."
     - delay: 5:00
     - service: homeassistant.turn_off
       entity_id: switch.slampher_173b67
