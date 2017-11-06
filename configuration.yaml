@@ -49,8 +49,8 @@ sun:
 updater:
 # conversation:
 
-recorder: !include yaml/recorder.yaml
-history: !include yaml/history.yaml
+# recorder: !include yaml/recorder.yaml
+# history: !include yaml/history.yaml
 
 # logbook:
 # discovery:

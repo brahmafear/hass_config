@@ -47,6 +47,10 @@ automation:
         data_template:
           message: >
             Motion detected: {{ trigger.to_state.entity_id|default("Unknown") }}
+      - service: light.turn_on
+        data:
+          entity_id: light.nook_light
+          effect: "Strobe epilepsy!"
       - service: notify.ios_dwmi5
         data:
           title: "Motion title"

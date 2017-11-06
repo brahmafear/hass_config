@@ -1,4 +1,4 @@
-default_view_temp:
+default_view:
   icon: mdi:information-variant
   view: yes
   entities:

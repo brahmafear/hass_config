@@ -3,7 +3,7 @@ sensor:
     name: 'UPS Shipping'
     username: !secret ups_username
     password: !secret ups_password
-  - platform: usps
-    name: 'USPS Shipping'
-    username: !secret usps_username
-    password: !secret usps_password
+#  - platform: usps
+#    name: 'USPS Shipping'
+#    username: !secret usps_username
+#    password: !secret usps_password

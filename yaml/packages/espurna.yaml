@@ -1,3 +1,4 @@
+### pwd is admin:espurna1Z
 switch:
   - platform: mqtt
     name: "SLAMPHER_173A91"
