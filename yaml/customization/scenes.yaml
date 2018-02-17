@@ -1,7 +1,8 @@
 scene.bedtime:
   friendly_name: Bedtime
-  emulated_hue: true
-  emulated_hue_name: "bedtime"
+  # emulated_hue: true
+  emulated_hue_hidden: false
+  emulated_hue_name: "Bedtime"
 
 scene.kitchen_red:
   friendly_name: Kitchen Red

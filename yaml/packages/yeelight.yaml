@@ -10,5 +10,5 @@ homeassistant:
   customize:
     light.nook_light:
       friendly_name: Kitchen Nook Light
-      emulated_hue: true
+      emulated_hue_hidden: false
       emulated_hue_name: "Nook Light"

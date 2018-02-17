@@ -4,14 +4,14 @@ sensor:
   - platform: template
     sensors:
       sunrise:
-        entity_id: sun.sun
+#        entity_id: sun.sun
         value_template: "{% if states.sun.sun and states.sun.sun.attributes.next_rising %}
                            {{ as_timestamp(states.sun.sun.attributes.next_rising) | timestamp_custom(' %I:%M %p', True)|replace(\" 0\",\"\") }}
                          {% else %}
                            Never
                          {% endif %}"
       sunset:
-        entity_id: sun.sun
+#        entity_id: sun.sun
         value_template: "{% if states.sun.sun and states.sun.sun.attributes.next_setting %}
                            {{ as_timestamp(states.sun.sun.attributes.next_setting) | timestamp_custom(' %I:%M %p', True)|replace(\" 0\",\"\") }}
                          {% else %}

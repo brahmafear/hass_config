@@ -11,7 +11,7 @@ homeassistant:
   customize:
     input_boolean.motion_alarm_delay:
       hidden: true
-      emulated_hue: true
+      emulated_hue_hidden: false
       emulated_hue_name: Motion Detection
 
 

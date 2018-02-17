@@ -16,3 +16,5 @@ locations:
     # - sensor.drive_to_beach
     # - sensor.phone_to_home
     - group.drive_times
+    - sensor.geocode_dwmi5
+    - sensor.geocode_prius

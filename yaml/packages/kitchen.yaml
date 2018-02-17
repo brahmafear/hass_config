@@ -11,6 +11,7 @@ group:
       - light.kitchen_52_33
   #    - switch.kitchen_52_21
       - light.nook_light
+      - switch.kitchen_light
 
 input_boolean:
   kitchen_strip:
@@ -19,7 +20,7 @@ homeassistant:
   customize:
     input_boolean.kitchen_strip:
       hidden: true
-      emulated_hue: true
+      emulated_hue_hidden: false
       emulated_hue_name: Kitchen Light
 
 sensor:

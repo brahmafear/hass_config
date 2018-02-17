@@ -9,7 +9,9 @@
 *.good
 *.bak
 *.old
+*.pickle
 .*
+plex.conf.disabled
 !/.gitignore
 suit.jpg
 home-assistant.log

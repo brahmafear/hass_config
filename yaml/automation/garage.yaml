@@ -25,7 +25,7 @@
         title: "Wecome Home"
         message: "Wecome Home {{ trigger.attributes.friendly_name }}."
     - service: homeassistant.turn_on
-      entity_id: switch.garage_light,switch.slampher_173b67
+      entity_id: switch.slampher_173b67
     - delay: 00:10:00
     - service: homeassistant.turn_off
-      entity_id: switch.garage_light,switch.slampher_173b67
+      entity_id: switch.slampher_173b67

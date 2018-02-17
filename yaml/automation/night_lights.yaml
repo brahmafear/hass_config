@@ -8,6 +8,8 @@
     entity_id:
       - switch.window_candles
       - group.porch_lights
+      - switch.garage_light
+      - switch.garage_light_pi
 
 - alias: Lights off at 11pm
   trigger:
@@ -20,6 +22,8 @@
     entity_id:
       - switch.window_candles
       - group.porch_lights
+      - switch.garage_light
+      - switch.garage_light_pi
 
 - alias: Side Light upon arrival
   trigger:

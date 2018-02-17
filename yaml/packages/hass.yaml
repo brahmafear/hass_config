@@ -1,6 +1,6 @@
 sensor:
   - platform: command_line
-    command: python3 -c "import requests; print(requests.get('https://pypi.python.org/pypi/homeassistant/json').json()['info']['version'])"
+    command: /srv/hass/bin/python3 -c "import requests; print(requests.get('https://pypi.python.org/pypi/homeassistant/json').json()['info']['version'])"
     name: PyPI Version
     scan_interval: 3600
   - platform: command_line
@@ -16,9 +16,9 @@ sensor:
                            Never
                          {% endif %}'
         friendly_name: HA Last Restart
-      ha_restart_count:
-        value_template: '{{ states.input_slider.ha_restart_count.state | int }}'
-        friendly_name: HA Restarts this version
+#      ha_restart_count:
+#        value_template: '{{ states.input_slider.ha_restart_count.state | int }}'
+#        friendly_name: HA Restarts this version
 
   - platform: command_line
     name: SSL Expiry
@@ -48,10 +48,10 @@ automation:
         data:
           title: "HomeAssistant Startup"
           message: "Home Assistant restarted."
-      - service: input_slider.select_value
-        data_template:
-          entity_id: input_slider.ha_restart_count
-          value: '{{ states.input_slider.ha_restart_count.state | int + 1 }}'
+#      - service: input_number.set_value
+#        data_template:
+#          entity_id: input_number.ha_restart_count
+#          value: '{{ states.input_number.ha_restart_count.state | int + 1 }}'
       - condition: state
         entity_id: binary_sensor.new_version_check
         state: 'on'
@@ -60,10 +60,10 @@ automation:
           title: 'HA Version'
           message: 'This is a first run on a new HomeAssistant version.'
       - service: shell_command.version_check_create_file
-      - service: input_slider.select_value
-        data:
-          entity_id: input_slider.ha_restart_count
-          value: '0'
+#      - service: input_number.set_value
+#        data:
+#          entity_id: input_number.ha_restart_count
+#          value: '0'
 
 #  - alias: "Restart Count Reset"
 #    hide_entity: true
@@ -103,25 +103,25 @@ group:
       - sensor.ha_version
       - sensor.pypi_version
       - sensor.ha_last_restart
-      - sensor.ha_restart_count
+#      - sensor.ha_restart_count
       - sensor.ssl_expiry
 
-input_slider:
-  ha_restart_count:
-    min: 0
-    max: 99
-    step: 1
+#input_number:
+#  ha_restart_count:
+#    min: 0
+#    max: 99
+#    step: 1
 
 shell_command:
-  version_check_create_file: 'touch /srv/hass/cfg/deps/version_file'
+  version_check_create_file: 'touch /srv/hasscfg/deps/version_file'
 
 binary_sensor:
   - platform: command_line
     name: New Version Check
-    command: ' [ -e /srv/hass/cfg/deps/version_file ] && echo "OFF" || echo "ON" '
+    command: ' [ -e /srv/hasscfg/deps/version_file ] && echo "OFF" || echo "ON" '
     scan_interval: 21600
 
-homeassistant:
-  customize:
-    input_slider.ha_restart_count:
-      hidden: true
+#homeassistant:
+#  customize:
+#    input_number.ha_restart_count:
+#      hidden: true

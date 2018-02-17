@@ -9,8 +9,9 @@ environment:
 #    - sensor.moon
     - group.astro
     - group.darksky
-    - group.openweathermap
+#    - group.openweathermap
     - group.wunderground
 #    - weather.openweathermap
 #    - group.yweather
     - group.local_weather
+    - camera.animated_radar

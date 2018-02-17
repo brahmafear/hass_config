@@ -10,3 +10,5 @@ house:
     - group.porch
     - group.attic
     - group.outdoors
+    - group.node56
+    - group.node55

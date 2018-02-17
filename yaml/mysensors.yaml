@@ -1,6 +1,6 @@
   gateways:
   - device: '127.0.0.1'
-    persistence_file: '/srv/hass/cfg/mysensors_devices.json'
+    persistence_file: '/srv/hasscfg/mysensors_devices.json'
     tcp_port: 5003
 #  debug: true
   version: 2.0

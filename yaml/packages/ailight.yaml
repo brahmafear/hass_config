@@ -143,20 +143,20 @@ scene:
 homeassistant:
   customize:
     group.living_room_fan:
-      emulated_hue: true
+      emulated_hue_hidden: false
       emulated_hue_name: "Living Room Lights"
     group.table_lights:
-      emulated_hue: true
+      emulated_hue_hidden: false
       emulated_hue_name: "Table Lights"
     scene.living_daytime:
-      emulated_hue: true
+      emulated_hue_hidden: false
       emulated_hue_name: "Living Daytime"
     scene.living_nighttime:
-      emulated_hue: true
+      emulated_hue_hidden: false
       emulated_hue_name: "Living Nighttime"
     scene.living_party:
-      emulated_hue: true
+      emulated_hue_hidden: false
       emulated_hue_name: "Party Time"
     scene.living_worktime:
-      emulated_hue: true
+      emulated_hue_hidden: false
       emulated_hue_name: "Living Worktime"

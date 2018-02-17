@@ -1,0 +1,21 @@
+sensor:
+  - platform: mqtt
+    state_topic: homie/dht-1/temperature/temperature
+    name: esp8266_temperature
+    unit_of_measurement: "F"
+  - platform: mqtt
+    state_topic: homie/dht-1/humidity/humidity
+    name: esp8266_humidity
+    unit_of_measurement: "%"
+  - platform: mqtt
+    state_topic: homie/dht-1/$signal
+    name: esp8266_wifi
+    unit_of_measurement: "%"
+
+group:
+  esp8266_dht:
+    name: ESP8266 DHT Sensor
+    entities:
+      - sensor.esp8266_temperature
+      - sensor.esp8266_humidity
+      - sensor.esp8266_wifi

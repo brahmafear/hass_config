@@ -12,7 +12,7 @@ switch:
 homeassistant:
   customize:
     switch.samsungtv:
-      emulated_hue: true
+      emulated_hue_hidden: false
       emulated_hue_name: "TV"
 
 # automation:

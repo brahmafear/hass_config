@@ -1,0 +1,8 @@
+switch:
+  - platform: command_line
+    switches:
+      kitchen_light:
+        friendly_name: Kitchen Fan Lights
+        command_on: /srv/switchmate/sm1 on
+        command_off: /srv/switchmate/sm1 off
+#        command_state: /srv/switchmate/sm1 status

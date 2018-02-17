@@ -1,4 +1,4 @@
-type: alexa
+# type: alexa
 listen_port: 8232
 host_ip: 192.168.9.22
 expose_by_default: false

@@ -27,7 +27,8 @@ light.bedroom_53_30:
   friendly_name: LED
 light.bedroom_53_36:
   friendly_name: Neo
-  emulated_hue: true
+  # emulated_hue: true
+  emulated_hue_hidden: false
   emulated_hue_name: "Bedroom Lights"
 switch.bedroom_53_21:
   friendly_name: Bedroom
@@ -45,7 +46,8 @@ sensor.kitchen_52_15:
   friendly_name: Light Level
 light.kitchen_52_33:
   friendly_name: RGB Strip
-  emulated_hue : true
+  # emulated_hue : true
+  emulated_hue_hidden: false
   emulated_hue_name: "Kitchen Lights"
 switch.kitchen_52_21:
   friendly_name: Kitchen

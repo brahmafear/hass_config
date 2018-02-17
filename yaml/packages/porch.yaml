@@ -11,7 +11,8 @@ group:
   #    - light.porch_54_33
   #    - switch.porch_54_21
       - input_select.porch_led_effect
-      - input_slider.porch_animation_speed
+#      - input_slider.porch_animation_speed
+      - input_number.porch_animation_speed
       - light.porch_leds
 
 
@@ -51,7 +52,7 @@ input_select:
      - "Twinkle"
     initial: "Solid"
 
-input_slider:
+input_number:
   porch_animation_speed:
     name: Bruh Animation Speed
     initial: 150
@@ -115,5 +116,5 @@ scene:
 homeassistant:
   customize:
     scene.blue_porch:
-      emulated_hue: true
+      emulated_hue_hidden: false
       emulated_hue_name: Blue Porch

@@ -1,3 +1,6 @@
 - platform: generic
   still_image_url: https://radblast.wunderground.com/cgi-bin/radar/WUNIDS_map?station=DOX&brand=wui&num=1&delay=100&type=NTP&frame=0&scale=1&noclutter=1&showstorms=5&mapx=400&mapy=240&centerx=400&centery=240&transx=0&transy=0&showlabels=0&severe=0&rainsnow=1&lightning=1&smooth=1&rand=24427697&lat=38.85&lon=-75.44&label=you
   name: Delaware Radar
+- platform: generic
+  still_image_url: http://images.intellicast.com/WxImages/RadarLoop/shd_None_anim.gif
+  name: Animated Radar

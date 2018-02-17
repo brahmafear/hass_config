@@ -7,14 +7,6 @@
 * RFLink on Arduino Mega via serial for 433MHz, MiLight control
       https://home-assistant.io/components/rflink/
 
-* AI Thinker RGB/WW bulbs either reverse-engineered or with new firmware
-
-* ~~Slampher with new firmware~~
-
-* ~~USB webcam either with motion or just capturing stills~~
-
-* Mopidy installations using Pis and Chips
-
 * SNMP device tracker via Sonicwall
 
 * Rewrite MySensor Node scripts to use before()
@@ -28,3 +20,5 @@
 * PyATV command line switches for direct control of ATV
 
 * LIRC2MQTT for IR input
+
+* HA FloorPlan https://github.com/pkozul/ha-floorplan
