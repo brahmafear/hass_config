@@ -2,8 +2,25 @@
 #    domains:
 #      - device_tracker
 
-purge_days: 7
+purge_keep_days: 30
 # db_url: sqlite:///var/run/hass.db
-db_url: !secret hass_db_url
+# db_url: !secret hass_db_url
 
 exclude: !include excludes.yaml
+include:
+  entities:
+    - sensor.attic_59_10
+    - sensor.bedroom_53_10
+    - sensor.kitchen_52_10
+    - sensor.living_room_51_10
+    - sensor.myn_55_55_10
+    - sensor.myn_56_56_10
+    - sensor.porch_54_10
+    - sensor.attic_59_11
+    - sensor.bedroom_53_11
+    - sensor.kitchen_52_11
+    - sensor.living_room_51_11
+    - sensor.myn_55_55_11
+    - sensor.myn_56_56_11
+    - sensor.porch_54_11
+

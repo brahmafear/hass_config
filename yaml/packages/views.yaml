@@ -1,0 +1,102 @@
+group:
+  default_view_temp:
+    icon: mdi:information-variant
+    view: yes
+    entities:
+      - group.front_card
+      - group.house_lights
+      - group.our_locations
+
+  house_view:
+    name: House View
+    view: yes
+    icon: mdi:home
+    entities:
+      - group.livingroom
+      - group.kitchen
+      - group.garage
+      - group.bedroom
+      - group.porch
+      - group.attic
+      - group.outdoors
+      - group.node56
+      - group.node55
+
+  location_view:
+    name: Location View
+    view: yes
+    icon: mdi:web
+    entities:
+      - group.dwmi8_ios
+      - group.jlw_ios
+      - group.dwmi8_ot
+      - camera.prius_location
+      - camera.dwmi8_ios_location
+      - group.drive_times
+
+  environment_view:
+    name: Environment View
+    view: yes
+    icon: mdi:weather-partlycloudy
+    entities:
+      - group.darksky
+      - group.local_weather
+      - camera.animated_radar
+      # - group.wunderground
+
+  system_view:
+    name: System View
+    view: yes
+    icon: mdi:settings
+    entities:
+      - group.raspi
+      - group.hass
+      - group.internet
+      # - group.buttons
+
+  debug_view:
+    name: Debug View
+    view: yes
+    icon: mdi:tune-vertical
+    entities:
+      - group.all_devices
+      - group.all_lights
+      - group.all_switches
+      - group.all_covers
+      - group.all_scripts
+      - group.all_automations
+      # - group.network_devices
+
+
+homeassistant:
+  customize:
+    group.house_view:
+      order: 1
+    group.location_view:
+      order: 2
+    group.environment_view:
+      order: 3
+    group.system_view:
+      order: 4
+    group.debug_view:
+      order: 5
+
+    group.all_devices:
+      friendly_name: Devices
+      hidden: false
+    group.all_lights:
+      friendly_name: Lights
+      hidden: false
+    group.all_switches:
+      friendly_name: Switches
+      hidden: false
+    group.all_covers:
+      friendly_name: Covers
+      hidden: false
+    group.all_scripts:
+      friendly_name: Scripts
+      hidden: false
+    group.all_automations:
+      friendly_name: Automations
+      hidden: false
+    

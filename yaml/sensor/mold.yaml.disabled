@@ -1,5 +1,0 @@
-- platform: mold_indicator
-  indoor_temp_sensor: sensor.node_20_10
-  indoor_humidity_sensor: sensor.node_20_11
-  outdoor_temp_sensor: sensor.dark_sky_temperature
-  calibration_factor: 2.0

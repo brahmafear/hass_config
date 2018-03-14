@@ -1,0 +1,34 @@
+automation:
+  - alias: Bedroom Motion
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.bedroom_53_20
+        to: 'on'
+    action:
+
+
+sensor:
+  - platform: template
+    sensors:
+      bedroom_last_motion:
+        value_template: '{% if states.automation.bedroom_motion and states.automation.bedroom_motion.attributes.last_triggered %}
+                           {{ as_timestamp(states.automation.bedroom_motion.attributes.last_triggered) | timestamp_custom("%b %d %X") }}
+                         {% else %}
+                           Never
+                         {% endif %}'
+        friendly_name: Last Motion
+
+group:
+  bedroom:
+    name:  Bedroom
+    control: hidden
+    entities:
+      - binary_sensor.bedroom_53_20
+      - sensor.bedroom_last_motion
+      - sensor.bedroom_53_10
+      - sensor.bedroom_53_11
+      - sensor.bedroom_53_15
+      - light.bedroom_53_30
+      - light.bedroom_53_36
+#    - switch.bedroom_53_21
+

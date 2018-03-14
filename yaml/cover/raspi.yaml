@@ -1,8 +1,0 @@
-- platform: rpi_gpio
-  relay_time: 1.0
-  state_pull_mode: 'DOWN'
-  invert_logic: false
-  covers:
-    - relay_pin: 23
-      state_pin: 18
-      name: 'Garage Door'

@@ -13,7 +13,6 @@
 .*
 plex.conf.disabled
 !/.gitignore
-suit.jpg
 home-assistant.log
 home-assistant_v2.db
 secrets.yaml
@@ -27,3 +26,8 @@ ios.conf
 /deps
 /ssl
 /backups
+/disabled
+/www
+emulated_hue_ids.json
+entity_registry.yaml
+__pycache__

@@ -8,15 +8,15 @@ homeassistant:
   customize: !include_dir_merge_named yaml/customization
   packages: !include_dir_named yaml/packages
 
-device_tracker: !include_dir_merge_list yaml/device_tracker
-camera: !include_dir_merge_list yaml/camera
-binary_sensor: !include_dir_merge_list yaml/binary_sensor
-cover: !include_dir_merge_list yaml/cover
+# device_tracker: !include_dir_merge_list yaml/device_tracker
+# camera: !include_dir_merge_list yaml/camera
+# binary_sensor: !include_dir_merge_list yaml/binary_sensor
+# cover: !include_dir_merge_list yaml/cover
 sensor: !include_dir_merge_list yaml/sensor
 automation: !include_dir_merge_list yaml/automation
-switch: !include_dir_merge_list yaml/switch
+# switch: !include_dir_merge_list yaml/switch
 notify: !include_dir_merge_list yaml/notify
-light: !include_dir_merge_list yaml/light
+# light: !include_dir_merge_list yaml/light
 scene: !include_dir_merge_list yaml/scene
 # proximity: !include_dir_list yaml/proximity
 input_boolean: !include_dir_merge_named yaml/input_boolean
@@ -49,35 +49,13 @@ sun:
 updater:
 # conversation:
 
-# recorder: !include yaml/recorder.yaml
-# history: !include yaml/history.yaml
+recorder: !include yaml/recorder.yaml
+history: !include yaml/history.yaml
 
 # logbook:
 # discovery:
 zeroconf:
 
 ios: !include yaml/ios.yaml
-# ios:
-#   push:
-#     categories:
-#       - name: Alarm
-#         identifier: 'ALARM'
-#         actions:
-#           - identifier: 'SOUND_ALARM'
-#             title: 'Sound Alarm'
-#             activationMode: 'background'
-#             authenticationRequired: yes
-#             destructive: yes
-#             behavior: 'default'
-#           - identifier: 'SILENCE_ALARM'
-#             title: 'Silence Alarm'
-#             activationMode: 'background'
-#             authenticationRequired: yes
-#             destructive: no
-#             behavior: 'default'
-#             textInputButtonTitle: 'Silencio!'
-#             textInputPlaceholder: 'Placeholder'
-
-
 
 frontend:

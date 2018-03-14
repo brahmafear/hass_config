@@ -9,7 +9,19 @@
     - group
     - switch
     - camera
+    - device_tracker
+    - input_boolean
+    - weblink
+    - updater
   entities:
+    - sensor.ailight_254ef3
+    - sensor.ailight_2550d0
+    - sensor.ailight_255346
+    - sensor.ailight_2553e5
+    - sensor.ailight_299bec
+    - sensor.ailight_29a0d5
+    - sensor.airport_extreme
+    - sensor.appletv
     - sensor.dark_sky_apparent_temperature
     - sensor.dark_sky_daily_high_temperature
     - sensor.dark_sky_daily_low_temperature

@@ -1,5 +1,0 @@
-- platform: rpi_gpio
-  invert_logic: true
-  # GPIO numbers
-  ports:
-    24: 'Garage Relay'

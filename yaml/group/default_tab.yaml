@@ -1,5 +1,0 @@
-default_view:
-  icon: mdi:information-variant
-  view: yes
-  entities:
-    - group.front_card

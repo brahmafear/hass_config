@@ -1,0 +1,6 @@
+- platform: yeelight
+  devices:
+    192.168.9.237:
+      name: Nook Light
+      transition: 1000
+      save_on_change: true

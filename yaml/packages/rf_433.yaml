@@ -1,0 +1,64 @@
+# Known Codes:
+# White5:
+# #, ON, OFF
+# 1, 5510451, 5510460 : A3  6
+# 2, 5510595, 5510604 : B3  6
+# 3, 5510915, 5510924 : C7  6
+# 4, 5512451, 5512460 : D11 6
+# 5, 5518595, 5518604 : E3  6
+
+# White3:
+# 1, 5264691, 5264700 : A3  12
+# 2, 5264835, 5264844 : B3  12
+# 3, 5265155, 5265164 : C7  12
+# 4, 5266691, 5266700 : D11 12
+# A, 5272835, 5272844 : E3  13
+
+##  "{\"id\":\"A3\",\"unit\":6,\"on\":1}"
+##  "{\"id\":\"A3\",\"unit\":6,\"off\":1}"
+
+switch:
+  - platform: rpi_rf
+    gpio: 4
+    switches:
+      window_candles_pi:
+        protocol: 1
+        pulselength: 186
+        code_on: 5510451
+        code_off: 5510460
+      christmas_tree_pi:
+        protocol: 1
+        pulselength: 186
+        code_on: 5264691
+        code_off: 5264700
+      garage_light_pi:
+        protocol: 1
+        pulselength: 186
+        code_on: 5266691
+        code_off: 5266700
+#    plug_3:
+#      protocol: 1
+#      pulselength: 186
+#      code_on: 5510915
+#      code_off: 5510924
+
+  - platform: mqtt
+    name: christmas_tree
+    command_topic: "bruh/mqttstrip/rf"
+    payload_on: "{\"id\":\"A3\",\"unit\":12,\"on\":1}"
+    payload_off: "{\"id\":\"A3\",\"unit\":12,\"off\":1}"
+    optimistic: true
+
+  - platform: mqtt
+    name: window_candles
+    command_topic: "bruh/mqttstrip/rf"
+    payload_on: "{\"id\":\"A3\",\"unit\":6,\"on\":1}"
+    payload_off: "{\"id\":\"A3\",\"unit\":6,\"off\":1}"
+    optimistic: true
+
+  - platform: mqtt
+    name: garage_light
+    command_topic: "bruh/mqttstrip/rf"
+    payload_on: "{\"id\":\"D11\",\"unit\":12,\"on\":1}"
+    payload_off: "{\"id\":\"D11\",\"unit\":12,\"off\":1}"
+    optimistic: true

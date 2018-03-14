@@ -2,9 +2,9 @@ binary_sensor.living_room_51_20:
   friendly_name: Motion
   sensor_class: motion
 sensor.living_room_51_10:
-  friendly_name: Temperature
+  friendly_name: Temperature LR
 sensor.living_room_51_11:
-  friendly_name: Humidity
+  friendly_name: Humidity LR
   icon: mdi:water-percent
 sensor.living_room_51_15:
   friendly_name: Light Level
@@ -17,9 +17,9 @@ binary_sensor.bedroom_53_20:
   friendly_name: Motion
   sensor_class: motion
 sensor.bedroom_53_10:
-  friendly_name: Temperature
+  friendly_name: Temperature BR
 sensor.bedroom_53_11:
-  friendly_name: Humidity
+  friendly_name: Humidity BR
   icon: mdi:water-percent
 sensor.bedroom_53_15:
   friendly_name: Light Level
@@ -38,9 +38,9 @@ binary_sensor.kitchen_52_20:
   friendly_name: Motion
   sensor_class: motion
 sensor.kitchen_52_10:
-  friendly_name: Temperature
+  friendly_name: Temperature K
 sensor.kitchen_52_11:
-  friendly_name: Humidity
+  friendly_name: Humidity K
   icon: mdi:water-percent
 sensor.kitchen_52_15:
   friendly_name: Light Level
@@ -57,9 +57,9 @@ binary_sensor.porch_54_20:
   friendly_name: Motion
   sensor_class: motion
 sensor.porch_54_10:
-  friendly_name: Temperature
+  friendly_name: Temperature P
 sensor.porch_54_11:
-  friendly_name: Humidity
+  friendly_name: Humidity P
   icon: mdi:water-percent
 sensor.porch_54_15:
   friendly_name: Light Level
@@ -69,7 +69,7 @@ switch.porch_54_21:
   friendly_name: Porch
 
 sensor.attic_59_10:
-  friendly_name: Temperature
+  friendly_name: Temperature A
 sensor.attic_59_11:
-  friendly_name: Humidity
+  friendly_name: Humidity A
   icon: mdi:water-percent

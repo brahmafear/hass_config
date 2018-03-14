@@ -16,12 +16,12 @@ group:
 input_boolean:
   kitchen_strip:
 
-homeassistant:
-  customize:
-    input_boolean.kitchen_strip:
-      hidden: true
-      emulated_hue_hidden: false
-      emulated_hue_name: Kitchen Light
+#homeassistant:
+#  customize:
+#    input_boolean.kitchen_strip:
+#      hidden: true
+#      emulated_hue_hidden: false
+#      emulated_hue_name: Kitchen Light
 
 sensor:
   - platform: template

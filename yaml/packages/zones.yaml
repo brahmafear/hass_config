@@ -12,6 +12,10 @@ homeassistant:
 #      track_ios: true
     zone.home:
       track_ios: true
+      beacon:
+        uuid: a22bd383-ebdd-49ac-b2e7-40eb55f5d0ab
+        major: 0
+        minor: 0
 #    zone.lewes_yacht_club:
 #      track_ios: true
 #    zone.sas:
@@ -55,7 +59,7 @@ zone:
   - name: sas
     latitude: !secret zone_sas_lat
     longitude: !secret zone_sas_long
-    radius: 1500
+    radius: 500
     icon: mdi:people
     passive: true
   #

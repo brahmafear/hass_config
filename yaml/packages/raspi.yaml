@@ -4,11 +4,10 @@ group:
     icon: mdi:raspberrypi
     entities:
       - sensor.processor_use
-      - sensor.memory_use
+      - sensor.memory_use_percent
+      - sensor.swap_use_percent
       - sensor.disk_free_
-      # - sensor.disk_free_mntmedia
       - sensor.last_boot
-      # - sensor.since_last_boot
       - sensor.cpu_temperature
 
 sensor:
@@ -25,14 +24,36 @@ sensor:
     unit_of_measurement: "°C"
     value_template: '{{ value|int // 1000 }}'
 
-
   - platform: systemmonitor
     resources:
       - type: disk_free
         arg: /
-      # - type: disk_free
-        # arg: /mnt/media/
       - type: memory_use_percent
+      - type: swap_use_percent
       - type: processor_use
       - type: last_boot
-      # - type: since_last_boot
+
+binary_sensor:
+  - platform: rpi_gpio
+    pull_mode: "DOWN"
+    bouncetime: 50
+    invert_logic: false
+    ports:
+      27: 'Garage Motion'
+
+cover:
+  - platform: rpi_gpio
+    relay_time: 1.0
+    state_pull_mode: 'DOWN'
+    invert_logic: false
+    covers:
+      - relay_pin: 23
+        state_pin: 18
+        name: 'Garage Door'
+
+switch:
+  - platform: rpi_gpio
+    invert_logic: true
+    # GPIO numbers
+    ports:
+      24: 'Garage Relay'

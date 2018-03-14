@@ -1,7 +1,0 @@
-- platform: rpi_gpio
-  pull_mode: "DOWN"
-  bouncetime: 50
-  invert_logic: false
-  ports:
-    27: 'Garage Motion'
-    

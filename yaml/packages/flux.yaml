@@ -1,0 +1,12 @@
+switch:
+  - platform: flux
+    mode: rgb
+    lights:
+      - light.ailight_254ef3
+      - light.ailight_2550d0
+      - light.ailight_255346
+      - light.ailight_2553e5
+      - light.ailight_299bec
+      - light.ailight_29a0d5
+      - light.ailight_2f0349
+      - light.kitchen_52_33

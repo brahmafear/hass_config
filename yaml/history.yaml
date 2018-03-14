@@ -2,12 +2,27 @@
 exclude: !include excludes.yaml
 include:
   entities:
-    - sensor.speedtest_download
-    - sensor.speedtest_upload
-    - sensor.speedtest_ping
-    - sensor.owm_temperature
-    - sensor.cpu_use
-    - sensor.cpu_temperature
-    - sensor.drive_from_rehoboth
-    - sensor.drive_to_rehoboth
-    - sensor.drive_to_beach
+#    - sensor.speedtest_download
+#    - sensor.speedtest_upload
+#    - sensor.speedtest_ping
+#    - sensor.owm_temperature
+#    - sensor.cpu_use
+#    - sensor.cpu_temperature
+#    - sensor.drive_from_rehoboth
+#    - sensor.drive_to_rehoboth
+#    - sensor.drive_to_beach
+    - sensor.attic_59_10
+    - sensor.bedroom_53_10
+    - sensor.kitchen_52_10
+    - sensor.living_room_51_10     
+    - sensor.myn_55_55_10
+    - sensor.myn_56_56_10
+    - sensor.porch_54_10
+    - sensor.attic_59_11
+    - sensor.bedroom_53_11
+    - sensor.kitchen_52_11
+    - sensor.living_room_51_11
+    - sensor.myn_55_55_11
+    - sensor.myn_56_56_11
+    - sensor.porch_54_11
+

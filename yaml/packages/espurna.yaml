@@ -36,7 +36,7 @@ switch:
     qos: 0
     retain: true
   - platform: mqtt
-    name: "ECOPLUG0_24662"
+    name: "ECOPLUG_024662"
     state_topic: "/espurna/switch/ECOPLUG024662/relay/0"
     command_topic: "/espurna/switch/ECOPLUG024662/relay/0/set"
     payload_on: 1
@@ -44,18 +44,6 @@ switch:
     optimistic: false
     qos: 0
     retain: true
-
-#light:
-#  - platform: mqtt
-#    name: "AILIGHT_299BEC"
-#    state_topic: "/espurna/light/AILIGHT_299BEC/relay/0/get"
-#    command_topic: "/espurna/light/AILIGHT_299BEC/relay/0/set"
-#    rgb_state_topic: "/espurna/light/AILIGHT_299BEC/color/get"
-#    rgb_command_topic: "/espurna/light/AILIGHT_299BEC/color/set"
-#    qos: 0
-#    payload_on: 1
-#    payload_off: 0
-#    optimistic: false
 
 homeassistant:
   customize:

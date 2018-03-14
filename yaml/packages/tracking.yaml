@@ -1,0 +1,106 @@
+device_tracker:
+  - platform: owntracks
+    max_gps_accuracy: 200
+  - platform: automatic
+    client_id: !secret automatic_client_id
+    secret: !secret automatic_secret
+    username: !secret automatic_username
+    password: !secret automatic_password
+
+sensor:
+# Battery levels
+  - platform: template
+    sensors:
+      dwmi8_ot_battery_level:
+        unit_of_measurement: '%'
+        value_template: "{{ states.device_tracker.owntracks_dwmi8.attributes.battery }}"
+      dwmi5_ot_battery_level:
+        unit_of_measurement: '%'
+        value_template: "{{ states.device_tracker.owntracks_dwmi5.attributes.battery }}"
+
+# https://github.com/michaelmcarthur/GoogleGeocode-HASS 
+  - platform: google_geocode
+    name: geocode_dwmi5_ot
+    origin: device_tracker.owntracks_dwmi5
+    options: street_number, street, city, county, state
+    display_zone: show
+    api_key: !secret google_travel_time_api_key
+  - platform: google_geocode
+    name: geocode_dwmi8_ot
+    origin: device_tracker.owntracks_dwmi8
+    options: street_number, street, city, county, state
+    display_zone: show
+    api_key: !secret google_travel_time_api_key
+  - platform: google_geocode
+    name: geocode_dwmi8_ios
+    origin: device_tracker.dwmi8
+    options: street_number, street, city, county, state
+    display_zone: show
+    api_key: !secret google_travel_time_api_key
+  - platform: google_geocode
+    name: geocode_jlw_ios
+    origin: device_tracker.jennifer_wilsons_iphone
+    options: street_number, street, city, county, state
+    display_zone: show
+    api_key: !secret google_travel_time_api_key
+  - platform: google_geocode
+    name: geocode_prius
+    origin: device_tracker.toyota_prius
+    options: street_number, street, city, county, state
+    display_zone: show
+    api_key: !secret google_travel_time_api_key
+
+camera:
+  - platform: generic
+    name: Prius Location
+    still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.device_tracker.toyota_prius.attributes.latitude }},{{ states.device_tracker.toyota_prius.attributes.longitude }}&zoom=13&size=500x500&maptype=roadmap&markers=color:blue%7Clabel:P%7C{{ states.device_tracker.toyota_prius.attributes.latitude }},{{ states.device_tracker.toyota_prius.attributes.longitude }}
+    limit_refetch_to_url_change: true
+  - platform: generic
+    name: DWMi8_ios Location
+    still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.device_tracker.dwmi8.attributes.latitude }},{{ states.device_tracker.owntracks_dwmi8.attributes.longitude }}&zoom=13&size=500x500&maptype=roadmap&markers=color:blue%7Clabel:P%7C{{ states.device_tracker.toyota_prius.attributes.latitude }},{{ states.device_tracker.toyota_prius.attributes.longitude }}
+    limit_refetch_to_url_change: true
+
+
+group:
+  dwmi8_ot:
+    name: DWMi8 OT
+    entities:
+      - device_tracker.owntracks_dwmi8
+      - sensor.dwmi8_ot_battery_level
+      - sensor.geocode_dwmi8_ot
+  dwmi5_ot:
+    name: DWMi5 OT
+    entities:
+      - device_tracker.owntracks_dwmi5
+      - sensor.dwmi5_ot_battery_level
+      - sensor.geocode_dwmi5_ot
+  dwmi8_ios:
+    name: DWM iPhone
+    entities:
+      - device_tracker.dwmi8
+      - sensor.geocode_dwmi8_ios
+      - sensor.iphone_battery_level
+      - sensor.iphone_battery_state
+  jlw_ios:
+    name: JLW iPhone
+    entities:
+      - device_tracker.jennifer_wilsons_iphone
+      - sensor.geocode_jlw_ios
+      - sensor.jennifer_wilsons_iphone_battery_level
+      - sensor.jennifer_wilsons_iphone_battery_state
+
+  our_locations:
+    name: Locations
+    entities:
+      - sensor.geocode_dwmi8_ios
+      - sensor.geocode_jlw_ios
+      - sensor.geocode_prius
+
+#homeassistant:
+#  customize:
+#    geocode_dwmi8_ios:
+#      friendly_name: "DWM Location"
+#    geocode_jlw_ios:
+#      friendly_name: "JLW Location"
+#    geocode_prius:
+#      friendly_name: "Prius Location"
