@@ -17,3 +17,12 @@ automation:
       - delay: 10:00
       - service: homeassistant.turn_off
         entity_id: switch.slampher_173b67
+
+  - alias: Update Phone Location when Prius parks
+    trigger:
+      - platform: state
+        entity_id: device_tracker.toyota_prius
+    action:
+      - service: notify.ios_dwmi8
+        data:
+          message: "request_location_update"
