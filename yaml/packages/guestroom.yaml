@@ -1,0 +1,7 @@
+group:
+  guestroom:
+    name:  Guest Room
+    control: hidden
+    entities:
+      - sensor.guestroom_55_10
+      - sensor.guestroom_55_11

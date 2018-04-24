@@ -1,6 +1,0 @@
-node55:
-  name:  Node55
-  control: hidden
-  entities:
-    - sensor.myn_55_55_10
-    - sensor.myn_55_55_11

@@ -1,0 +1,31 @@
+group:
+  office:
+    name: Office
+    control: hidden
+    entities:
+      - binary_sensor.office_56_20
+      - sensor.office_last_motion
+      - sensor.office_56_10
+      - sensor.office_56_11
+      - sensor.office_56_15
+
+automation:
+  - alias: Office Motion
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.office_56_20
+        to: 'on'
+    action:
+
+
+sensor:
+  - platform: template
+    sensors:
+      office_last_motion:
+        value_template: '{% if states.automation.office_motion and states.automation.office_motion.attributes.last_triggered %}
+                           {{ as_timestamp(states.automation.office_motion.attributes.last_triggered) | timestamp_custom("%b %d %X") }}
+                         {% else %}
+                           Never
+                         {% endif %}'
+        friendly_name: Last Motion
+

@@ -9,6 +9,10 @@ group:
       - sensor.disk_free_
       - sensor.last_boot
       - sensor.cpu_temperature
+      - sensor.load_1m
+      - sensor.load_5m
+      - sensor.load_15m
+ 
 
 sensor:
   - platform: dht
@@ -32,6 +36,9 @@ sensor:
       - type: swap_use_percent
       - type: processor_use
       - type: last_boot
+      - type: load_1m
+      - type: load_5m
+      - type: load_15m
 
 binary_sensor:
   - platform: rpi_gpio

@@ -19,8 +19,8 @@ group:
       - group.porch
       - group.attic
       - group.outdoors
-      - group.node56
-      - group.node55
+      - group.office
+      - group.guestroom
 
   location_view:
     name: Location View

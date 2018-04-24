@@ -1,9 +1,0 @@
-node56:
-  name:  Node56
-  control: hidden
-  entities:
-    - binary_sensor.myn_56_56_20
-    - sensor.myn_56_56_10
-    - sensor.myn_56_56_11
-    - sensor.myn_56_56_15
-    - light.myn_56_56_36

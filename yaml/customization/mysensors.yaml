@@ -73,3 +73,21 @@ sensor.attic_59_10:
 sensor.attic_59_11:
   friendly_name: Humidity A
   icon: mdi:water-percent
+
+binary_sensor.office_56_20:
+  friendly_name: Motion
+  sensor_class: motion
+sensor.office_56_10:
+  friendly_name: Temperature Of
+sensor.office_56_11:
+  friendly_name: Humidity Of
+  icon: mdi:water-percent
+sensor.office_56_15:
+  friendly_name: Light Level
+
+sensor.guestroom_55_10:
+  friendly_name: Temperature GR
+sensor.guestroom_55_11:
+  friendly_name: Humidity GR
+  icon: mdi:water-percent
+

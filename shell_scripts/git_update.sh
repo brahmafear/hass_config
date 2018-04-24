@@ -1,8 +1,8 @@
 #!/bin/bash
 
-cd /srv/hass/cfg
+cd /srv/hasscfg
 source /srv/hass/bin/activate
-/srv/hass/bin/hass -c /srv/hass/cfg --script check_config
+/srv/hass/bin/hass -c /srv/hasscfg --script check_config
 echo -n "Enter the Description for the Change: " [Minor Update]
 read CHANGE_MSG
 
