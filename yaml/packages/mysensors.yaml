@@ -1,0 +1,5 @@
+binary_sensor:
+  - platform: command_line
+    name: MySensors Status
+    command: "/bin/systemctl status mysensors | /bin/grep broken >/dev/null && echo OFF || echo ON"
+    

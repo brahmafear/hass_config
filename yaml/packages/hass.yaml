@@ -105,6 +105,7 @@ group:
       - sensor.ha_last_restart
 #      - sensor.ha_restart_count
       - sensor.ssl_expiry
+      - binary_sensor.mysensors_status
 
 #input_number:
 #  ha_restart_count:
