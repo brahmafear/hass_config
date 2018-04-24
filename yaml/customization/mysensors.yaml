@@ -91,3 +91,8 @@ sensor.guestroom_55_11:
   friendly_name: Humidity GR
   icon: mdi:water-percent
 
+sensor.crawl_60_10:
+  friendly_name: Crawl Space Temperature
+sensor.crawl_60_11:
+  friendly_name: Crawl Space Humidity
+  icon: mdi:water-percent

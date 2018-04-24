@@ -12,6 +12,7 @@ group:
   #    - switch.kitchen_52_21
       - light.nook_light
       - switch.kitchen_light
+      - sensor.kitchen_last_update
 
 input_boolean:
   kitchen_strip:
@@ -33,7 +34,13 @@ sensor:
                            Never
                          {% endif %}'
         friendly_name: Last Motion
-
+      kitchen_last_update:
+        value_template: '{% if states.sensor.kitchen_52_10 and states.sensor.kitchen_52_10.last_updated %}
+                           {{ as_timestamp(states.sensor.kitchen_52_10.last_updated)|timestamp_custom("%b %d %X") }}
+                         {% else %}
+                           Never
+                         {% endif %}'
+        friendly_name: Last Update
 
 script:
   kitchen_lights_motion:
