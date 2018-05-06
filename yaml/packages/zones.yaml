@@ -13,9 +13,9 @@ homeassistant:
     zone.home:
       track_ios: true
       beacon:
-        uuid: a22bd383-ebdd-49ac-b2e7-40eb55f5d0ab
-        major: 0
-        minor: 0
+        uuid: b6938ed0-32e5-4fd5-838f-8929ec4e3686
+        major: 22
+        minor: 1
 #    zone.lewes_yacht_club:
 #      track_ios: true
 #    zone.sas:
@@ -27,7 +27,10 @@ zone:
     longitude: !secret hass_long
     radius: 15
     icon: mdi:home
-
+    beacon:
+      uuid: b6938ed0-32e5-4fd5-838f-8929ec4e3686
+      major: 22
+      minor: 1
   # - name: gary_and_jane_house
   #   latitude: !secret zone_gjh_lat
   #   longitude: !secret zone_gjh_long

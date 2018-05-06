@@ -2,7 +2,7 @@ automation:
   - alias: Side Light upon arrival
     trigger:
       - platform: state
-        entity_id: device_tracker.toyota_prius, device_tracker.dwmi8, device_tracker.jennifer_wilsons_iphone
+        entity_id: device_tracker.toyota_prius, device_tracker.owntracks_dwmi8, device_tracker.jennifer_wilsons_iphone
         to: home
     condition:
       - condition: template

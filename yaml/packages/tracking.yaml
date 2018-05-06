@@ -19,36 +19,36 @@ sensor:
         value_template: "{{ states.device_tracker.owntracks_dwmi5.attributes.battery }}"
 
 # https://github.com/michaelmcarthur/GoogleGeocode-HASS 
-  - platform: google_geocode
-    name: geocode_dwmi5_ot
-    origin: device_tracker.owntracks_dwmi5
-    options: street_number, street, city, county, state
-    display_zone: show
-    api_key: !secret google_travel_time_api_key
+#  - platform: google_geocode
+#    name: geocode_dwmi5_ot
+#    origin: device_tracker.owntracks_dwmi5
+#    options: street_number, street, city, county, state
+#    display_zone: show
+#    api_key: !secret google_travel_time_api_key
   - platform: google_geocode
     name: geocode_dwmi8_ot
     origin: device_tracker.owntracks_dwmi8
     options: street_number, street, city, county, state
     display_zone: show
     api_key: !secret google_travel_time_api_key
-  - platform: google_geocode
-    name: geocode_dwmi8_ios
-    origin: device_tracker.dwmi8
-    options: street_number, street, city, county, state
-    display_zone: show
-    api_key: !secret google_travel_time_api_key
+#  - platform: google_geocode
+#    name: geocode_dwmi8_ios
+#    origin: device_tracker.dwmi8
+#    options: street_number, street, city, county, state
+#    display_zone: show
+#    api_key: !secret google_travel_time_api_key
   - platform: google_geocode
     name: geocode_jlw_ios
     origin: device_tracker.jennifer_wilsons_iphone
     options: street_number, street, city, county, state
     display_zone: show
     api_key: !secret google_travel_time_api_key
-  - platform: google_geocode
-    name: geocode_prius
-    origin: device_tracker.toyota_prius
-    options: street_number, street, city, county, state
-    display_zone: show
-    api_key: !secret google_travel_time_api_key
+#  - platform: google_geocode
+#    name: geocode_prius
+#    origin: device_tracker.toyota_prius
+#    options: street_number, street, city, county, state
+#    display_zone: show
+#    api_key: !secret google_travel_time_api_key
 
 camera:
   - platform: generic
@@ -58,6 +58,10 @@ camera:
   - platform: generic
     name: DWMi8_ios Location
     still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.device_tracker.dwmi8.attributes.latitude }},{{ states.device_tracker.owntracks_dwmi8.attributes.longitude }}&zoom=13&size=500x500&maptype=roadmap&markers=color:blue%7Clabel:P%7C{{ states.device_tracker.toyota_prius.attributes.latitude }},{{ states.device_tracker.toyota_prius.attributes.longitude }}
+    limit_refetch_to_url_change: true
+  - platform: generic
+    name: DWMi8_OT Location
+    still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.device_tracker.owntracks_dwmi8.attributes.latitude }},{{ states.device_tracker.owntracks_dwmi8.attributes.longitude }}&zoom=13&size=500x500&maptype=roadmap&markers=color:blue%7Clabel:P%7C{{ states.device_tracker.toyota_prius.attributes.latitude }},{{ states.device_tracker.toyota_prius.attributes.longitude }}
     limit_refetch_to_url_change: true
 
 
@@ -92,7 +96,7 @@ group:
   our_locations:
     name: Locations
     entities:
-      - sensor.geocode_dwmi8_ios
+      - sensor.geocode_dwmi8_ot
       - sensor.geocode_jlw_ios
       - sensor.geocode_prius
 

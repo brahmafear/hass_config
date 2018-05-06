@@ -34,7 +34,7 @@ sensor:
   - platform: google_travel_time
     name: Phone To Home
     api_key: !secret google_travel_time_api_key
-    origin: device_tracker.dwmi5
+    origin: device_tracker.owntracks_dwmi8
     destination: zone.home
     options:
       mode: driving
