@@ -12,6 +12,14 @@ group:
       - sensor.load_1m
       - sensor.load_5m
       - sensor.load_15m
+  raspi_environment:
+    name: Rasperry Pi Environment
+    entities:
+      - binary_sensor.raspi_motion
+      - sensor.dht_sensor_temperature
+      - sensor.dht_sensor_humidity
+      - switch.raspi_relay
+      - cover.raspi_cover
  
 
 sensor:
@@ -46,7 +54,7 @@ binary_sensor:
     bouncetime: 50
     invert_logic: false
     ports:
-      27: 'Garage Motion'
+      27: 'RasPi Motion'
 
 cover:
   - platform: rpi_gpio
@@ -56,11 +64,11 @@ cover:
     covers:
       - relay_pin: 23
         state_pin: 18
-        name: 'Garage Door'
+        name: 'RasPi Cover'
 
 switch:
   - platform: rpi_gpio
     invert_logic: true
     # GPIO numbers
     ports:
-      24: 'Garage Relay'
+      24: 'RasPi Relay'

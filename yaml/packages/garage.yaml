@@ -1,0 +1,33 @@
+group:
+  garage:
+    name: Garage
+    icon: mdi:garage
+    control: hidden
+    entities:
+      - binary_sensor.garage_57_20
+      - sensor.garage_last_motion
+      - sensor.garage_57_10
+      - sensor.garage_57_11
+      - sensor.garage_57_15
+      - switch.garage_57_5
+      - cover.garage_57_25
+
+automation:
+  - alias: Garage Motion
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.garage_57_20
+        to: 'on'
+    action:
+
+sensor:
+  - platform: template
+    sensors:
+      garage_last_motion:
+        value_template: '{% if states.automation.garage_motion and states.automation.garage_motion.attributes.last_triggered %}
+                           {{ as_timestamp(states.automation.garage_motion.attributes.last_triggered) | timestamp_custom("%b %d %X") }}
+                         {% else %}
+                           Never
+                         {% endif %}'
+        friendly_name: Last Motion
+
