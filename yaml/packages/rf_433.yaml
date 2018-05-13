@@ -31,7 +31,7 @@ switch:
         pulselength: 186
         code_on: 5264691
         code_off: 5264700
-      garage_light_pi:
+      bush_lights_pi:
         protocol: 1
         pulselength: 186
         code_on: 5266691
@@ -57,7 +57,7 @@ switch:
     optimistic: true
 
   - platform: mqtt
-    name: garage_light
+    name: bush_lights
     command_topic: "bruh/mqttstrip/rf"
     payload_on: "{\"id\":\"D11\",\"unit\":12,\"on\":1}"
     payload_off: "{\"id\":\"D11\",\"unit\":12,\"off\":1}"

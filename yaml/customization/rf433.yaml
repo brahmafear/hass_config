@@ -12,8 +12,8 @@ switch.window_candles:
   emulated_hue_name: "Window Candles"
   persistent: true
 
-switch.garage_light:
-  friendly_name: Garage Light
+switch.bush_lights:
+  friendly_name: Bush Lights
   assumed_state: false
   # emulated_hue: true
   emulated_hue_hidden: false
