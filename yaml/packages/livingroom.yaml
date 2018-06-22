@@ -13,20 +13,20 @@ script:
   living_room_toggle_1:
     sequence:
       - condition: state
-        entity_id: 'group.living_room_fan'
+        entity_id: 'light.living_room_fan'
         state: 'on'
       - service: homeassistant.turn_off
         data:
-          entity_id: group.living_room_fan
+          entity_id: light.living_room_fan
 
   living_room_toggle_2:
     sequence:
       - condition: state
-        entity_id: 'group.living_room_fan'
+        entity_id: 'light.living_room_fan'
         state: 'off'
       - service: scene.turn_on
         data:
-          entity_id: 'scene.living_nighttime'
+          entity_id: 'light.living_nighttime'
 
 group:
   livingroom:
@@ -42,7 +42,8 @@ group:
       - switch.christmas_tree
 #      - switch.samsungtv
 #      - switch.fairy_bottle
-      - group.living_room_fan
+#      - group.living_room_fan
+      - light.living_room_fan
       - scene.living_daytime
       - scene.living_nighttime
       - scene.living_party
@@ -68,3 +69,4 @@ automation:
         entity_id: binary_sensor.living_room_51_20
         to: 'on'
     action:
+

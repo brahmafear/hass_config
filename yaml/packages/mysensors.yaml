@@ -1,5 +1,7 @@
 binary_sensor:
   - platform: command_line
     name: MySensors Status
-    command: "/bin/systemctl status mysensors | /bin/grep Broken >/dev/null && echo OFF || echo ON"
-    
+    # command: "/bin/systemctl status mysensors | /bin/grep Broken >/dev/null && echo OFF || echo ON"
+    # command: 'netstat -na | grep "0:5003" | grep LISTEN > /dev/null && echo "ON" || echo "OFF"'
+    command: "journalctl -n1 -q -u mysensors | /bin/grep Broken >/dev/null && echo OFF || echo ON"
+    scan_interval: 60

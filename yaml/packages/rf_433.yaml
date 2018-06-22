@@ -36,11 +36,16 @@ switch:
         pulselength: 186
         code_on: 5266691
         code_off: 5266700
-#    plug_3:
-#      protocol: 1
-#      pulselength: 186
-#      code_on: 5510915
-#      code_off: 5510924
+      porch_strip_pi:
+        protocol: 1
+        pulselength: 186
+        code_on: 5510595
+        code_off: 5510604
+      wifi_pi:
+        protocol: 1
+        pulselength: 186
+        code_on: 5510915
+        code_off: 5510924
 
   - platform: mqtt
     name: christmas_tree
@@ -62,3 +67,4 @@ switch:
     payload_on: "{\"id\":\"D11\",\"unit\":12,\"on\":1}"
     payload_off: "{\"id\":\"D11\",\"unit\":12,\"off\":1}"
     optimistic: true
+

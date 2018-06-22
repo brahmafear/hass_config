@@ -14,7 +14,7 @@ switch.window_candles:
 
 switch.bush_lights:
   friendly_name: Bush Lights
-  assumed_state: false
+  # assumed_state: false
   # emulated_hue: true
   emulated_hue_hidden: false
   emulated_hue_name: "Bush Lights"

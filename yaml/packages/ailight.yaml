@@ -69,6 +69,13 @@ light:
     white_value: true
     effect: false
     optimistic: false
+  - platform: group
+    name: living_room_fan
+    entities:
+      - light.ailight_2550D0
+      - light.ailight_299BEC
+      - light.ailight_254EF3
+      - light.ailight_29A0D5
 
 
 group:
@@ -82,13 +89,13 @@ group:
       - light.ailight_299BEC
       - light.ailight_29A0D5
       - light.ailight_2F0349
-  living_room_fan:
-    name: Living Room Fan Lights
-    entities:
-      - light.ailight_2550D0
-      - light.ailight_299BEC
-      - light.ailight_254EF3
-      - light.ailight_29A0D5
+  #living_room_fan:
+  #  name: Living Room Fan Lights
+  #  entities:
+  #    - light.ailight_2550D0
+  #    - light.ailight_299BEC
+  #    - light.ailight_254EF3
+  #    - light.ailight_29A0D5
   table_lights:
     name: Table Lights
     entities:
@@ -98,14 +105,14 @@ group:
 scene:
   - name: Living Worktime
     entities:
-      group.living_room_fan:
+      light.living_room_fan:
         state: on
         brightness: 255
         white_value: 255
         rgb_color: [255,255,255]
   - name: Living Daytime
     entities:
-      group.living_room_fan:
+      light.living_room_fan:
         state: on
         brightness: 255
         white_value: 0
@@ -142,7 +149,8 @@ scene:
 
 homeassistant:
   customize:
-    group.living_room_fan:
+    light.living_room_fan:
+      friendly_name: 'Living Room Fan Lights'
       emulated_hue_hidden: false
       emulated_hue_name: "Living Room Lights"
     group.table_lights:

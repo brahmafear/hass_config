@@ -72,10 +72,10 @@ light.porch_54_33:
 switch.porch_54_21:
   friendly_name: Porch
 
-sensor.attic_59_10:
-  friendly_name: Temperature A
-sensor.attic_59_11:
-  friendly_name: Humidity A
+sensor.attic2_59_10:
+  friendly_name: Attic Temperature
+sensor.attic2_59_11:
+  friendly_name: Attic Humidity
   icon: mdi:water-percent
 
 binary_sensor.office_56_20:

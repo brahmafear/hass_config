@@ -9,3 +9,5 @@ outdoors:
     - switch.slampher_173b67
     - sensor.crawl_60_10
     - sensor.crawl_60_11
+    - sensor.attic2_59_10
+    - sensor.attic2_59_11
