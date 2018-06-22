@@ -119,7 +119,7 @@ scene:
         rgb_color: [255,240,100]
   - name: Living Nighttime
     entities:
-      group.living_room_fan:
+      light.living_room_fan:
         state: on
         brightness: 32
         white_value: 0
