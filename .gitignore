@@ -5,6 +5,8 @@
 *.key
 *.conf
 *.db-journal
+*.db-shm
+*.db-wal
 *.test
 *.good
 *.bak
