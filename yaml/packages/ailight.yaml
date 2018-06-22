@@ -121,7 +121,7 @@ scene:
     entities:
       light.living_room_fan:
         state: on
-        brightness: 32
+        brightness: 80
         white_value: 0
         rgb_color: [255,240,100]
   - name: Living Party
