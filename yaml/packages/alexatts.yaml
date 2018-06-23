@@ -1,0 +1,17 @@
+# https://github.com/walthowd/ha-alexa-tts
+
+notify:
+  - platform: command_line
+    name: 'Alexa Honeywell'
+    command: "/srv/ha-alexa-tts/alexa_wrapper.sh -d 'Honeywell'"
+  - platform: command_line
+    name: 'Alexa Lewes'
+    command: "/srv/ha-alexa-tts/alexa_wrapper.sh -d 'Lewes Kitchen'"
+
+script:
+  alexatts_announce_time:
+    alias: Announce Time
+    sequence:
+      - service: notify.alexa_lewes
+        data_template:
+          message: 'The time is now {{ as_timestamp(now()) | timestamp_custom("%-H %M %p") }}.'
