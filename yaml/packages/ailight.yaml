@@ -170,6 +170,6 @@ homeassistant:
       emulated_hue_name: "Living Worktime"
     light.ailight_255346:
       friendly_name: "Bedside"
-    light.ailight_255_3e5:
+    light.ailight_2553e5:
       friendly_name: "Porch Table"
       
