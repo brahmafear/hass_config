@@ -31,4 +31,4 @@ group:
       - light.bedroom_53_30
       - light.bedroom_53_36
 #    - switch.bedroom_53_21
-
+      - light.ailight_255346

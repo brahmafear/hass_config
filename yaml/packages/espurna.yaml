@@ -44,6 +44,15 @@ switch:
     optimistic: false
     qos: 0
     retain: true
+  - name: ECOPLUG04E301
+    platform: mqtt
+    state_topic: espurna/ECOPLUG04E301/relay/0
+    command_topic: espurna/ECOPLUG04E301/relay/0/set
+    payload_on: 1
+    payload_off: 0
+    availability_topic: espurna/ECOPLUG04E301/status
+    payload_available: 1
+    payload_not_available: 0
 
 homeassistant:
   customize:
@@ -58,6 +67,10 @@ homeassistant:
     group.porch_lights:
       emulated_hue_hidden: false
       emulated_hue_name: "Front Porch Lights"
+    switch.ecoplug04e301:
+      friendly_name: Bush Lights
+      emulated_hue_hidden: false
+      emulated_hue_name: "Bush Lights"
 
 group:
   porch_lights:

@@ -7,3 +7,4 @@ front_card:
     - sensor.house_temp_avg
     - sensor.house_hum_avg
     - input_boolean.motion_alarm
+    - cover.garage_57_25

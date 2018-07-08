@@ -31,7 +31,7 @@ switch:
         pulselength: 186
         code_on: 5264691
         code_off: 5264700
-      bush_lights_pi:
+      extra_pi:
         protocol: 1
         pulselength: 186
         code_on: 5266691
@@ -62,9 +62,23 @@ switch:
     optimistic: true
 
   - platform: mqtt
-    name: bush_lights
+    name: extra
     command_topic: "bruh/mqttstrip/rf"
     payload_on: "{\"id\":\"D11\",\"unit\":12,\"on\":1}"
     payload_off: "{\"id\":\"D11\",\"unit\":12,\"off\":1}"
     optimistic: true
+
+homeassistant:
+  customize:
+    switch.christmas_tree:
+      friendly_name: Christmas Tree
+      emulated_hue_hidden: false
+      emulated_hue_name: "Christmas Tree"
+      persistent: true
+    switch.window_candles:
+      friendly_name: Window Candles
+      emulated_hue_hidden: false
+      emulated_hue_name: "Window Candles"
+      persistent: true
+
 

@@ -3,7 +3,7 @@ outdoors:
   control: hidden
   entities:
     - switch.window_candles
-    - switch.bush_lights
+    - switch.ecoplug04e301
     - switch.slampher_1735b9
     - switch.slampher_173a91
     - switch.slampher_173b67

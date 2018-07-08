@@ -96,11 +96,11 @@ group:
   #    - light.ailight_299BEC
   #    - light.ailight_254EF3
   #    - light.ailight_29A0D5
-  table_lights:
-    name: Table Lights
-    entities:
-      - light.ailight_255346
-      - light.ailight_2553E5
+#  table_lights:
+#    name: Table Lights
+#    entities:
+#      - light.ailight_255346
+#      - light.ailight_2553E5
 
 scene:
   - name: Living Worktime
@@ -153,9 +153,9 @@ homeassistant:
       friendly_name: 'Living Room Fan Lights'
       emulated_hue_hidden: false
       emulated_hue_name: "Living Room Lights"
-    group.table_lights:
-      emulated_hue_hidden: false
-      emulated_hue_name: "Table Lights"
+#    group.table_lights:
+#      emulated_hue_hidden: false
+#      emulated_hue_name: "Table Lights"
     scene.living_daytime:
       emulated_hue_hidden: false
       emulated_hue_name: "Living Daytime"
@@ -168,3 +168,8 @@ homeassistant:
     scene.living_worktime:
       emulated_hue_hidden: false
       emulated_hue_name: "Living Worktime"
+    light.ailight_255346:
+      friendly_name: "Bedside"
+    light.ailight_255_3e5:
+      friendly_name: "Porch Table"
+      

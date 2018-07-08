@@ -14,7 +14,7 @@ group:
 #      - input_slider.porch_animation_speed
       - input_number.porch_animation_speed
       - light.porch_leds
-
+      - light.ailight_2553e5
 
 
 light:
